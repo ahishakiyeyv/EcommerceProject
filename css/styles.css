@@ -199,6 +199,7 @@ section
      align-items: center;
      font-size:3rem;
      padding:0px 0px 50px 0px;
+     letter-spacing: 8px;
 }
 
 .box-container {
@@ -335,6 +336,11 @@ footer{
      color:var(--gray);
      font-size:14px;
 }
+.footer-box2 ul li{
+     text-align: center;
+     list-style-type: none;
+     line-height: 30px;
+}
 .footer-box3{
      width:300px;
      margin:30px;
@@ -342,6 +348,11 @@ footer{
 .footer-box3 ul{
      color:var(--gray);
      font-size:14px;
+}
+.footer-box3 ul li{
+     text-align: center;
+     list-style-type: none;
+     line-height: 30px;
 }
 .footer-box4{
      width:300px;
@@ -383,6 +394,7 @@ footer{
      text-align: center;
      color:var(--gray);
      font-size:15px;
+     padding:10px;
 }
 /* Responsivity starts*/
 
