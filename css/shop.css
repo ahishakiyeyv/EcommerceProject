@@ -104,7 +104,7 @@ aside{
     top:110px;
     left:3px;
     width:250px;
-    height:400px;
+    height:320px;
     border:1px solid red;
     background:black;
 }
@@ -117,13 +117,13 @@ aside{
 
 .links{
     font-size: 25px;
-    padding:10px 50px;
-    width:400px;
-    line-height: 50px;
+    padding:15px 80px;
+    line-height: 40px;
     color:var(--gray);
-    
+    text-align: left;
 }
-.links:hover{
+.li-links:hover{
+    transition:1s;
     background:gray;
 }
 
