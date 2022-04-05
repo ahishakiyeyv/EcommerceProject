@@ -114,7 +114,7 @@ html
     font-size:50px;
     color:var(--white);
     letter-spacing:5px;
-    margin:40px;
+    margin:40px 0px;
 }
 .link-about{
     font-size:35px;
@@ -123,4 +123,69 @@ html
     padding:20px;
     background:var(--black);
     border-radius:20px;
+}
+/* =================================section 2============================= */
+.about-description{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:100px;
+}
+.describe{
+    border :1px solid red;
+    width:600px;
+    height:300px;
+    padding:20px;
+}
+.video-desc{
+    border:1px solid red;
+    width:600px;
+    height:300px;
+}
+.h2-desc{
+    font-size:40px;
+    text-align: center;
+}
+.p-desc{
+    font-size:18px;
+    text-align:left;
+    line-height: 30px;
+}
+.ul-about{
+    margin-left:100px;
+    line-height: 40px;
+}
+.li-about{
+    font-size:18px;
+    list-style-type: none;
+}
+.count{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.student{
+    margin:30px;
+}
+.teach{
+    margin:30px;
+}
+.award{
+    margin:30px;
+}
+.h2-award{
+    font-size:35px;
+    font-weight:200;
+    color:var(--gray);
+}
+.h3-award{
+    font-size:30px;
+    font-weight:200;
+    color:var(--gray);
+}
+.video{
+    position:relative;
+    left:40px;
+    height:300px;
+    width:500px;
 }
