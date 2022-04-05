@@ -130,15 +130,14 @@ html
     justify-content: center;
     align-items: center;
     margin-top:100px;
+    height:720px;
 }
 .describe{
-    border :1px solid red;
     width:600px;
     height:300px;
     padding:20px;
 }
 .video-desc{
-    border:1px solid red;
     width:600px;
     height:300px;
 }
@@ -188,4 +187,44 @@ html
     left:40px;
     height:300px;
     width:500px;
+}
+
+/* ==================================section 3===================================== */
+.section3{
+    margin-top:50px;
+}
+.ttle{
+    font-size:40px;
+    text-align:center;
+}
+.p-team{
+    font-size:25px;
+    text-align:center;
+    color:var(--gray);
+}
+.team{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top:100px;
+}
+.member1{
+    margin:30px;
+    width:350px;
+}
+.img-member1{
+    height:100px;
+    width:100px;
+    border-radius:50px;
+    float:center;
+}
+.name1{
+    font-size:20px;
+    padding:10px;
+}
+.p-text{
+    font-size:15px;
+    color:#a2a2a2;
+    margin:10px;
 }
