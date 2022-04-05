@@ -9,14 +9,12 @@
      border: none;
      text-decoration: none;
 }
-body{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:100vh;
-    background:#f7f7f7;
-}
+
 .wrapper{
+    position:absolute;
+    top:120px;
+    left:400px;
+    min-height:400px;
     background:#fff;
     width:450px;
     border-radius: 16px;
@@ -224,4 +222,19 @@ form .name-details .field:last-child{
 .users-list a .status-dot{
     font-size:12px;
     color:#468669;
+}
+/* ====================================bouton========================== */
+.bouton{
+    padding:15px;
+    border:1px solid black;
+    background:black;
+    color:#fff;
+    position:relative;
+    top:50px;
+    left:50px;
+    border-radius:50px;
+}
+.bouton:hover{
+    background:gray;
+    color:#fff;
 }
