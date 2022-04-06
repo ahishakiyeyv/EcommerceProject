@@ -212,7 +212,7 @@ section
  }
  .box-container .box {
      width: 350px;
-     height: 350px;
+     height: 420px;
      margin: 20px;
      border:1px solid black;
  }
@@ -226,6 +226,10 @@ section
       position:relative;
       left:50px;
  }
+ .img-sell{
+      width:340px;
+      height:380px;
+ }
 
  /* =========================================arrival section============================ */
  .flexcontainer {
@@ -233,23 +237,23 @@ section
      grid-template-columns: repeat(3, 1fr);
      grid-template-rows: repeat(0, 1fr);
      grid-column-gap: 30px;
-     grid-row-gap: 30px;
+     grid-row-gap: 50px;
      }
 .box1{
-     
+     border:1px solid black;
      height:500px;
      width:350px;
 }
 .pop{
      position:relative;
-     top:2px;
+     top:-20px;
      left:1px;
      padding:10px;
      color:var(--white);
      font-size:15px;
      background:black;
-     border:1px solid red;
      border-radius:80px 80px 0px 80px;
+     transform: rotate(45deg) skew(12deg,0deg);
 }
 .img-arrival{
      width:340px;
@@ -273,17 +277,21 @@ section
      float:left;
      font-size:15px;
      padding:10px;
-     margin:5px 0px;
+     margin:2px 0px;
      border:1px solid var(--black);
      border-radius:20px;
+     background:var(--black);
+     color:var(--white);
 }
 .details-btn{
      float:right;
      font-size:15px;
      padding:10px;
-     margin:5px 0px;
+     margin:2px 0px;
      border:1px solid var(--black);
      border-radius:20px;
+     background:var(--black);
+     color:var(--white);
 }
 /* =========================================deal of the week============================= */
 
