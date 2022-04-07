@@ -507,12 +507,17 @@ section
 }
 .shop{
      border:1px solid black;
-     padding:15px;
+     padding:5px 15px;
      margin-left:150px;
      color:var(--white);
      background: var(--black);
      font-size:20px;
      border-radius:50px;
+     transition:0.5s ease;
+}
+.shop:hover{
+     background:var(--white);
+     color:var(--black);
 }
 
 /* ====================================payment section============================== */

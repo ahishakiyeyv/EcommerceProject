@@ -9,6 +9,7 @@
      border: none;
      text-decoration: none;
 }
+
 /* variables start */
 :root
 {
@@ -192,6 +193,8 @@ html
 /* ==================================section 3===================================== */
 .section3{
     margin-top:50px;
+    background:#ececec;
+    padding:20px;
 }
 .ttle{
     font-size:40px;
