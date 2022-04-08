@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authentification</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Login | SuitSHOP</title>
     <style>
         body {
 	font-family: sans-serif;	
-	background-image: url("../images/bg.jpg");
+	background-image: url("images/bg.jpg");
 	background-repeat: no-repeat;
 	overflow: hidden;
 	background-size: cover;
@@ -86,7 +87,7 @@
  		<h1>login</h1>
  	</div>
  	<div class="main">
- 		<form>
+ 		<form action="dashboard.php" method="POST">
  			<span>
  				<i class="fa fa-user"></i>
  				<input type="text" placeholder="Username" name="">
