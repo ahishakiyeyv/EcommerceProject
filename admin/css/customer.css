@@ -17,6 +17,9 @@ body{
 .logo span{
 	color: #f7403b;
 }
+#mySidenav{
+    position:fixed;
+}
 .sidenav {
     position: fixed;
     height: 90%;
