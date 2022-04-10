@@ -43,16 +43,28 @@
                 <img src="images/01.png" alt="image non disponible" class="img-recovery">
                 <h3 class="desc">clothes</h3>
                 <h2 class="price">123$</h2>
+                <div class="btn-act">
+                <a href="#" class="btn-del">Delete</a>
+                <a href="#" class="btn-upd">Update</a>
+                </div>
             </div>
             <div class="recovery">
                 <img src="images/01.png" alt="image non disponible" class="img-recovery">
                 <h3 class="desc">clothes</h3>
                 <h2 class="price">233$</h2>
+                <div class="btn-act">
+                <a href="#" class="btn-del">Delete</a>
+                <a href="#" class="btn-upd">Update</a>
+                </div>
             </div>
             <div class="recovery">
                 <img src="images/01.png" alt="image non disponible" class="img-recovery">
                 <h3 class="desc">clothes</h3>
                 <h2 class="price">123$</h2>
+                <div class="btn-act">
+                <a href="#" class="btn-del">Delete</a>
+                <a href="#" class="btn-upd">Update</a>
+                </div>
             </div>
     </div>
 </section>
