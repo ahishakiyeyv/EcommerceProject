@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Rambla&display=swap');
+*{
+    margin:0px;
+	padding: 0px;
+    font-family: 'Rambla', sans-serif;
+}
+body{
+    background:#1b203d;
+}
+.logo{
+	margin: 0px;
+	margin-left: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+}
+.logo span{
+	color: #f7403b;
+}
+#mySidenav{
+    position:fixed;
+}
+.sidenav {
+    position: fixed;
+    height: 90%;
+    width: 300px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #272c4a;
+    overflow: auto;
+    transition: 0.5s;
+    padding-top: 30px;
+  }
+  .sidenav a {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color:#1b203d;
+  }
+  .sidenav{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+/* =============================================section 1============================================= */
+.section01{
+    margin-left:320px;
+}
+.titre1{
+    text-align:center;
+    font-size:40px;
+    color:#fff;
+    letter-spacing: 5px;
+    margin:20px;
+}
+fieldset{
+    width:400px;
+    margin:80px 350px;
+    border-radius:20px;
+    box-shadow: 0px 0px 15px 5px rgba(247,64,59,0.9);
+
+}
+.th-cat{
+    color:#818181;
+    letter-spacing: 2px;
+}
+.inpt-cat{
+    height:30px;
+    width:250px;
+    background:transparent;
+    border:0;
+    border-bottom:2px solid #f7403b;
+    outline:none;
+    margin:5px 10px;
+    color:#fff;
+    font-size:15px;
+}
+#sub-cat{
+    padding:5px 30px;
+    margin:20px 10px;
+    background:green;
+    color:#fff;
+    border-radius:10px;
+    font-size:15px;
+}
+#res-cat{
+    padding:5px 30px;
+    margin:20px 10px;
+    background:red;
+    color:#fff;
+    border-radius:10px;
+    font-size:15px;
+}
+
+/* ====================================================section 2=================================== */
+.section02{
+    margin-left:320px;
+}
+.title-reco{
+    text-align: center;
+    font-size:40px;
+    color:#fff;
+    letter-spacing: 5px;
+}
+.table01{
+    width:600px;
+    margin:50px 150px;
+}
+.thead01{
+    background:#f7403b;
+    padding:20px;
+    height:40px;
+}
+.td01{
+    text-align:center;
+    padding:15px;
+    border:0;
+    border-bottom:2px solid #f7403b;
+}
+.delete{
+    color:#fff;
+    background:red;
+    padding:3px 20px;
+    border:1px solid red;
+    text-decoration: none;
+}
+.update{
+    color:#000;
+    background:yellowgreen;
+    padding:3px 20px;
+    border:1px solid yellowgreen;
+    text-decoration: none;
+}
