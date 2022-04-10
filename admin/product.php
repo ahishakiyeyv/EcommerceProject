@@ -30,10 +30,31 @@
                 <li class="li-form"><input type="text" name="prix" class="inpt" placeholder="enter price..."></li>
                 <h3 class="h3-form">Image:</h3>
                 <li class="li-form"><input type="file" name="image" class="inpt-img"></li>
+                <br>
                 <li class="li-form"><input type="submit" value="Submit" class="inpt-sub"></li>
             </ul>
         </form>
     </fieldset>
+</section>
+<section class="section2">
+    <h1 class="title02">Recovery</h1>
+    <div class="box-recovery">
+            <div class="recovery">
+                <img src="images/01.png" alt="image non disponible" class="img-recovery">
+                <h3 class="desc">clothes</h3>
+                <h2 class="price">123$</h2>
+            </div>
+            <div class="recovery">
+                <img src="images/01.png" alt="image non disponible" class="img-recovery">
+                <h3 class="desc">clothes</h3>
+                <h2 class="price">233$</h2>
+            </div>
+            <div class="recovery">
+                <img src="images/01.png" alt="image non disponible" class="img-recovery">
+                <h3 class="desc">clothes</h3>
+                <h2 class="price">123$</h2>
+            </div>
+    </div>
 </section>
 </body>
 </html>
