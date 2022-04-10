@@ -19,5 +19,21 @@
   <a href="#"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Accounts</a>
   <!-- <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Tasks</a> -->
 </div>
+<section class="section1">
+    <h1 class="title01">Product Management</h1>
+    <fieldset>
+        <form action="" method="post">
+            <ul class="ul-form">
+                <h3 class="h3-form">Name:</h3>
+                <li class="li-form"><input type="text" name="nomproduit" class="inpt" placeholder="Name of the product..."></li>
+                <h3 class="h3-form">Price:</h3>
+                <li class="li-form"><input type="text" name="prix" class="inpt" placeholder="enter price..."></li>
+                <h3 class="h3-form">Image:</h3>
+                <li class="li-form"><input type="file" name="image" class="inpt-img"></li>
+                <li class="li-form"><input type="submit" value="Submit" class="inpt-sub"></li>
+            </ul>
+        </form>
+    </fieldset>
+</section>
 </body>
 </html>

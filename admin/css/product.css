@@ -50,3 +50,52 @@ body{
     right: 25px;
     font-size: 36px;
   }
+/* =============================================section 1======================================== */
+.section1{
+    margin-left:320px;
+}
+.title01{
+    text-align:center;
+    font-size:40px;
+    letter-spacing:5px;
+    color:#fff;
+    margin:30px;
+}
+fieldset{
+    width:350px;
+    margin:80px 350px;
+
+}
+.li-form{
+list-style: none;
+margin-left:30px;
+}
+.h3-form{
+    font-size:20px;
+    color:#f1f1f1;
+    margin: 10px 20px;
+    text-decoration: underline;
+    letter-spacing: 3px;
+    font-weight:200;
+}
+.inpt{
+    width:300px;
+    height:30px;
+    font-size:15px;
+    border:0;
+    border-bottom:2px solid #f7403b;
+    background:transparent;
+    color:#818181;
+    outline:none;
+}
+.inpt-img{
+    width:300px;
+    height:30px;
+    font-size:15px;
+}
+.inpt-sub{
+    padding:10px 30px;
+    background:#f7403b;
+    font-size:15px;
+    border-radius:10px;
+}
