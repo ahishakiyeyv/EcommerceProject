@@ -1,3 +1,7 @@
+<?php
+include("db.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +45,9 @@
         </form>
     </fieldset>
 </section>
+<?php
+$select=$bdd->query("SELECT * FROM categorie ORDER BY id_cat");
+?>
 <section class="section02">
     <h1 class="title-reco">Recovery</h1>
     <table class="table01">
@@ -52,34 +59,32 @@
                 
             </tr>
         </thead>
+        <?php
+        while($dataselect=$select->fetch()){
+        ?>
         <tbody class="tbody01">
             <tr>
-                <td class="td01">1</td>
-                <td class="td01">Books</td>
+                <td class="td01"><?php echo $dataselect["id_cat"]?></td>
+                <td class="td01"><?php echo $dataselect["nom_cat"]?></td>
                 <td class="td01"><a href="#" class="delete">Delete</a></td>
                 <td class="td01"><a href="#" class="update">Update</a></td>
 
             </tr>
-            <tr>
-                <td class="td01">2</td>
-                <td class="td01">Clothes</td>
-                <td class="td01"><a href="#" class="delete">Delete</a></td>
-                <td class="td01"><a href="#" class="update">Update</a></td>
-            </tr>
-            <tr>
-                <td class="td01">3</td>
-                <td class="td01">Suit</td>
-                <td class="td01"><a href="#" class="delete">Delete</a></td>
-                <td class="td01"><a href="#" class="update">Update</a></td>
-            </tr>
-            <tr>
-                <td class="td01">4</td>
-                <td class="td01">Shoes</td>
-                <td class="td01"><a href="#" class="delete">Delete</a></td>
-                <td class="td01"><a href="#" class="update">Update</a></td>
-            </tr>
+           <?php
+        }
+           ?>
         </tbody>
     </table>
 </section>
 </body>
 </html>
+<?php
+if(isset($_POST["submit"])){
+    $categorie=$_POST["categorie"];
+    $insert=$bdd->prepare("INSERT INTO categorie(nom_cat)VALUES(?)");
+    $insert->execute(array($categorie));
+    echo "<script>alert('Category added successfully')</script>";
+}else{
+    echo "<script>alert('Data error!')</script>";
+}
+?>

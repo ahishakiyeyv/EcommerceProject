@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/producte.css">
     <title>Product | SuitSHOP</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
                 <h3 class="h3-form">Image:</h3>
                 <li class="li-form"><input type="file" name="image" class="inpt-img"></li>
                 <h3 class="h3-form">Category:</h3>
-                <li class="li-form"><select name="" class="inpt">
+                <li class="li-form"><select name="" class="inpt-select">
                     <option value="">----------</option>
                     <option value="1">Books</option>
                     <option value="2">Suit</option>
