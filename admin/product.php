@@ -30,6 +30,14 @@
                 <li class="li-form"><input type="text" name="prix" class="inpt" placeholder="enter price..."></li>
                 <h3 class="h3-form">Image:</h3>
                 <li class="li-form"><input type="file" name="image" class="inpt-img"></li>
+                <h3 class="h3-form">Category:</h3>
+                <li class="li-form"><select name="" class="inpt">
+                    <option value="">----------</option>
+                    <option value="1">Books</option>
+                    <option value="2">Suit</option>
+                    <option value="3">Trousers</option>
+                    <option value="4">Pullover</option>
+                </select></li>
                 <br>
                 <li class="li-form"><input type="submit" value="Submit" class="inpt-sub"></li>
             </ul>
