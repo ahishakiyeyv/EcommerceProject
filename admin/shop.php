@@ -8,7 +8,7 @@ include("db.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/shope.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Shop | SuitSHOP</title>
 </head>
@@ -44,19 +44,21 @@ include("db.php");
        <h1 class="title-shop">Our Shop</h1>
        <?php 
 $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
-while($dataselect=$select->fetch()){
+
 ?>
     <div class="parent">
-        <div class="div1">
-        <?php
+    <?php
+    while($dataselect=$select->fetch()){
+      echo "  <div class='div1'>";
+        
         echo "<img src='image/".$dataselect['photo']."' class='img-div1' alt='image non disponible'>";
                 echo "<h3 class='h3-div1'>".$dataselect['nom_pro']."</h3>";
                 echo "<h2 class='h2-div1'>".$dataselect['prix']."</h2>";
               echo"  <a href='#' class='comment'>Commentaire</a>
                 <a href='#' class='a-div1'>Add Cart</a>";
-                ?>
-         </div>
-         <?php
+                
+        echo "</div>"; 
+        
 }
          ?>
         </div>

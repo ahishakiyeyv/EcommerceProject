@@ -72,10 +72,6 @@ $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
                 <a href='#' class='btn-del'>Delete</a>
                 <a href='#' class='btn-upd'>Update</a>
                 </div>";
-                echo "<div class='btn-act'>
-                <a href='#' class='btn-del'>Comment</a>
-                <a href='#' class='btn-upd'>Add Cart</a>
-                </div>";
             echo "</div>";
   
         }
