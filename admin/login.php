@@ -1,3 +1,6 @@
+<?php
+include("db.php");
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,15 +20,15 @@
                <div class="error-txt">This is an error message</div>
                    <div class="field input">
                     <label>Email Address</label>
-                    <input type="text"  placeholder="Enter your email">
+                    <input type="text" name="mail" placeholder="Enter your email">
                    </div>
                    <div class="field input">
                     <label>Password</label>
-                    <input type="password"  placeholder="Enter your password">
+                    <input type="password"  name="motdepasse" placeholder="Enter your password">
                     <i class="fas fa-eye"></i>
                    </div>
                    <div class="field button">
-                       <input type="submit" value="Continue to Shop">
+                       <input type="submit" value="Continue to Shop" name="submit">
                    </div>
            </form>
            <div class="link">Not yet  signed up? <a href="signup.html">Signup now</a></div>
@@ -34,3 +37,19 @@
     <script src="js/pass-show-hide.js"></script>
 </body>
 </html>
+<?php
+    if(isset($_POST['submit'])){
+        $mail=$_POST["mail"];
+        $password=md5($_POST["motdepasse"]);
+        $select="SELECT email_user,password From user WHERE email_user=:mail AND password=:motdepasse";
+        $datauser=$bdd->prepare($select);
+        $datauser->execute(array('mail'=>$mail,'motdepasse'=>$password ));
+        $count=$datauser->rowCount();
+        if($count >0){
+            header("location:dashboard.php");
+        }
+        else{
+           echo "<script>alert('Email or Password are Invalid!')</script>";
+    }
+}
+?>

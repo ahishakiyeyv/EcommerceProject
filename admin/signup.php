@@ -17,7 +17,7 @@ include("db.php");
     <div class="wrapper">
        <section class="form signup">
            <header>Sign Up | My Account</header>
-           <form action="#" enctype="multipart/form-data">
+           <form action="#" method="POST" enctype="multipart/form-data">
                <div class="error-txt"></div>
                <div class="name-details">
                    <div class="field input">
