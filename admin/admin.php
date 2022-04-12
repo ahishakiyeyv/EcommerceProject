@@ -22,8 +22,8 @@
 <section class="section1">
 <h1 class="title001">Admin Control</h1>
     <div class="admin-link">
+    <a href="accueil.php" class="b-link">Home</a>
         <a href="login.php" class="b-link">Login</a>
-        <a href="users.php" class="b-link">Users</a>
         <a href="shop.php" class="b-link">Shop</a>
         <a href="cart.php" class="b-link">Cart</a>
     </div>

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Rambla&display=swap');
+*{
+    margin:0px;
+	padding: 0px;
+    font-family: 'Rambla', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background:#1b203d;
+}
+.logo{
+	margin: 0px;
+	margin-left: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+}
+.logo span{
+	color: #f7403b;
+}
+#mySidenav{
+    position:fixed;
+}
+.sidenav {
+    position: fixed;
+    height: 90%;
+    width: 300px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #272c4a;
+    overflow: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+  }
+  .sidenav a {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color:#1b203d;
+  }
+  .sidenav{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  /* =====================================================section 1========================================================= */
+  .form-section{
+      margin-left:350px;
+  }
+  .title002{
+        text-align: center;
+        font-size:40px;
+        letter-spacing: 5px;
+        color:#fff;
+  }
+  fieldset{
+      width:350px;
+      margin:70px 300px;
+      border-radius:20px;
+      box-shadow: 0px 0px 15px 5px rgba(247,64,59,0.9);
+  }
+ .th-form{
+     font-size:20px;
+     letter-spacing: 3px;
+     font-weight:200;
+     color:#fff;
+    
+ }
+ .td-form input{
+     height:30px;
+     width:250px;
+     outline:none;
+     border:0;
+     border-bottom:2px solid #000;
+     background:transparent;
+     margin:10px 20px;
+     color:#fff;
+ }
+ /* ========================================section 2=============================================== */
+ .rec-form{
+     margin-left:320px;
+ }
+ .title003{
+    text-align: center;
+    font-size:40px;
+    letter-spacing: 5px;
+    color:#fff;
+    margin:30px 0px;
+ }
+ .formu{
+     margin-top:50px;
+ }
+ .table01{
+    margin-left:5px;
+}
+.thead01{
+    background:#f7403b;
+}
+.th01{
+    padding:10px 30px;
+}
+.td01{
+    color:#fff;
+    text-align:center;
+    padding:10px 40px;
+    border-top:0;
+    border-left:0;
+    border-right:0;
+    border-bottom:2px solid #f7403b;
+}
+.td-sub input{
+    cursor: pointer;
+    height:40px;
+    width:80px;
+    background:#000;
+    color:#fff;
+    border-radius:10px;
+    font-size:15px;
+}
+.td01-link a{
+    text-decoration:none;
+    color:#fff;
+    background:green;
+    padding:5px 10px;
+    margin:10px;
+}
+.td01-link a:hover{
+    background:#818181;
+    transition:0.5s ease;
+}
+.td01-lin a{
+    text-decoration:none;
+    color:#fff;
+    background:red;
+    padding:5px 10px;
+    margin:10px;
+}
+.td01-lin a:hover{
+    background:#818181;
+    transition:0.5s ease;
+}

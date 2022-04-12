@@ -25,7 +25,7 @@
         <a href="#" class="a-link">Products</a>
         <a href="#" class="a-link">Category</a>
         <a href="#" class="a-link">Stock</a>
-        <a href="admin.php" class="a-link">Admin Control</a>
+        <a href="administrator.php" class="a-link">Administrator</a>
     </div>
 </section>
 <section class="recup-admin">
