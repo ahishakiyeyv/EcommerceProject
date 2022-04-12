@@ -62,17 +62,19 @@ $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
     <div class="box-recovery">
         <?php
         while($dataselect=$select->fetch()){
-        ?>
-            <div class="recovery">
-               <img src="picture/<?php $dataselect["image"]?>" alt="image non disponible" class="img-recovery">
-                <h3 class="desc"><?php echo $dataselect["nom_pro"]?></h3>
-                <h2 class="price"><?php echo $dataselect["prix"]?></h2>
-                <div class="btn-act">
-                <a href="#" class="btn-del">Delete</a>
-                <a href="#" class="btn-upd">Update</a>
+        
+           
+            echo "<div class='recovery'>";
+                echo "<img src='image/".$dataselect['photo']."' class='img-recovery' alt='image non disponible'>";
+                echo "<h3 class='desc'>".$dataselect['nom_pro']."</h3>";
+                echo "<h2 class='price'>".$dataselect['prix']."</h2>";
+                echo "<div class='btn-act'>
+                <a href='#' class='btn-del'>Delete</a>
+                <a href='#' class='btn-upd'>Update</a>
                 </div>
-            </div>
-            <?php
+                ";
+            echo "</div>";
+  
         }
             ?>
     </div>
@@ -81,69 +83,18 @@ $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
 </html>
 <?php
 
-if (isset($_POST["submit"])){
-    $target ="picture/".basename($_FILES["image"]["name"]);
-    $nompro=$_POST["nomproduit"];
-    $price=$_POST["prix"];
-    $image=$_POST["image"]["name"];
-    $cat=$_POST["category"];
-    $sql="INSERT INTO produit(nom_pro,prix,image,id_Cat)VALUES('$nompro','$price','$image','$cat')";
-    $insert=$bdd->query($sql);
-    
-}
-/*
 if(isset($_POST["submit"])){
+    $target="image/".basename($_FILES['image']['name']);
     $nompro=$_POST["nomproduit"];
     $prix=$_POST["prix"];
     $img=$_FILES["image"]["name"];
     $category=$_POST["category"];
-$insert=$bdd->prepare("INSERT INTO produit(nom_pro,prix,image,id_Cat)VALUES(?,?,?,?)");
+$insert=$bdd->prepare("INSERT INTO produit(nom_pro,prix,photo,id_Cat)VALUES(?,?,?,?)");
 if($insert->execute(array($nompro,$prix,$img,$category))){
-    move_uploaded_file($_FILES["image"]["tmp_name"],"picture/");
+    move_uploaded_file($_FILES["image"]["tmp_name"],$target);
     echo "<script>alert('Data added Successfully')</script>";
 }else{
     echo "<script>alert('Error occurs !!')</script>";
 }
-}*/
-?>
-
-
-<?php
-// Include the database configuration file
-//$statusMsg = '';
-
-// File upload path
-//$targetDir = "picture/";
-//$fileName = basename($_FILES["file"]["name"]);
-//$targetFilePath = $targetDir . $fileName;
-//$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
-
-//if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
-  //  $nompro=$_POST["nomproduit"];
-    //$prix=$_POST["prix"];
-    //$category=$_POST["category"];
-    // Allow certain file formats
-    //$allowTypes = array('jpg','png','jpeg','gif','pdf');
-   // if(in_array($fileType, $allowTypes)){
-        // Upload file to server
-     //   if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-            // Insert image file name into database
-       //     $insert = $bdd->prepare("INSERT INTO produit (nom_pro,prix,file_name, uploaded_on,id_Cat) VALUES (?,?,'".$fileName."', NOW(),?)");
-         //   if($insert){
-           //     $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-            //}else{
-              //  $statusMsg = "File upload failed, please try again.";
-            //} 
-        //}else{
-          //  $statusMsg = "Sorry, there was an error uploading your file.";
-        //}
-    //}else{
-      //  $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
-    //}
-//}else{
-  //  $statusMsg = 'Please select a file to upload.';
-//}
-
-// Display status message
-//echo $statusMsg;
+}
 ?>
