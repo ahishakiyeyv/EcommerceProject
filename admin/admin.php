@@ -1,6 +1,3 @@
-<?php
-include("db.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +5,8 @@ include("db.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/customer.css">
-    <title>Customer | SuitSHOP</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <title>Admin Control | SuitSHOP</title>
 </head>
 <body>
 <div id="mySidenav" class="sidenav">
@@ -22,35 +19,14 @@ include("db.php");
   <a href="#"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Accounts</a>
   <!-- <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Tasks</a> -->
 </div>
-<?php
-$select=$bdd->query("SELECT * FROM user ORDER BY id_user");
-?>
-<section class="section_table">
-    <h1 class="h1title1">Customers</h1>
-    <table class="table1">
-        <thead class="thead1">
-            <tr>
-                <th class="th1">FirstName</th>
-                <th class="th1">LastName</th>
-                <th class="th1">Email</th>
-                <th class="th1">Password</th>
-            </tr>
-        </thead>
-        <?php
-        while($data=$select->fetch()){
-        ?>
-        <tbody class="tbody1">
-            <tr>
-                <td class="td1"><?php echo $data['nom_user']?></td>
-                <td class="td1"><?php echo $data['prenom_user']?></td>
-                <td class="td1"><?php echo $data['email_user']?></td>
-                <td class="td1"><?php echo $data['password']?></td>
-            </tr>
-        </tbody>
-        <?php
-        }
-        ?>
-    </table>
+<section class="section1">
+<h1 class="title001">Admin Control</h1>
+    <div class="admin-link">
+        <a href="login.php" class="b-link">Login</a>
+        <a href="users.php" class="b-link">Users</a>
+        <a href="shop.php" class="b-link">Shop</a>
+        <a href="cart.php" class="b-link">Cart</a>
+    </div>
 </section>
 </body>
 </html>

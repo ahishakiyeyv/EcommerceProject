@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Rambla&display=swap');
+*{
+    margin:0px;
+	padding: 0px;
+    font-family: 'Rambla', sans-serif;
+}
+body{
+    background:#1b203d;
+}
+.logo{
+	margin: 0px;
+	margin-left: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+}
+.logo span{
+	color: #f7403b;
+}
+#mySidenav{
+    position:fixed;
+}
+.sidenav {
+    position: fixed;
+    height: 90%;
+    width: 300px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #272c4a;
+    overflow: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+  }
+  .sidenav a {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color:#1b203d;
+  }
+  .sidenav{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  /* ===============================================section 1=========================================== */
+  .title001{
+    text-align:center;
+    font-size:40px;
+    color:#fff;
+    margin:30px 0;
+    letter-spacing:5px;
+}
+.section1{
+    margin-left:320px;
+}
+.admin-link{
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 20px;
+grid-row-gap: 50px;
+margin:50px;
+}
+.b-link{
+    width:200px;
+    padding:40px 80px;
+    text-align:center;
+    text-decoration:none;
+    color:#f1f1f1;
+    background:#272c4a;
+    font-size:30px;
+}
+.b-link:hover{
+    background:#1b203d;
+    border:1px dashed #f1f1f1;
+}

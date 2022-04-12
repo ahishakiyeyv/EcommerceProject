@@ -13,11 +13,11 @@ include("db.php");
     <title>Signup | SuitSHOP</title>
 </head>
 <body>
-    <a href="index.html" class="bouton">Back</a>
+    <a href="admin.php" class="bouton">Back</a>
     <div class="wrapper">
        <section class="form signup">
            <header>Sign Up | My Account</header>
-           <form action="#" method="POST" enctype="multipart/form-data">
+           <form  method="POST">
                <div class="error-txt"></div>
                <div class="name-details">
                    <div class="field input">
@@ -35,18 +35,17 @@ include("db.php");
                    </div>
                    <div class="field input">
                         <label>Password</label>
-                        <input type="password" name="password" placeholder="Enter new password" required>
+                        <input type="password" name="motdepasse" placeholder="Enter new password" required>
                         <i class="fas fa-eye"></i>
                    </div>
                    <div class="field button">
                        <input type="submit" value="Continue to Shop" name="submit">
                    </div>
            </form>
-           <div class="link">Already signed up? <a href="login.html">Login now</a></div>
+           <div class="link">Already signed up? <a href="login.php">Login now</a></div>
        </section>
     </div>
     <script src="js/pass-show-hide.js"></script>
-    <script src="js/signup.js"></script>
 </body>
 </html>
 <?php
@@ -54,7 +53,7 @@ if(isset($_POST['submit'])){
     $fname=$_POST['fname'];
     $lname=$_POST['lname'];
     $mail=$_POST['email'];
-    $password=$_POST['motdepasse'];
+    $password=md5($_POST['motdepasse']);
    $insert=$bdd->prepare("INSERT INTO user(nom_user,prenom_user,email_user,password)VALUES(?,?,?,?)");
    $insert->execute(array($fname,$lname,$mail,$password));
    echo "<script>alert('Your Account has been registred.')</script>";

@@ -12,11 +12,11 @@ include("db.php");
     <title>My Accout | SuitSHOP</title>
 </head>
 <body>
-    <a href="index.html" class="bouton"><i class="fa-solid fa-left"></i>Back</a>
+    <a href="admin.php" class="bouton"><i class="fa-solid fa-left"></i>Back</a>
     <div class="wrapper">
        <section class="form login">
            <header>My Account</header>
-           <form action="#">
+           <form action="#" method="POST">
                <div class="error-txt">This is an error message</div>
                    <div class="field input">
                     <label>Email Address</label>
@@ -31,7 +31,7 @@ include("db.php");
                        <input type="submit" value="Continue to Shop" name="submit">
                    </div>
            </form>
-           <div class="link">Not yet  signed up? <a href="signup.html">Signup now</a></div>
+           <div class="link">Not yet  signed up? <a href="signup.php">Signup now</a></div>
        </section>
     </div>
     <script src="js/pass-show-hide.js"></script>
