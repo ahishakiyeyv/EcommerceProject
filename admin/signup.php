@@ -1,5 +1,9 @@
+<?php
+include("db.php");
+?>
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,7 +39,7 @@
                         <i class="fas fa-eye"></i>
                    </div>
                    <div class="field button">
-                       <input type="submit" value="Continue to Shop">
+                       <input type="submit" value="Continue to Shop" name="submit">
                    </div>
            </form>
            <div class="link">Already signed up? <a href="login.html">Login now</a></div>
@@ -45,3 +49,16 @@
     <script src="js/signup.js"></script>
 </body>
 </html>
+<?php
+if(isset($_POST['submit'])){
+    $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+    $mail=$_POST['email'];
+    $password=$_POST['motdepasse'];
+   $insert=$bdd->prepare("INSERT INTO user(nom_user,prenom_user,email_user,password)VALUES(?,?,?,?)");
+   $insert->execute(array($fname,$lname,$mail,$password));
+   echo "<script>alert('Your Account has been registred.')</script>";
+}else{
+    echo "<script>alert('Error! Try Again')</script>";
+}
+?>
