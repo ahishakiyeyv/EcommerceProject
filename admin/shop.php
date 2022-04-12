@@ -1,3 +1,7 @@
+<?php
+include("db.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +29,7 @@
     <div class="quick-links">
         <h3 class="title">Categories</h3>
         <ul class="ule-links">
+
             <li class="li-links"><a href="#" class="links">Suit</a></li>
             <li class="li-links"><a href="#" class="links">Jacket</a></li>
             <li class="li-links"><a href="#" class="links">Trousers</a></li>
@@ -37,90 +42,23 @@
    </aside>
    <section class="shop">
        <h1 class="title-shop">Our Shop</h1>
+       <?php 
+$select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
+while($dataselect=$select->fetch()){
+?>
     <div class="parent">
         <div class="div1">
-            <img src="images/11.jpeg" alt="image non disponible" class="img-div1">
-            <h3 class="h3-div1">Description</h3>
-            <h2 class="h2-div1">200$</h2>
-            <a href="#" class="comment">Commentaire</a>
-            <a href="#" class="a-div1">Add Cart</a>
-             </div>
-        <div class="div2"><img src="images/11.jpeg" alt="image non disponible" class="img-div1">
-            <h3 class="h3-div1">Description</h3>
-            <h2 class="h2-div1">200$</h2> 
-            <a href="#" class="comment">Commentaire</a>
-            <a href="#" class="a-div1">Add Cart</a>
-        </div>
-        <div class="div3"><img src="images/11.jpeg" alt="image non disponible" class="img-div1">
-            <h3 class="h3-div1">Description</h3>
-            <h2 class="h2-div1">200$</h2>
-            <a href="#" class="comment">Commentaire</a>
-            <a href="#" class="a-div1">Add Cart</a> 
-        </div>
-        <div class="div4">
-            <img src="images/11.jpeg" alt="image non disponible" class="img-div1">
-            <h3 class="h3-div1">Description</h3>
-            <h2 class="h2-div1">200$</h2> 
-            <a href="#" class="comment">Commentaire</a>
-            <a href="#" class="a-div1">Add Cart</a>   
-        </div>
-        <div class="div5"> 
-            <img src="images/11.jpeg" alt="image non disponible" class="img-div1">
-            <h3 class="h3-div1">Description</h3>
-            <h2 class="h2-div1">200$</h2>
-            <a href="#" class="comment">Commentaire</a>
-            <a href="#" class="a-div1">Add Cart</a>
-
-        </div>
-        <div class="div6"> 
-            <img src="images/11.jpeg" alt="image non disponible" class="img-div1">
-            <h3 class="h3-div1">Description</h3>
-            <h2 class="h2-div1">200$</h2>
-            <a href="#" class="comment">Commentaire</a>
-            <a href="#" class="a-div1">Add Cart</a>
-        </div>
-        <div class="div7">
-            <img src="images/11.jpeg" alt="image non disponible" class="img-div1">
-            <h3 class="h3-div1">Description</h3>
-            <h2 class="h2-div1">200$</h2> 
-            <a href="#" class="comment">Commentaire</a> 
-            <a href="#" class="a-div1">Add Cart</a>  
-        </div>
-        <div class="div8"> 
-            <img src="images/11.jpeg" alt="image non disponible" class="img-div1">
-            <h3 class="h3-div1">Description</h3>
-            <h2 class="h2-div1">200$</h2>
-            <a href="#" class="comment">Commentaire</a>
-            <a href="#" class="a-div1">Add Cart</a>
-        </div>
-        <div class="div9">
-            <img src="images/11.jpeg" alt="image non disponible" class="img-div1">
-            <h3 class="h3-div1">Description</h3>
-            <h2 class="h2-div1">200$</h2> 
-            <a href="#" class="comment">Commentaire</a>
-            <a href="#" class="a-div1">Add Cart</a>   
-        </div>
-        <div class="div10"> 
-            <img src="images/11.jpeg" alt="image non disponible" class="img-div1">
-            <h3 class="h3-div1">Description</h3>
-            <h2 class="h2-div1">200$</h2>
-            <a href="#" class="comment">Commentaire</a>
-            <a href="#" class="a-div1">Add Cart</a>
-        </div>
-        <div class="div11"> 
-            <img src="images/11.jpeg" alt="image non disponible" class="img-div1">
-            <h3 class="h3-div1">Description</h3>
-            <h2 class="h2-div1">200$</h2>
-            <a href="#" class="comment">Commentaire</a>
-            <a href="#" class="a-div1">Add Cart</a>
-        </div>
-        <div class="div12"> 
-            <img src="images/11.jpeg" alt="image non disponible" class="img-div1">
-            <h3 class="h3-div1">Description</h3>
-            <h2 class="h2-div1">200$</h2>
-            <a href="#" class="comment">Commentaire</a>
-            <a href="#" class="a-div1">Add Cart</a>
-        </div>
+        <?php
+        echo "<img src='image/".$dataselect['photo']."' class='img-div1' alt='image non disponible'>";
+                echo "<h3 class='h3-div1'>".$dataselect['nom_pro']."</h3>";
+                echo "<h2 class='h2-div1'>".$dataselect['prix']."</h2>";
+              echo"  <a href='#' class='comment'>Commentaire</a>
+                <a href='#' class='a-div1'>Add Cart</a>";
+                ?>
+         </div>
+         <?php
+}
+         ?>
         </div>
    </section>
    <footer>
