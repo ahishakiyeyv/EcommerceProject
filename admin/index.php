@@ -1,3 +1,6 @@
+<?php
+include("db.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,15 +90,32 @@
  		<h1>login</h1>
  	</div>
  	<div class="main">
- 		<form action="dashboard.php" method="POST">
+ 		<form  method="POST">
  			<span>
  				<i class="fa fa-user"></i>
- 				<input type="text" placeholder="Username" name="">
+ 				<input type="text" placeholder="Username" name="username">
  			</span><br>
  			<span>
  				<i class="fa fa-lock"></i>
- 				<input type="password" placeholder="password" name="">
+ 				<input type="password" placeholder="password" name="motdepasse">
  			</span><br>
- 				<button>login</button>
+ 		<button name="submit">login</button>
+		 </form>
 </body>
 </html>
+<?php
+    if(isset($_POST['submit'])){
+        $username=$_POST["username"];
+        $password=md5($_POST["motdepasse"]);
+        $select="SELECT username,password_admin From administrator WHERE username=:usernme AND password_admin=:motdepasse";
+        $datauser=$bdd->prepare($select);
+        $datauser->execute(array('usernme'=>$username,'motdepasse'=>$password ));
+        $count=$datauser->rowCount();
+        if($count >0){
+            header("location:dashboard.php");
+        }
+        else{
+           echo "<script>alert('Email or Password are Invalid!')</script>";
+    }
+}
+?>
