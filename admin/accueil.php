@@ -18,10 +18,11 @@ include("db.php");
      <header class="header">
           <a href="#" class="logo"><i class="fas fa-splotch"></i> SuitSHOP</a>
           <nav class="navbar">
-               <a href="index.html">Home</a>
-               <a href="shop.html">Shop</a>
-               <a href="about.html">About</a>
-               <a href="login.html">My Account</a>
+               <a href="dashboard.php">Dashboard.php</a>
+               <a href="accueil.php">Home</a>
+               <a href="shop.php">Shop</a>
+               <a href="about.php">About</a>
+               <a href="login.php">My Account</a>
           </nav>
 
           <div id="menu-btn" class="fas fa-bars"></div>
