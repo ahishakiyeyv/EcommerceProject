@@ -1,3 +1,6 @@
+<?php
+include("db.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -541,7 +544,7 @@
                <p class="p-form">Be the first to know about new arrivals, look books, sales & promos!</p>
                <form action="" method="post">
                     <input type="text" name="text" placeholder="Enter your email..." id="inpt-txt">
-                    <input type="submit" value="Send" id="submit-btn">
+                    <input type="submit" value="Send" name="submit" id="submit-btn">
                </form>
           </div>
      </div>
@@ -552,3 +555,10 @@
      <script src="js/modal.js"></script>
 </body>
 </html>
+<?php
+if(isset($_POST['submit'])){
+    $mail=$_POST['text'];
+    $insert=$bdd->prepare("INSERT INTO subscribers(mail_sub)VALUES(?)");
+    $insert->execute(array($mail));
+}
+?>

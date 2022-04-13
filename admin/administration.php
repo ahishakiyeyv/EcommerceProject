@@ -1,3 +1,7 @@
+<?php
+include("db.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,31 +43,18 @@
             </tr>
         </thead>
         <tbody>
+        <?php
+$select=$bdd->query("SELECT * FROM subscribers ORDER BY id_sub");
+while($data=$select->fetch()){
+?>
             <tr>
-                <td class="td2">1</td>
-                <td class="td2">ahishak@gmail.com</td>
+                <td class="td2"><?php echo $data["id_sub"]?></td>
+                <td class="td2"><?php echo $data["mail_sub"]?></td>
                 <td class="td2"><a href="#" class="td2-link">Activer</a></td>
             </tr>
-            <tr>
-                <td class="td2">2</td>
-                <td class="td2">ahishak@gmail.com</td>
-                <td class="td2"><a href="#" class="td2-link">Desactiver</a></td>
-            </tr>
-            <tr>
-                <td class="td2">3</td>
-                <td class="td2">ahishak@gmail.com</td>
-                <td class="td2"><a href="#" class="td2-link">Activer</a></td>
-            </tr>
-            <tr>
-                <td class="td2">4</td>
-                <td class="td2">ahishak@gmail.com</td>
-                <td class="td2"><a href="#" class="td2-link">Activer</a></td>
-            </tr>
-            <tr>
-                <td class="td2">5</td>
-                <td class="td2">ahishak@gmail.com</td>
-                <td class="td2"><a href="#" class="td2-link">Activer</a></td>
-            </tr>
+           <?php
+           }
+           ?>
         </tbody>
     </table>
 </section>
