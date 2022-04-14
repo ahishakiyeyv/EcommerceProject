@@ -78,6 +78,16 @@ section
      background: none;
      color: var(--black);
 }
+.btn span{
+     padding:5px;
+     background:var(--white);
+     color:black;
+     border-radius:5px;
+     margin:5px 1px;
+}
+.btn:hover span{
+     border:1px solid var(--black);
+}
 
 .line-down
 {

@@ -11,14 +11,15 @@
     <header class="header">
         <a href="#" class="logo"><i class="fas fa-splotch"></i> SuitSHOP</a>
         <nav class="navbar">
-             <a href="index.html">Home</a>
-             <a href="shop.html">Shop</a>
-             <a href="about.html">About</a>
-             <a href="login.html">My Account</a>
+            <a href="dashboard.php">Dashboard</a>
+             <a href="accueil.php">Home</a>
+             <a href="shop.php">Shop</a>
+             <a href="about.php">About</a>
+             <a href="login.php">My Account</a>
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
-        <a href="#" class="btn">Chart</a>
+        <a href="#" class="btn">Cart <span>0</span></a>
    </header>
    <section class="section_1">
        <h1 class="title1">Shopping Cart</h1>
