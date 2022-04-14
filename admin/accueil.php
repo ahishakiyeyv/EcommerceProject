@@ -181,13 +181,28 @@ include("db.php");
      <section class="arrival">
           <h2 class="title-heading">New Arrivals</h2>
           <div class="flexcontainer">
+              <?php
+              if(isset($_GET["add"])){
+                  $idtoadd=$_GET["add"];
+                  $quantite=1;
+                  $insert=$bdd->query("INSERT INTO cart(quantite,Id_user,Id_pro)SELECT nom_pro,prix,photo FROM produit WHERE id_pro=$idtoadd");
+                  
+              }
+              ?>
+              <?php
+              $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
+              while($dataselect=$select->fetch()){
+              ?>
                <div class="box1">
                     <a href="#" class="pop">New</a>
-                    <img src="images/22.jpg" alt="image non disponible" class="img-arrival">
-                    <h3 class="desc">New Clothes</h3>
-                    <h2 class="prix">130$</h2>
+                    <?php
+                     echo "<img src='image/".$dataselect['photo']."' class='img-arrival' alt='image non disponible'>";
+                    ?>
+                    <!-- <img src="images/22.jpg" alt="image non disponible" class="img-arrival"> -->
+                    <h3 class="desc"><?php echo $dataselect["nom_pro"]?></h3>
+                    <h2 class="prix"><?php echo $dataselect["prix"]?></h2>
                     <p class="p-txtbox"></p>
-                    <a href="#" class="add-btn">Add to Cart</a>
+                    <a href="accueil.php?add=<?php echo $dataselect['id_pro'];?>" class="add-btn">Add to Cart</a>
                     <button id="details-btn">Details</button>
                     <div id="modal">
                         <div class="modal-content">
@@ -205,7 +220,10 @@ include("db.php");
                         </div>
                     </div>
                </div>
-               <div class="box1">
+               <?php
+              }
+               ?>
+               <!-- <div class="box1">
                     <a href="#" class="pop">New</a>
                     <img src="images/30.jpeg" alt="image non disponible" class="img-arrival">
                     <h3 class="desc">New Clothes</h3>
@@ -468,8 +486,8 @@ include("db.php");
                             </div>
                         </div>
                     </div>
-               </div>
-               </div>
+               </div> -->
+               <!-- </div> -->
           </div>
          
      </section>
