@@ -25,7 +25,7 @@
     <a href="accueil.php" class="b-link">Home</a>
         <a href="login.php" class="b-link">Login</a>
         <a href="shop.php" class="b-link">Shop</a>
-        <a href="cart.php" class="b-link">Cart</a>
+        <a href="contact.php" class="b-link">Contact</a>
     </div>
 </section>
 </body>

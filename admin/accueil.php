@@ -18,7 +18,7 @@ include("db.php");
      <header class="header">
           <a href="#" class="logo"><i class="fas fa-splotch"></i> SuitSHOP</a>
           <nav class="navbar">
-               <a href="dashboard.php">Dashboard.php</a>
+               <a href="dashboard.php">Dashboard</a>
                <a href="accueil.php">Home</a>
                <a href="shop.php">Shop</a>
                <a href="about.php">About</a>
