@@ -185,8 +185,7 @@ include("db.php");
               if(isset($_GET["add"])){
                   $idtoadd=$_GET["add"];
                   $quantite=1;
-                  $insert=$bdd->query("INSERT INTO cart(quantite,Id_user,Id_pro)SELECT nom_pro,prix,photo FROM produit WHERE id_pro=$idtoadd");
-                  
+                  $insert=$bdd->query("INSERT INTO cart(quantite,Id_user,Id_pro)SELECT nom_pro,prix,photo FROM produit WHERE id_pro=$idtoadd");  
               }
               ?>
               <?php
