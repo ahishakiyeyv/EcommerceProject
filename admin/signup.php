@@ -13,7 +13,7 @@ include("db.php");
     <title>Signup | SuitSHOP</title>
 </head>
 <body>
-    <a href="admin.php" class="bouton">Back</a>
+    <a href="dashboard.php" class="bouton">Back</a>
     <div class="wrapper">
        <section class="form signup">
            <header>Sign Up | My Account</header>

@@ -12,7 +12,7 @@ include("db.php");
     <title>My Accout | SuitSHOP</title>
 </head>
 <body>
-    <a href="admin.php" class="bouton"><i class="fa-solid fa-left"></i>Back</a>
+    <a href="dashboard.php" class="bouton"><i class="fa-solid fa-left"></i>Back</a>
     <div class="wrapper">
        <section class="form login">
            <header>My Account</header>
