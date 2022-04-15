@@ -98,6 +98,20 @@ html
      background: none;
      color: var(--black);
 }
+.btn span{
+     border:1px solid #fff;
+     color:#000;
+     background:#fff;
+     padding:5px;
+     margin:5px 1px;
+     border-radius:5px;
+
+}
+.btn:hover span{
+     border:1px solid var(--black);
+     background:#000;
+     color:#fff;
+}
 /* ===================================section 1========================================== */
 .title1{
     text-align:center;
@@ -146,4 +160,31 @@ html
      border: var(--border);
      background:var(--white);
      color:var(--black);
+}
+.remove_btn{
+     border:1px solid red;
+     border-radius:5px;
+     padding: .5rem 2rem;
+     text-decoration: none;
+     color:#fff;
+     background: red;
+     transition:0.5s ease;
+}
+.remove_btn:hover{
+     background:#fff;
+     color:red;
+}
+.deleteAll_btn{
+     font-size:2rem;
+     border:2px solid red;
+     border-radius:5px;
+     padding: .5rem 2rem;
+     text-decoration: none;
+     color:#fff;
+     background: red;
+     transition:0.5s ease;
+}
+.deleteAll_btn:hover{
+     background:#fff;
+     color:red;
 }
