@@ -95,7 +95,7 @@ if(isset($_GET['delete'])){
            </tbody>
        </table>
        <div class="order_btn">
-           <a href="order.php" class="btn <?= ($grandTotal > 1)?'':'disabled'?>">Order Now</a>
+           <a href="order.php" class="btn <?= ($grandTotal > 1)?'':'disabled'?>">CheckOut</a>
        </div>
    </section>
 </body>

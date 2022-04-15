@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Rambla&display=swap');
+*
+{
+     font-family: 'Rambla', sans-serif;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+     border: none;
+     text-decoration: none;
+}
+/* variables start */
+:root
+{
+     --gray:#a2a2a2;
+     --graye:#ececec;
+     --black: #000;
+     --blue: #cae8e3;
+     --pink: #f6e4d5;
+     --white: #fff;
+     --yellow: #ffd080;
+     --border: .2rem solid var(--black);
+}
+::-webkit-scrollbar
+     {
+          width: 1rem;
+     }
+::-webkit-scrollbar-track
+{
+     background: var(--white);
+}
+
+::-webkit-scrollbar-thumb
+{
+     background: var(--black);
+}
+html
+{
+     font-size: 62.5%;
+     overflow-x: hidden;
+     scroll-behavior: smooth;
+     scroll-padding-top: 7rem;   
+}
+.header
+{
+     position: sticky;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 1000;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background-color: var(--white);
+     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+     padding: 2rem 9%;
+}
+.logo
+     {
+          font-size: 2.5rem;
+          color: var(--black);
+     }
+
+.navbar a
+{
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: var(--black);   
+}
+
+.navbar a:hover
+{
+     text-decoration: underline;
+}
+
+#menu-btn
+{
+     display:none;
+     cursor: pointer;
+     font-size: 3rem;
+}
+.btn
+{
+     display: inline-block;
+     /* margin-top: 1rem; */
+     padding: 1rem 3rem;
+     font-size: 2rem;
+     color: var(--white);
+     background: var(--black);
+     border: var(--border);
+     cursor: pointer;
+     font-weight: bolder;
+     border-radius: .5rem;
+}
+
+.btn:hover
+{
+     background: none;
+     color: var(--black);
+}
+.btn span{
+     border:1px solid #fff;
+     color:#000;
+     background:#fff;
+     padding:5px;
+     margin:5px 1px;
+     border-radius:5px;
+
+}
+.btn:hover span{
+     border:1px solid var(--black);
+     background:#000;
+     color:#fff;
+}
