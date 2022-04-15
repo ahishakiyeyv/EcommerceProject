@@ -188,3 +188,19 @@ html
      background:#fff;
      color:red;
 }
+.order_btn{
+     text-align:center;
+     margin-top:1rem;
+}
+.order_btn a{
+     padding:10px 100px;
+     text-decoration: none;
+     font-weight:200;
+     color:#fff;
+     display:inline-block;
+     width:auto;
+}
+.order_btn a.disabled{
+     pointer-events: none;
+     opacity:.5;
+}

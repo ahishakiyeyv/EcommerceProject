@@ -62,7 +62,7 @@ if(isset($_GET['delete'])){
                <?php
                 $select=$bdd->query("SELECT * FROM cart");
                 
-                $grandTotal=0;
+                $tot=0;
                 While($data=$select->fetch()){
                ?>
                     <tr>
@@ -76,10 +76,10 @@ if(isset($_GET['delete'])){
                         </form>    
                         </td>
                         <td><?php echo $data['prixprod']?> Fbu</td>
-                        <td><?php echo $tot = number_format($data['prixprod'] * $data['Quantite']);?>Fbu</td>
+                        <td><?php echo $tot1 = number_format($data['prixprod'] * $data['Quantite']);?>Fbu</td>
                         <td><a href="cart.php?sup=<?php echo $data['id_cart'];?>" onclick="return confirm('Delete item from the cart')" class="remove_btn">Remove</a></td>
                     </tr>
-                        <?php $grandTotal += $tot;?>
+                        <?php $grandTotal = $tot += $tot1;?>
                <?php
                
                 }
@@ -94,6 +94,9 @@ if(isset($_GET['delete'])){
                </tr>
            </tbody>
        </table>
+       <div class="order_btn">
+           <a href="order.php" class="btn <?= ($grandTotal > 1)?'':'disabled'?>">Order Now</a>
+       </div>
    </section>
 </body>
 </html>
