@@ -30,7 +30,7 @@ include("db.php");
                 <h3 class="h3-form">Name:</h3>
                 <li class="li-form"><input type="text" name="nomproduit" class="inpt" placeholder="Name of the product..."></li>
                 <h3 class="h3-form">Price:</h3>
-                <li class="li-form"><input type="text" name="prix" class="inpt" placeholder="enter price..."></li>
+                <li class="li-form"><input type="number" name="prix" class="inpt" placeholder="enter price..."></li>
                 <h3 class="h3-form">Image:</h3>
                 <li class="li-form"><input type="file" name="image" class="inpt-img"></li>
                 <h3 class="h3-form">Category:</h3>
@@ -67,7 +67,7 @@ $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
             echo "<div class='recovery'>";
                 echo "<img src='image/".$dataselect['photo']."' class='img-recovery' alt='image non disponible'>";
                 echo "<h3 class='desc'>".$dataselect['nom_pro']."</h3>";
-                echo "<h2 class='price'>".$dataselect['prix']."</h2>";
+                echo "<h2 class='price'>".$dataselect['prix']." fbu</h2>";
                 echo "<div class='btn-act'>
                 <a href='#' class='btn-del'>Delete</a>
                 <a href='#' class='btn-upd'>Update</a>

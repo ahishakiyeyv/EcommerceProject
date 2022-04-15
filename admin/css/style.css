@@ -79,14 +79,18 @@ section
      color: var(--black);
 }
 .btn span{
+     border:1px solid #fff;
+     color:#000;
+     background:#fff;
      padding:5px;
-     background:var(--white);
-     color:black;
-     border-radius:5px;
      margin:5px 1px;
+     border-radius:5px;
+
 }
 .btn:hover span{
      border:1px solid var(--black);
+     background:#000;
+     color:#fff;
 }
 
 .line-down
@@ -320,10 +324,11 @@ section
  }
  .flexcontainer {
      display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(0, 1fr);
+     grid-template-columns: repeat(auto-fit,35rem);
+     gap:30px;
+     /* grid-template-rows: repeat(0, 1fr);
      grid-column-gap: 30px;
-     grid-row-gap: 50px;
+     grid-row-gap: 50px; */
      }
 .box1{
      border:1px solid black;
@@ -363,7 +368,6 @@ section
      text-align:center;
 }
 .add-btn{
-     float:left;
      font-size:15px;
      padding:5px 15px;
      margin:2px 0px;
@@ -371,6 +375,11 @@ section
      border-radius:20px;
      background:var(--black);
      color:var(--white);
+     transition:0.4s ease;
+}
+.add-btn:hover{
+     color:var(--black);
+     background:var(--white);
 }
 #details-btn{
      float:right;

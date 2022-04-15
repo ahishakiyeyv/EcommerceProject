@@ -1,5 +1,22 @@
 <?php
 include("db.php");
+if(isset($_POST['add_to_cart'])){
+    $prod_name=$_POST['nomprod'];
+    $prod_prix=$_POST['prixpro'];
+    $prod_photo=$_POST['imagepro'];
+    $prod_quantite=1;
+
+    $select=$bdd->query("SELECT * FROM cart WHERE nom_pro='$prod_name'");
+    $data=$bdd->prepare($select);
+    $data->execute(array($prod_name,$prod_prix,$prod_photo,$prod_quantite));
+    $count=$data->rowCount();
+    if($count > 0){
+        echo "<script>alert('Product already existed')</script>";
+    }else{
+        $insert=$bdd->query("INSERT INTO cart(nomprod,prixprod,photoprod,Quantite)VALUES('$prod_name','$prod_prix','$prod_photo','$prod_quantite')");
+        echo "<script>alert('Product added successfully')</script>";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,9 +41,12 @@ include("db.php");
                <a href="about.php">About</a>
                <a href="login.php">My Account</a>
           </nav>
-
+            <?php
+                $select_row=$bdd->query("SELECT * FROM cart");
+                $row=$select_row->rowCount();
+            ?>
           <div id="menu-btn" class="fas fa-bars"></div>
-          <a href="#" class="btn">Cart <span>0</span></a>
+          <a href="#" class="btn">Cart <span><?php echo $row;?></span></a>
      </header>
      <!-- header section ends -->
 
@@ -192,6 +212,7 @@ include("db.php");
               $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
               while($dataselect=$select->fetch()){
               ?>
+              <form  method="post">
                <div class="box1">
                     <a href="#" class="pop">New</a>
                     <?php
@@ -201,9 +222,15 @@ include("db.php");
                     <h3 class="desc"><?php echo $dataselect["nom_pro"]?></h3>
                     <h2 class="prix"><?php echo $dataselect["prix"]?></h2>
                     <p class="p-txtbox"></p>
-                    <a href="accueil.php?add=<?php echo $dataselect['id_pro'];?>" class="add-btn">Add to Cart</a>
-                    <button id="details-btn">Details</button>
-                    <div id="modal">
+                    <!-- <a href="accueil.php" class="add-btn">Add to Cart</a> -->
+                    
+               
+               <input type="hidden" name="nomprod" value="<?php echo $dataselect['nom_pro'];?>">
+               <input type="hidden" name="prixpro" value="<?php echo $dataselect['prix'];?>">
+               <input type="hidden" name="imagepro" value="<?php echo $dataselect['photo'];?>">
+               <input type="submit" value="Add to Cart" name="add_to_cart" class="add-btn">
+             <button id="details-btn">Details</button>
+            <div id="modal">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h2>Modal Header</h2>
@@ -217,8 +244,10 @@ include("db.php");
                                 <h3>Yvan Igor AHISHAKIYE</h3>
                             </div>
                         </div>
-                    </div>
-               </div>
+                    </div>    
+            </div>
+            </form>
+           
                <?php
               }
                ?>
