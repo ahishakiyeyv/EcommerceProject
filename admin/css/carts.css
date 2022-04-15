@@ -179,6 +179,7 @@ html
      border:2px solid red;
      border-radius:5px;
      padding: .5rem 2rem;
+     margin:2rem 0rem;
      text-decoration: none;
      color:#fff;
      background: red;
@@ -203,4 +204,7 @@ html
 .order_btn a.disabled{
      pointer-events: none;
      opacity:.5;
+}
+.td-tot{
+     height:50px;
 }

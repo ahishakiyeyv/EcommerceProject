@@ -61,8 +61,8 @@ if(isset($_GET['delete'])){
            <tbody class="tbody01">
                <?php
                 $select=$bdd->query("SELECT * FROM cart");
-                
-                $tot=0;
+                (int)$grandTotal=0;
+               (int) $tot=0;
                 While($data=$select->fetch()){
                ?>
                     <tr>
@@ -76,21 +76,21 @@ if(isset($_GET['delete'])){
                         </form>    
                         </td>
                         <td><?php echo $data['prixprod']?> Fbu</td>
-                        <td><?php echo $tot1 = number_format($data['prixprod'] * $data['Quantite']);?>Fbu</td>
+                        <td><?php echo $tot = $data['prixprod'] * $data['Quantite'];?>Fbu</td>
                         <td><a href="cart.php?sup=<?php echo $data['id_cart'];?>" onclick="return confirm('Delete item from the cart')" class="remove_btn">Remove</a></td>
                     </tr>
-                        <?php $grandTotal = $tot += $tot1;?>
+                        <?php (int)$grandTotal +=   (int) $tot;?>
                <?php
                
                 }
                ?>
                <tr>
-                   <td>Total:</td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td><?php echo $grandTotal?></td>
-                   <td><a href="cart.php?delete" onclick="return confirm('Are you sure you want to delete all ?');" class="deleteAll_btn">Delete All</a></td>
+                   <td class="td-tot">Total:</td>
+                   <td class="td-tot"></td>
+                   <td class="td-tot"></td>
+                   <td class="td-tot"></td>
+                   <td class="td-tot"><?php echo $grandTotal?>  Fbu</td>
+                   <td class="td-tot"><a href="cart.php?delete" onclick="return confirm('Are you sure you want to delete all ?');" class="deleteAll_btn">Delete All</a></td>
                </tr>
            </tbody>
        </table>
