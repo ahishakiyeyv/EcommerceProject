@@ -1,3 +1,6 @@
+<?php
+include("db.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,9 +37,9 @@
                    <p class="p-title">Name:*</p>
                    <input type="text" name="name" class="inpt-order" required>
                    <p class="p-title">Email:*</p>
-                   <input type="text" name="name" class="inpt-order" required>
+                   <input type="text" name="email" class="inpt-order" required>
                    <p class="p-title">Phone:*</p>
-                   <input type="number" name="name" class="inpt-order" required>
+                   <input type="number" name="phone" class="inpt-order" required>
                    <div class="addresse">
                        <div class="add1">
                        <p class="p-title">City:*</p>
@@ -64,11 +67,11 @@
                        </div>
                        <div class="add1">
                        <p class="p-title">Commune:*</p>
-                         <input type="text" name="name" class="inpt-add" required>
+                         <input type="text" name="commune" class="inpt-add" required>
                        </div>
                        <div class="add1">
                        <p class="p-title">Street:*</p>
-                         <input type="text" name="name" class="inpt-add" required>
+                         <input type="text" name="street" class="inpt-add" required>
                        </div>
                    </div>
                    <br>
@@ -81,3 +84,21 @@
    </section>
 </body>
 </html>
+<?php
+if(isset($_POST['submit'])){
+    $name=$_POST['name'];
+    $mail=$_POST['email'];
+    $phone=$_POST['phone'];
+    $city=$_POST['city'];
+    $commune=$_POST['commune'];
+    $street=$_POST['street'];
+    
+    $insert = $bdd ->prepare("INSERT INTO order(name_order,email_order,phone_order,city,commune,street)VALUES(?,?,?,?,?,?)");
+    $insert->execute(array($name,$mail, $phone,$city,$commune,$street));
+    if($insert){
+        echo "<script>alert('Order Registred Successfully')</script>";
+    }else{
+        echo "<script>alert('There's an error while ordering')</script>";
+    }
+}
+?>

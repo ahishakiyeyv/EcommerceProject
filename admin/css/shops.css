@@ -113,29 +113,35 @@ aside{
     position:fixed;
     top:110px;
     left:3px;
-    width:250px;
-    height:320px;
-    border:1px solid var(--black);
+    width:30rem;
+    border:var(--border);
 }
 .title{
     text-align: center;
     font-size:30px;
     color:var(--black);
     padding:20px;
+    letter-spacing: 5px;
 }
 
-.links{
-    font-size: 25px;
-    padding:15px 80px;
-    line-height: 40px;
-    color:var(--black);
-    text-align: left;
+.cat-select{
+     border:var(--border);
+     padding:.3rem 4rem;
+     font-size:2rem;
 }
-.li-links:hover{
-    transition:1s;
-    background:gray;
+.search-btn{
+ padding:.5rem 1.3rem;
+ border:var(--border);
+ background:var(--black);
+ color:var(--white);
+ font-size:15px;
+ font-weight:200;
+ border-radius:1rem;
 }
-
+.search-btn:hover{
+     background:var(--white);
+     color:var(--black);
+}
 
 /* =======================================section 1============================ */
 .shop{

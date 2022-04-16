@@ -8,7 +8,7 @@ include("db.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/shops.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Shop | SuitSHOP</title>
 </head>
@@ -29,7 +29,23 @@ include("db.php");
    <aside>
     <div class="quick-links">
         <h3 class="title">Categories</h3>
-        <ul class="ule-links">
+        <form  method="post">
+             <select name="categorie" class="cat-select">
+                  <option value="">--Category--</option>
+                  <?php 
+                         
+                         $reponse=$bdd->query("SELECT id_cat,nom_cat FROM categorie");
+                         while($data=$reponse->fetch()){
+                             ?>
+                             
+                             <option value="<?php echo $data["id_cat"]?>"><?php echo $data["nom_cat"]?></option>
+                             <?php
+                         }
+                         ?>
+             </select>
+             <input type="submit" name="search" value="Search" class="search-btn">
+        </form>
+        <!-- <ul class="ule-links">
 
             <li class="li-links"><a href="#" class="links">Suit</a></li>
             <li class="li-links"><a href="#" class="links">Jacket</a></li>
@@ -37,7 +53,7 @@ include("db.php");
             <li class="li-links"><a href="#" class="links">T-Shirt</a></li>
             <li class="li-links"><a href="#" class="links">Bags</a></li>
             <li class="li-links"><a href="#" class="links">Shoes</a></li>
-        </ul>
+        </ul> -->
     </div>
 
    </aside>
@@ -54,7 +70,7 @@ $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
         
         echo "<img src='image/".$dataselect['photo']."' class='img-div1' alt='image non disponible'>";
                 echo "<h3 class='h3-div1'>".$dataselect['nom_pro']."</h3>";
-                echo "<h2 class='h2-div1'>".$dataselect['prix']."</h2>";
+                echo "<h2 class='h2-div1'>".$dataselect['prix']."/piece</h2>";
               echo"  <a href='#' class='comment'>Commentaire</a>
                 <a href='#' class='a-div1'>Add Cart</a>";
                 
