@@ -40,7 +40,27 @@
                    <div class="addresse">
                        <div class="add1">
                        <p class="p-title">City:*</p>
-                         <input type="text" name="name" class="inpt-add" required>
+                         <!-- <input type="text" name="name" class="inpt-add" required> -->
+                         <select name="city" class="inpt-add">
+                             <option value="">--City--</option>
+                             <option value="Bujumbura mairie">Bujumbura Mairie</option>
+                             <option value="Bujumbura rural">Bujumbura Rural</option> 
+                             <option value="gitega">Gitega</option>
+                             <option value="ngozi">Ngozi</option>
+                             <option value="cibitoke">Cibitoke</option>
+                             <option value="kayanza">Kayanza</option>
+                             <option value="muyinga">Muyinga</option>
+                             <option value="cankuzo">Cankuzo</option>
+                             <option value="ruyigi">Ruyigi</option>
+                             <option value="bururi">Bururi</option>
+                             <option value="rutana">Rutana</option>
+                             <option value="rumonge">Rumonge</option>
+                             <option value="makamba">Makamba</option>
+                             <option value="bubanza">Bubanza</option>
+                             <option value="muramvya">Muramvya</option>
+                             <option value="kirundo">Kirundo</option>
+                             <option value="mwaro">Mwaro</option>
+                         </select>
                        </div>
                        <div class="add1">
                        <p class="p-title">Commune:*</p>
