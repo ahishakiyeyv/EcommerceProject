@@ -112,3 +112,67 @@ html
      background:#000;
      color:#fff;
 }
+
+/* ===================================section 11================================================ */
+
+
+.button:hover
+{
+	transform: scale(1.05) translateY(-3px);
+    box-shadow: 3px 3px 6px #38373785;
+}
+
+@media only screen and (max-width: 1000px) {
+    .card{
+        flex-direction: column;
+        width: auto;
+      
+    }
+
+    .leftside{
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+      border-top-right-radius:0;
+      border-radius:0;
+    }
+
+    .rightside{
+        width:auto;
+        border-bottom-left-radius: 1.5rem;
+        padding:0.5rem 3rem 3rem 2rem;
+      border-radius:0;
+    }
+}
+/* ===========================================section 12========================================= */
+.tit1{
+    text-align: center;
+    font-size:30px;
+    font-weight:200;
+    margin:40px 0px;
+    letter-spacing: 5px;;
+}
+.card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:30px 0px;
+}
+.leftside{
+    background:black;
+    height:400px;
+    width:30rem;
+}
+.leftside h1{
+    color:#fff;
+    text-align: center;
+    margin:10px;
+    font-size:22px;
+    font-weight:200;
+}
+.rightside{
+    background:red;
+    height:400px;
+    width:50rem;
+}
