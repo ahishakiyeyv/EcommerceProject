@@ -31,26 +31,27 @@
                <h1>Checkout</h1>
                <h2>Ordering Information</h2>
                <form method="post">
-                   <p class="p-title">Name:</p>
-                   <input type="text" name="name" class="inpt-order">
-                   <p class="p-title">Email:</p>
-                   <input type="text" name="name" class="inpt-order">
-                   <p class="p-title">Phone:</p>
-                   <input type="number" name="name" class="inpt-order">
+                   <p class="p-title">Name:*</p>
+                   <input type="text" name="name" class="inpt-order" required>
+                   <p class="p-title">Email:*</p>
+                   <input type="text" name="name" class="inpt-order" required>
+                   <p class="p-title">Phone:*</p>
+                   <input type="number" name="name" class="inpt-order" required>
                    <div class="addresse">
                        <div class="add1">
-                       <p class="p-title">City:</p>
-                   <input type="text" name="name" class="inpt-add">
+                       <p class="p-title">City:*</p>
+                         <input type="text" name="name" class="inpt-add" required>
                        </div>
                        <div class="add1">
-                       <p class="p-title">Commune:</p>
-                   <input type="text" name="name" class="inpt-add">
+                       <p class="p-title">Commune:*</p>
+                         <input type="text" name="name" class="inpt-add" required>
                        </div>
                        <div class="add1">
-                       <p class="p-title">Street:</p>
-                   <input type="text" name="name" class="inpt-add">
+                       <p class="p-title">Street:*</p>
+                         <input type="text" name="name" class="inpt-add" required>
                        </div>
                    </div>
+                   <br>
                    <input type="submit" name="submit" class="inpt-sub">
 
                </form>
