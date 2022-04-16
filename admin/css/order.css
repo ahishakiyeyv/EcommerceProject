@@ -223,4 +223,9 @@ background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 39%, rgba
 border-radius:10px;
 font-size:18px;
 color:#fff;
+cursor: pointer;
+}
+.inpt-sub:hover{
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 3px 3px 6px #38373785;
 }

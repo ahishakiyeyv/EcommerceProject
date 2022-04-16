@@ -75,7 +75,7 @@ include("db.php");
                        </div>
                    </div>
                    <br>
-                   <input type="submit" name="submit" class="inpt-sub">
+                   <input type="submit" name="submit" class="inpt-sub" value="Order Now">
 
                </form>
 

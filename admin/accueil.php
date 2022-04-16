@@ -25,7 +25,7 @@ if(isset($_POST['add_to_cart'])){
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Custom css link -->
-     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/styles.css">
      <!-- font awesome cdn link -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
      <title>Home | SuitSHOP</title>
@@ -251,271 +251,6 @@ if(isset($_POST['add_to_cart'])){
                <?php
               }
                ?>
-               <!-- <div class="box1">
-                    <a href="#" class="pop">New</a>
-                    <img src="images/30.jpeg" alt="image non disponible" class="img-arrival">
-                    <h3 class="desc">New Clothes</h3>
-                    <h2 class="prix">130$</h2>
-                    <p class="p-txtbox"></p>
-                    <a href="#" class="add-btn">Add to Cart</a>
-                    <button id="details-btn">Details</button>
-                    <div id="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2>Modal Header</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/09.jpg" alt="images non disponible">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsum tenetur, illum cumque ipsam numquam beatae placeat qui voluptates, totam vitae. Eveniet, accusantium. Numquam veritatis blanditiis adipisci, deserunt ad sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <h3>Yvan Igor AHISHAKIYE</h3>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-               <div class="box1">
-                    <a href="#" class="pop">New</a>
-                    <img src="images/17.jpg" alt="image non disponible" class="img-arrival">
-                    <h3 class="desc">New Clothes</h3>
-                    <h2 class="prix">130$</h2>
-                    <p class="p-txtbox"></p>
-                    <a href="#" class="add-btn">Add to Cart</a>
-                    <button id="details-btn">Details</button>
-                    <div id="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2>Modal Header</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/09.jpg" alt="images non disponible">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsum tenetur, illum cumque ipsam numquam beatae placeat qui voluptates, totam vitae. Eveniet, accusantium. Numquam veritatis blanditiis adipisci, deserunt ad sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <h3>Yvan Igor AHISHAKIYE</h3>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-               <div class="box1">
-                    <a href="#" class="pop">New</a>
-                    <img src="images/17.jpg" alt="image non disponible" class="img-arrival">
-                    <h3 class="desc">New Clothes</h3>
-                    <h2 class="prix">130$</h2>
-                    <p class="p-txtbox"></p>
-                    <a href="#" class="add-btn">Add to Cart</a>
-                    <button id="details-btn">Details</button>
-                    <div id="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2>Modal Header</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/09.jpg" alt="images non disponible">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsum tenetur, illum cumque ipsam numquam beatae placeat qui voluptates, totam vitae. Eveniet, accusantium. Numquam veritatis blanditiis adipisci, deserunt ad sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <h3>Yvan Igor AHISHAKIYE</h3>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-               <div class="box1">
-                    <a href="#" class="pop">New</a>
-                    <img src="images/17.jpg" alt="image non disponible" class="img-arrival">
-                    <h3 class="desc">New Clothes</h3>
-                    <h2 class="prix">130$</h2>
-                    <p class="p-txtbox"></p>
-                    <a href="#" class="add-btn">Add to Cart</a>
-                    <button id="details-btn">Details</button>
-                    <div id="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2>Modal Header</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/09.jpg" alt="images non disponible">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsum tenetur, illum cumque ipsam numquam beatae placeat qui voluptates, totam vitae. Eveniet, accusantium. Numquam veritatis blanditiis adipisci, deserunt ad sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <h3>Yvan Igor AHISHAKIYE</h3>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-               <div class="box1">
-                    <a href="#" class="pop">New</a>
-                    <img src="images/17.jpg" alt="image non disponible" class="img-arrival">
-                    <h3 class="desc">New Clothes</h3>
-                    <h2 class="prix">130$</h2>
-                    <p class="p-txtbox"></p>
-                    <a href="#" class="add-btn">Add to Cart</a>
-                        <button id="details-btn">Details</button>
-                        <div id="modal">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h2>Modal Header</h2>
-                                    <span class="close-btn">&times;</span>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="images/09.jpg" alt="images non disponible">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsum tenetur, illum cumque ipsam numquam beatae placeat qui voluptates, totam vitae. Eveniet, accusantium. Numquam veritatis blanditiis adipisci, deserunt ad sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <h3>Yvan Igor AHISHAKIYE</h3>
-                                </div>
-                            </div>
-                        </div>
-                  </div>
-               <div class="box1">
-                    <a href="#" class="pop">New</a>
-                    <img src="images/17.jpg" alt="image non disponible" class="img-arrival">
-                    <h3 class="desc">New Clothes</h3>
-                    <h2 class="prix">130$</h2>
-                    <p class="p-txtbox"></p>
-                    <a href="#" class="add-btn">Add to Cart</a>
-                    <button id="details-btn">Details</button>
-                    <div id="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2>Modal Header</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/09.jpg" alt="images non disponible">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsum tenetur, illum cumque ipsam numquam beatae placeat qui voluptates, totam vitae. Eveniet, accusantium. Numquam veritatis blanditiis adipisci, deserunt ad sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <h3>Yvan Igor AHISHAKIYE</h3>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-               <div class="box1">
-                    <a href="#" class="pop">New</a>
-                    <img src="images/17.jpg" alt="image non disponible" class="img-arrival">
-                    <h3 class="desc">New Clothes</h3>
-                    <h2 class="prix">130$</h2>
-                    <p class="p-txtbox"></p>
-                    <a href="#" class="add-btn">Add to Cart</a>
-                    <button id="details-btn">Details</button>
-                    <div id="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2>Modal Header</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/09.jpg" alt="images non disponible">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsum tenetur, illum cumque ipsam numquam beatae placeat qui voluptates, totam vitae. Eveniet, accusantium. Numquam veritatis blanditiis adipisci, deserunt ad sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <h3>Yvan Igor AHISHAKIYE</h3>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-               <div class="box1">
-                    <a href="#" class="pop">New</a>
-                    <img src="images/17.jpg" alt="image non disponible" class="img-arrival">
-                    <h3 class="desc">New Clothes</h3>
-                    <h2 class="prix">130$</h2>
-                    <p class="p-txtbox"></p>
-                    <a href="#" class="add-btn">Add to Cart</a>
-                    <button id="details-btn">Details</button>
-                    <div id="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2>Modal Header</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/09.jpg" alt="images non disponible">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsum tenetur, illum cumque ipsam numquam beatae placeat qui voluptates, totam vitae. Eveniet, accusantium. Numquam veritatis blanditiis adipisci, deserunt ad sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <h3>Yvan Igor AHISHAKIYE</h3>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-               <div class="box1">
-                    <a href="#" class="pop">New</a>
-                    <img src="images/17.jpg" alt="image non disponible" class="img-arrival">
-                    <h3 class="desc">New Clothes</h3>
-                    <h2 class="prix">130$</h2>
-                    <p class="p-txtbox"></p>
-                    <a href="#" class="add-btn">Add to Cart</a>
-                    <button id="details-btn">Details</button>
-                    <div id="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2>Modal Header</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/09.jpg" alt="images non disponible">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsum tenetur, illum cumque ipsam numquam beatae placeat qui voluptates, totam vitae. Eveniet, accusantium. Numquam veritatis blanditiis adipisci, deserunt ad sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                            </div>
-                            <div class="modal-footer">
-                                <h3>Yvan Igor AHISHAKIYE</h3>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-               <div class="box1">
-                    <a href="#" class="pop">New</a>
-                    <img src="images/17.jpg" alt="image non disponible" class="img-arrival">
-                    <h3 class="desc">New Clothes</h3>
-                    <h2 class="prix">130$</h2>
-                    <p class="p-txtbox"></p>
-                    <a href="#" class="add-btn">Add to Cart</a>
-                    <button id="details-btn">Details</button>
-                    <div id="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2>Modal Header</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/09.jpg" alt="images non disponible">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsum tenetur, illum cumque ipsam numquam beatae placeat qui voluptates, totam vitae. Eveniet, accusantium. Numquam veritatis blanditiis adipisci, deserunt ad sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <h3>Yvan Igor AHISHAKIYE</h3>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-               <div class="box1">
-                    <a href="#" class="pop">New</a>
-                    <img src="images/17.jpg" alt="image non disponible" class="img-arrival">
-                    <h3 class="desc">New Clothes</h3>
-                    <h2 class="prix">130$</h2>
-                    <p class="p-txtbox"></p>
-                    <a href="#" class="add-btn">Add to Cart</a>
-                    <button id="details-btn">Details</button>
-                    <div id="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2>Modal Header</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/09.jpg" alt="images non disponible">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsum tenetur, illum cumque ipsam numquam beatae placeat qui voluptates, totam vitae. Eveniet, accusantium. Numquam veritatis blanditiis adipisci, deserunt ad sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                            </div>
-                            <div class="modal-footer">
-                                <h3>Yvan Igor AHISHAKIYE</h3>
-                            </div>
-                        </div>
-                    </div>
-               </div> -->
-               <!-- </div> -->
           </div>
          
      </section>
@@ -539,6 +274,7 @@ if(isset($_POST['add_to_cart'])){
      <section class="payment">
           <h2 class="title-heading">Payment Methods </h2>
           <div class="payment-container">
+           
                <div class="pay">
                    <a href="#"><img src="images/visa.png" alt="images non disponible" class="pay-img"></a> 
                </div>
@@ -558,7 +294,6 @@ if(isset($_POST['add_to_cart'])){
                     <a href="#"><img src="images/apay.png" alt="images non disponible" class="pay-img"></a>
                </div>
           </div>
-
      </section>
 
      <!-- section ends -->

@@ -114,7 +114,7 @@ aside{
     top:110px;
     left:3px;
     width:30rem;
-    border:var(--border);
+    /* border:var(--border); */
 }
 .title{
     text-align: center;
