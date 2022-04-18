@@ -37,29 +37,29 @@ include("db.php");
                     $count=$select_cart->rowCount();
                     if($count>0){
                         while($fetch=$select_cart->fetch()){
-                           (int) $total_price=number_format( $fetch['prixprod'] * $fetch['Quantite']);
+                           (int) $total_price= $fetch['prixprod'] * $fetch['Quantite'];
                            (int) $grandtotal = (int)$total += (int)$total_price;
                             
                 ?>
-                    <li><?php echo $fetch['nomprod'];?>(<?php echo $fetch['Quantite'];?>)</li>
+                    <li><?php echo $fetch['nomprod'];?>: (<?php echo $fetch['Quantite'];?>)</li>
 
                 <?php
                     };
                 };
                 ?>
                 </ul>
-                <p>Grand Total : <?php (int)$grandtotal;?></p>
+                <p>Total : <?php echo (int)$grandtotal; ?> fbu</p>
            </div>
            <div class="rightside">
                <h1>Checkout</h1>
                <h2>Ordering Information</h2>
                <form method="post">
                    <p class="p-title">Name:*</p>
-                   <input type="text" name="name" class="inpt-order" required>
+                   <input type="text" name="name" class="inpt-order" placeholder="Your name..." required>
                    <p class="p-title">Email:*</p>
-                   <input type="text" name="email" class="inpt-order" required>
+                   <input type="text" name="email" class="inpt-order" placeholder="Your email..." required>
                    <p class="p-title">Phone:*</p>
-                   <input type="number" name="phone" class="inpt-order" required>
+                   <input type="number" name="phone" class="inpt-order" placeholder="Your phone number..." required>
                    <div class="addresse">
                        <div class="add1">
                        <p class="p-title">City:*</p>
@@ -87,11 +87,11 @@ include("db.php");
                        </div>
                        <div class="add1">
                        <p class="p-title">Commune:*</p>
-                         <input type="text" name="commune" class="inpt-add" required>
+                         <input type="text" name="commune" class="inpt-add" placeholder="Your commune..." required>
                        </div>
                        <div class="add1">
                        <p class="p-title">Street:*</p>
-                         <input type="text" name="street" class="inpt-add" required>
+                         <input type="text" name="street" class="inpt-add" placeholder="Your street..." required>
                        </div>
                    </div>
                    <br>
@@ -112,13 +112,41 @@ if(isset($_POST['submit'])){
     $city=$_POST['city'];
     $commune=$_POST['commune'];
     $street=$_POST['street'];
+
+    $cart_query=$bdd->query("SELECT * FROM cart");
+    (int)$price_total=0;
+    $count_cart=$cart_query->rowCount();
+    if($count_cart>0){
+        while($product_item=$cart_query->fetch()){
+            $product_name[] =$product_item['nomprod'] .' ('. $product_item['Quantite'] .' )';
+           (int) $product_price= $product_item['prixprod'] * $product_item['Quantite'];
+           (int) $price_total += (int)$product_price;
+        };
+    };
+
+    $total_product = implode(', ',$product_name);
+    $detail_query = $bdd->query("INSERT INTO orders(name_order,email_order,phone_order,city,commune,street,total_product,total_price)VALUES('$name','$mail','$phone','$city','$commune','$street','$total_product','$price_total')");
     
-    $insert = $bdd ->prepare("INSERT INTO order(name_order,email_order,phone_order,city,commune,street)VALUES(?,?,?,?,?,?)");
-    $insert->execute(array($name,$mail, $phone,$city,$commune,$street));
-    if($insert){
-        echo "<script>alert('Order Registred Successfully')</script>";
-    }else{
-        echo "<script>alert('There's an error while ordering')</script>";
+    if($cart_query && $detail_query){
+echo "
+<div class='order-message'>
+<div class='message'>
+    <h3>Thank you for shopping</h3>
+    <div class='order-detail'>
+        <span>".$total_product."</span>
+        <span class='total'>total : ".(int)$price_total." fbu</span>
+    </div>
+    <div class='customer-details'>
+        <p>your name: <span>".$name."</span></p>
+        <p>your email: <span>".$mail."</span></p>
+        <p>your phone number: <span>".$phone."</span></p>
+        <p>your address: <span>".$city.", ".$commune.", ".$street."</span></p>
+        <p>(*Pay when products arrive*)</p>
+    </div>
+    <a href='accueil.php' class='btn_check'>Continue Shopping</a>
+</div>
+</div>
+";
     }
 }
 ?>

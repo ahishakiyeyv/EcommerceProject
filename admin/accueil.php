@@ -46,7 +46,7 @@ if(isset($_POST['add_to_cart'])){
                 $row=$select_row->rowCount();
             ?>
           <div id="menu-btn" class="fas fa-bars"></div>
-          <a href="#" class="btn">Cart <span><?php echo $row;?></span></a>
+          <a href="cart.php" class="btn">Cart <span><?php echo $row;?></span></a>
      </header>
      <!-- header section ends -->
 

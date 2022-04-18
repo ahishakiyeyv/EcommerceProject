@@ -205,6 +205,7 @@ html
 .addresse{
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-top:2rem;
 }
 .add1{
@@ -218,7 +219,7 @@ html
     outline:none;
 }
 .inpt-sub{
-    margin-top:2rem;
+    margin-top:1rem;
 padding:1rem 7rem;
 background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 39%, rgba(0,212,255,1) 100%);
 border-radius:10px;
@@ -238,4 +239,81 @@ cursor: pointer;
     color:var(--white);
     font-size:2rem;
     text-align: center;
+}
+.leftside p{
+    color:var(--white);
+    font-size:2rem;
+    margin:1rem;
+}
+
+/* ===============================modal======================================== */
+
+.order-message{
+    position:fixed;
+    top:0;
+    left:0;
+    min-height:100vh;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    padding:2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1100;
+    background:var(--black);
+    width:100%;
+}
+.order-message .message{
+    width:50rem;
+    background:var(--white);
+    border-radius:.5rem;
+    padding:2rem;
+    text-align:center;
+}
+
+.order-message .message h3{
+    font-size:2.5rem;
+    color:var(--black);
+}
+.order-message .message .order-detail{
+    background:var(--black);
+    border-radius:.5rem;
+    padding:1rem;
+    margin:1rem 0;
+}
+.order-message .message .order-detail span{
+background: var(--white);
+border-radius:.5rem;
+color:var(--black);
+font-size:2rem;
+display:inline-block;
+padding:1rem 1.5rem;
+margin:1rem;
+
+}
+.order-message .message .order-detail span.total{
+    display:block;
+    background:var(--gray);
+    color:#000;
+}
+.order-message .message .customer-details{
+    margin:1.5rem 0;
+}
+.order-message .message .customer-details p{
+    padding: 1rem 0;
+    font-size:2rem;
+    color:var(--black);
+}
+.order-message .message .customer-details p span{
+    color:red;
+    padding:0 .5rem;
+    font-style: italic;
+}
+.btn_check{
+    padding:1.5rem 10rem;
+    border-radius:.5rem;
+    font-size:1.6rem;
+    color:var(--white);
+    background: var(--black);
+    margin:1rem;
 }
