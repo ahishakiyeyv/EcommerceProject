@@ -274,7 +274,6 @@ if(isset($_POST['add_to_cart'])){
      <section class="payment">
           <h2 class="title-heading">Payment Methods </h2>
           <div class="payment-container">
-           
                <div class="pay">
                    <a href="#"><img src="images/visa.png" alt="images non disponible" class="pay-img"></a> 
                </div>

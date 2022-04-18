@@ -218,6 +218,7 @@ html
     outline:none;
 }
 .inpt-sub{
+    margin-top:2rem;
 padding:1rem 7rem;
 background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 39%, rgba(0,212,255,1) 100%);
 border-radius:10px;
@@ -226,6 +227,15 @@ color:#fff;
 cursor: pointer;
 }
 .inpt-sub:hover{
-    transform: scale(1.05) translateY(-3px);
     box-shadow: 3px 3px 6px #38373785;
+}
+
+
+/* ==========================order summary============================================= */
+
+.leftside ul li{
+    margin-top:2rem;
+    color:var(--white);
+    font-size:2rem;
+    text-align: center;
 }

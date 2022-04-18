@@ -7,7 +7,7 @@ include("db.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/orders.css">
     <title>Order | SuitSHOP</title>
 </head>
 <body>
@@ -29,6 +29,26 @@ include("db.php");
        <div class="card">
            <div class="leftside">
                 <h1>Order-Summary</h1>
+                <ul>
+                <?php
+                    $select_cart=$bdd->query("SELECT * FROM cart");
+                   (int) $total=0;
+                   (int) $grandtotal=0;
+                    $count=$select_cart->rowCount();
+                    if($count>0){
+                        while($fetch=$select_cart->fetch()){
+                           (int) $total_price=number_format( $fetch['prixprod'] * $fetch['Quantite']);
+                           (int) $grandtotal = (int)$total += (int)$total_price;
+                            
+                ?>
+                    <li><?php echo $fetch['nomprod'];?>(<?php echo $fetch['Quantite'];?>)</li>
+
+                <?php
+                    };
+                };
+                ?>
+                </ul>
+                <p>Grand Total : <?php (int)$grandtotal;?></p>
            </div>
            <div class="rightside">
                <h1>Checkout</h1>
