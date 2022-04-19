@@ -25,7 +25,7 @@ if(isset($_POST['add_to_cart'])){
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Custom css link -->
-     <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/style.css">
      <!-- font awesome cdn link -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
      <title>Home | SuitSHOP</title>
@@ -39,6 +39,7 @@ if(isset($_POST['add_to_cart'])){
                <a href="accueil.php">Home</a>
                <a href="shop.php">Shop</a>
                <a href="about.php">About</a>
+               <a href="about.php">Contact</a>
                <a href="login.php">My Account</a>
           </nav>
             <?php
@@ -288,9 +289,6 @@ if(isset($_POST['add_to_cart'])){
                </div>
                <div class="pay">
                    <a href="#"><img src="images/amazonpay.png" alt="images non disponible" class="pay-img"></a> 
-               </div>
-               <div class="pay">
-                    <a href="#"><img src="images/apay.png" alt="images non disponible" class="pay-img"></a>
                </div>
           </div>
      </section>

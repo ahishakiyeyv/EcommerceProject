@@ -161,7 +161,7 @@ html
 }
 .leftside{
     background:black;
-    height:400px;
+    height:500px;
     width:30rem;
 }
 .leftside h1{
@@ -172,7 +172,7 @@ html
     font-weight:200;
 }
 .rightside{
-    height:400px;
+    height:500px;
     width:40rem;
     border:1px solid #000;
 }
@@ -221,13 +221,15 @@ html
 .inpt-sub{
     margin-top:1rem;
 padding:1rem 7rem;
-background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 39%, rgba(0,212,255,1) 100%);
+background: var(--black);
 border-radius:10px;
 font-size:18px;
 color:#fff;
 cursor: pointer;
 }
 .inpt-sub:hover{
+    background: var(--graye);
+    color:var(--black);
     box-shadow: 3px 3px 6px #38373785;
 }
 
