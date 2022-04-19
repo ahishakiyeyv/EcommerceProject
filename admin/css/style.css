@@ -713,6 +713,18 @@ footer{
           margin: 0;
           padding: 1.5rem 2rem;
      }
+     .flex-container{
+          display:flex;
+          flex-wrap:wrap;
+          justify-content: center;
+          align-items: center;
+     }
+     .footer-container{
+          display:flex;
+          flex-wrap:wrap;
+          justify-content: center;
+          align-items: center;
+     }
 }
 
 @media (max-width: 450px)
@@ -723,6 +735,10 @@ footer{
      .heading h1
      {
           font-size: 3rem;
+     }
+     .footer-container{
+          display:flex;
+          flex-wrap:wrap;
      }
 }
 
