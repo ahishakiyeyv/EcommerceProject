@@ -126,7 +126,7 @@ html
      background:black;
 }
 .thead01 th{
-     padding:20px 80px;
+     padding:10px 80px;
      color:#fff;
      font-size:20px;
      text-transform: capitalize;
@@ -200,6 +200,7 @@ html
      color:#fff;
      display:inline-block;
      width:auto;
+     margin:2rem;
 }
 .order_btn a.disabled{
      pointer-events: none;
@@ -207,4 +208,93 @@ html
 }
 .td-tot{
      height:50px;
+}
+/* ====================================footer========================= */
+footer{
+     background: var(--black);
+}
+.footer-container{
+     display:flex;
+     flex-wrap: nowrap;
+     justify-content: space-between;
+     align-items: flex-start;
+     align-content: center;
+     flex-direction: row;
+}
+.footer-box1{
+     width:300px;
+     margin:30px;
+}
+.footer-box1 p{
+     color:var(--gray);
+     text-align: justify;
+     font-size:14px;
+}
+.footer-box2{
+     width:300px;
+     margin:30px;
+}
+.footer-box2 ul{
+     color:var(--gray);
+     font-size:14px;
+}
+.footer-box2 ul li{
+     text-align: center;
+     list-style-type: none;
+     line-height: 30px;
+}
+.footer-box3{
+     width:300px;
+     margin:30px;
+}
+.footer-box3 ul{
+     color:var(--gray);
+     font-size:14px;
+}
+.footer-box3 ul li{
+     text-align: center;
+     list-style-type: none;
+     line-height: 30px;
+}
+.footer-box4{
+     width:300px;
+     margin:30px;
+}
+.footer-box4 ul {
+     color: var(--gray);
+     font-size:14px;
+     text-align:center;
+}
+.p-form{
+     color:var(--gray);
+     font-size:14px;
+     margin-bottom: 40px;
+}
+#inpt-txt{
+     height:40px;
+     width:200px;
+     border-top:0;
+     border-left:0;
+     border-right:0;
+     border-bottom:2px solid var(--white);
+     outline:none;
+     background: var(--black);
+}
+#submit-btn{
+     width:50px;
+     height:40px;
+     border-radius:15px;
+}
+.h3-ttle{
+     color:var(--white);
+     text-align: center;
+     font-size:18px;
+     margin:0px 20px 20px 0px;
+}
+
+.copy{
+     text-align: center;
+     color:var(--gray);
+     font-size:15px;
+     padding:10px;
 }

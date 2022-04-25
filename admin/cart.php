@@ -25,7 +25,7 @@ if(isset($_GET['delete'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/carts.css">
+    <link rel="stylesheet" href="css/cart.css">
     <title>Cart | SuitSHOP</title>
 </head>
 <body>
@@ -98,5 +98,40 @@ if(isset($_GET['delete'])){
            <a href="order.php" class="btn <?= ($grandTotal > 1)?'':'disabled'?>">CheckOut</a>
        </div>
    </section>
+   <footer>
+     <div class="footer-container">
+          <div class="footer-box1">
+               <h3 class="h3-ttle">SuitSHOP</h3>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quos quas, dolore architecto iure illo voluptatum sequi suscipit facere quod soluta .</p>
+          </div>
+          <div class="footer-box2">
+               <h3 class="h3-ttle">Shopping</h3>
+               <ul>
+                    <li>clothing store</li>
+                    <li>Treding suit</li>
+                    <li>accessories</li>
+                    <li>Sale</li>
+               </ul>
+          </div>
+          <div class="footer-box3">
+               <h3 class="h3-ttle">Quick Links</h3>
+               <ul>
+                    <li>Contact Us</li>
+                    <li>Payment Method</li>
+                    <li>Delivery</li>
+                    <li>Return & Exchange</li>
+               </ul>
+          </div>
+          <div class="footer-box4">
+               <h3 class="h3-ttle">NewsLetter</h3>
+               <p class="p-form">Be the first to know about new arrivals, look books, sales & promos!</p>
+               <form action="" method="post">
+                    <input type="text" name="text" placeholder="Enter your email..." id="inpt-txt">
+                    <input type="submit" value="Send" name="submit" id="submit-btn">
+               </form>
+          </div>
+     </div>
+     <p class="copy">&copy 2022 All Right Reserved | </p>
+</footer>
 </body>
 </html>
