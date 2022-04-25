@@ -8,7 +8,7 @@ include("db.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/producte.css">
+    <link rel="stylesheet" href="css/product.css">
     <title>Product | SuitSHOP</title>
 </head>
 <body>
@@ -55,16 +55,19 @@ include("db.php");
 </section>
 <?php 
 $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
-
+if(isset($_GET['sup'])){
+    $idtodelete=$_GET['sup'];
+    $delete=$bdd->exec("DELETE FROM produit WHERE id_pro=$idtodelete");
+}
 ?>
 <section class="section2">
     <h1 class="title02">Recovery</h1>
     <div class="box-recovery">
         <?php
-        while($dataselect=$select->fetch()){
+        while($dataselect=$select->fetch()){?>
         
            
-            echo "<div class='recovery'>";
+            <!-- echo "<div class='recovery'>";
                 echo "<img src='image/".$dataselect['photo']."' class='img-recovery' alt='image non disponible'>";
                 echo "<h3 class='desc'>".$dataselect['nom_pro']."</h3>";
                 echo "<h2 class='price'>".$dataselect['prix']." fbu</h2>";
@@ -72,8 +75,17 @@ $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
                 <a href='#' class='btn-del'>Delete</a>
                 <a href='#' class='btn-upd'>Update</a>
                 </div>";
-            echo "</div>";
-  
+            echo "</div>"; -->
+            <div class="recovery">
+                <img src="image/<?php echo $dataselect['photo'];?>" alt="image non disponible" class="img-recovery">
+                <h3 class="desc"><?php echo $dataselect['nom_pro'];?></h3>
+                <h2 class="price"><?php echo $dataselect['prix']?> fbu</h2>
+                <div class="btn-act">
+                    <a href="product.php?sup=<?php echo $dataselect['id_pro'];?>" class="btn-del">Delete</a>
+                    <a href="#" class="btn-upd">Update</a>
+                </div>
+            </div>
+  <?php
         }
             ?>
     </div>

@@ -51,6 +51,10 @@ include("db.php");
 </section>
 <?php
 $select=$bdd->query("SELECT * FROM administrator ORDER BY id_admin");
+if(isset($_GET['sup'])){
+    $idtodelete=$_GET['sup'];
+    $delete=$bdd->exec("DELETE FROM administrator WHERE id_admin=$idtodelete");
+}
 ?>
 <section class="rec-form">
     <h1 class="title003">Recovery</h1>
@@ -74,7 +78,7 @@ $select=$bdd->query("SELECT * FROM administrator ORDER BY id_admin");
                 <td class="td01"><?php echo $data['email_admin']?></td>
                 <td class="td01"><?php echo $data['password_admin']?></td>
                 <td class="td01-link"><a href="#">Activate</a></td>
-                <td class="td01-lin"><a href="#">Delete</a></td>
+                <td class="td01-lin"><a href="administrator.php?sup=<?php echo $data['id_admin'];?>">Delete</a></td>
             </tr>
         </tbody>
         <?php
@@ -91,9 +95,10 @@ $select=$bdd->query("SELECT * FROM administrator ORDER BY id_admin");
         $password=md5($_POST['motdepasse']);
         $insert=$bdd->prepare("INSERT INTO administrator(username,email_admin,password_admin)VALUES(?,?,?)");
         $insert->execute(array($username,$mail,$password));
-
+if($insert ){
         echo "<script>alert('admin added successfully !!')</script>";
     }else{
         echo "<script>alert('Please Try Again !!')</script>";
     }
+}
 ?>
