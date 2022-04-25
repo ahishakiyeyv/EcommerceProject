@@ -47,6 +47,10 @@ include("db.php");
 </section>
 <?php
 $select=$bdd->query("SELECT * FROM categorie ORDER BY id_cat");
+if(isset($_GET['sup'])){
+    $idtodelete=$_GET['sup'];
+    $delete=$bdd->exec("DELETE FROM categorie WHERE id_cat=$idtodelete");
+}
 ?>
 <section class="section02">
     <h1 class="title-reco">Recovery</h1>
@@ -66,7 +70,7 @@ $select=$bdd->query("SELECT * FROM categorie ORDER BY id_cat");
             <tr>
                 <td class="td01"><?php echo $dataselect["id_cat"]?></td>
                 <td class="td01"><?php echo $dataselect["nom_cat"]?></td>
-                <td class="td01"><a href="#" class="delete">Delete</a></td>
+                <td class="td01"><a href="category.php?sup=<?php echo $dataselect['id_cat'];?>" class="delete">Delete</a></td>
                 <td class="td01"><a href="#" class="update">Update</a></td>
 
             </tr>
@@ -83,8 +87,10 @@ if(isset($_POST["submit"])){
     $categorie=$_POST["categorie"];
     $insert=$bdd->prepare("INSERT INTO categorie(nom_cat)VALUES(?)");
     $insert->execute(array($categorie));
+    if($insert){
     echo "<script>alert('Category added successfully')</script>";
 }else{
     echo "<script>alert('Data error!')</script>";
+}
 }
 ?>
