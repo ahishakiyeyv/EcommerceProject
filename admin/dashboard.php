@@ -1,9 +1,17 @@
-
+<?php
+include("db.php");
+$select=$bdd->query("SELECT count(id_user) as Nombre FROM user");
+$selectuser=$select->fetch();
+$selectorder=$bdd->query("SELECT count(id_order)AS Nombre FROM orders");
+$selectOrders=$selectorder->fetch();
+$selectproduct=$bdd->query("SELECT count(id_pro)AS Nombre FROM produit");
+$product=$selectproduct->fetch();
+?>
 <!Doctype HTML>
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="css/dashboard.css" type="text/css"/>
+	<link rel="stylesheet" href="css/dashboards.css" type="text/css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Dashboard | SuitSHOP</title>
 </head>
@@ -31,7 +39,7 @@
 	<div class="col-div-6">
 	<div class="profile">
 
-		<img src="images/user.png" class="pro-img" />
+		<img src="images/200.jpg" class="pro-img" />
 		<p>Manoj Adhikari <span>ADMIN</span></p>
 	</div>
 </div>
@@ -43,19 +51,19 @@
 	
 	<div class="col-div-3">
 		<div class="box">
-			<p>67<br/><span>Customers</span></p>
+			<p><?php echo $selectuser['Nombre'] ?><br/><span>Customers</span></p>
 			<i class="fa fa-users box-icon"></i>
 		</div>
 	</div>
 	<div class="col-div-3">
 		<div class="box">
-			<p>88<br/><span>Products</span></p>
+			<p><?php echo $product['Nombre'];?><br/><span>Products</span></p>
 			<i class="fa fa-list box-icon"></i>
 		</div>
 	</div>
 	<div class="col-div-3">
 		<div class="box">
-			<p>99<br/><span>Orders</span></p>
+			<p><?php echo $selectOrders['Nombre'];?><br/><span>Orders</span></p>
 			<i class="fa fa-shopping-bag box-icon"></i>
 		</div>
 	</div>
@@ -70,7 +78,7 @@
 	<div class="col-div-8">
 		<div class="box-8">
 		<div class="content-box">
-			<p>Administrator <span>Sell All</span></p>
+			<p>Administrator <span>See All</span></p>
 			<br/>
 			<table>
   <tr>
@@ -108,7 +116,7 @@
 	<div class="col-div-4">
 		<div class="box-4">
 		<div class="content-box">
-			<p>Total Sale <span>Sell All</span></p>
+			<p>Total Sale <span>See All</span></p>
 
 			<div class="circle-wrap">
     <div class="circle">
