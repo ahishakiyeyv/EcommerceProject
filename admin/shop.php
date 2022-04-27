@@ -8,25 +8,28 @@ include("db.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/shops.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Shop | SuitSHOP</title>
+    <title>Shop | FashionSHOP</title>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"><i class="fas fa-splotch"></i> SuitSHOP</a>
-        <nav class="navbar">
-             <a href="dashboard.php">Dashboard</a>
-             <a href="accueil.php">Home</a>
-             <a href="shop.php">Shop</a>
-             <a href="about.php">About</a>
-             <a href="contact.php">Contact</a>
-             <a href="login.php">My Account</a>
-        </nav>
-
-        <div id="menu-btn" class="fas fa-bars"></div>
-        <a href="#" class="btn">Cart <span>0</span></a>
-   </header>
+<header class="header">
+          <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
+          <nav class="navbar">
+               <a href="dashboard.php">Dashboard</a>
+               <a href="accueil.php">Home</a>
+               <a href="shop.php">Shop</a>
+               <a href="about.php">About</a>
+               <a href="contact.php">Contact</a>
+               <a href="login.php">My Account</a>
+          </nav>
+            <?php
+                $select_row=$bdd->query("SELECT * FROM cart");
+                $row=$select_row->rowCount();
+            ?>
+          <div id="menu-btn" class="fas fa-bars"></div>
+          <a href="cart.php" class="btn">Cart <span><?php echo $row;?></span></a>
+     </header>
    <aside>
     <div class="quick-links">
         <h3 class="title">Categories</h3>

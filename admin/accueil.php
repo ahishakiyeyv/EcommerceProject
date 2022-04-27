@@ -28,12 +28,12 @@ if(isset($_POST['add_to_cart'])){
      <link rel="stylesheet" href="css/style.css">
      <!-- font awesome cdn link -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-     <title>Home | SuitSHOP</title>
+     <title>Home | FashionSHOP</title>
 </head>
 <body> 
      <!-- header section starts -->
      <header class="header">
-          <a href="#" class="logo"><i class="fas fa-splotch"></i> SuitSHOP</a>
+          <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
           <nav class="navbar">
                <a href="dashboard.php">Dashboard</a>
                <a href="accueil.php">Home</a>

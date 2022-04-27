@@ -13,12 +13,12 @@ $product=$selectproduct->fetch();
 	<title></title>
 	<link rel="stylesheet" href="css/dashboards.css" type="text/css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Dashboard | SuitSHOP</title>
+    <title>Dashboard | FashionSHOP</title>
 </head>
 <body>
 	
 	<div id="mySidenav" class="sidenav">
-	<p class="logo"><span>E-</span>SuitSHOP</p>
+	<p class="logo"><span>E-</span>FashionSHOP</p>
   <a href="dashboard.php" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
   <a href="customer.php"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Customers</a>
   <a href="administration.php"class="icon-a"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Administration</a>

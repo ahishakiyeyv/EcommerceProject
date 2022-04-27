@@ -10,7 +10,7 @@ include("db.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Signup | SuitSHOP</title>
+    <title>Signup | FashionSHOP</title>
 </head>
 <body>
     <a href="dashboard.php" class="bouton">Back</a>

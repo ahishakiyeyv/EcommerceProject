@@ -8,13 +8,13 @@ include("db.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/contacts.css">
-    <title>Contact | SuitSHOP</title>
+    <title>Contact | FashionSHOP</title>
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
 <header class="header">
-          <a href="#" class="logo"><i class="fas fa-splotch"></i> SuitSHOP</a>
+          <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
           <nav class="navbar">
                <a href="dashboard.php">Dashboard</a>
                <a href="accueil.php">Home</a>
@@ -162,6 +162,8 @@ include("db.php");
 
 
      <!-- JavaScript link -->
-    
+    <?php
+    include("livechat.php");
+    ?>
 </body>
 </html>
