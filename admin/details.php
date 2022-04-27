@@ -33,5 +33,35 @@ include("db.php");
           <a href="cart.php" class="btn">Cart <span><?php echo $row;?></span></a>
      </header>
      <!-- header section ends -->
+
+     <section class="section-details">
+         <h1 class="titleDetails">Details</h1>
+         <div class="container-details">
+             <div class="img-details">
+                <img src="image/<?php echo $data['photo'];?>" alt="image non disponible" class="img1">
+             </div>
+             <div class="desc-details">
+                    <h2 class="titledesc">T-shirt</h2>
+                    <div class="rating">
+                        <span class="fa fa-star fa-3x checked"></span>
+                        <span class="fa fa-star fa-3x checked"></span>
+                        <span class="fa fa-star fa-3x checked"></span>
+                        <span class="fa fa-star fa-3x"></span>
+                        <span class="fa fa-star fa-3x"></span>
+                    </div>
+                    <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem assumenda doloremque illo reiciendis rem aperiam dolores quis, asperiores obcaecati, commodi et iure distinctio voluptas laudantium laboriosam deleniti minima totam eveniet.</p>
+                    <div class="icon">
+                        <a href="#" class="btn-add">Add to Cart</a>
+                        <a href="#" class="like">Like</a>
+                    </div>
+                    <div class="avis">
+                        <form  method="post">
+                            <textarea name="" id="" cols="20" rows="10"></textarea>
+                            <input type="submit" value="Commenter">
+                        </form>
+                    </div>
+             </div>
+         </div>
+     </section>
 </body>
 </html>
