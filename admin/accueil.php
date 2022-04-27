@@ -25,7 +25,7 @@ if(isset($_POST['add_to_cart'])){
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Custom css link -->
-     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/styles.css">
      <!-- font awesome cdn link -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
      <title>Home | FashionSHOP</title>
@@ -230,8 +230,9 @@ if(isset($_POST['add_to_cart'])){
                <input type="hidden" name="prixpro" value="<?php echo $dataselect['prix'];?>">
                <input type="hidden" name="imagepro" value="<?php echo $dataselect['photo'];?>">
                <input type="submit" value="Add to Cart" name="add_to_cart" class="add-btn">
-             <button id="details-btn">Details</button>
-            <div id="modal">
+             <!-- <button id="details-btn">Details</button> -->
+             <a href="details.php?det=<?php echo $dataselect['id_pro'];?>" id="details-btn">Details</a>
+            <!-- <div id="modal">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h2>Modal Header</h2>
@@ -245,7 +246,8 @@ if(isset($_POST['add_to_cart'])){
                                 <h3>Yvan Igor AHISHAKIYE</h3>
                             </div>
                         </div>
-                    </div>    
+                    </div>     -->
+
             </div>
             </form>
            
