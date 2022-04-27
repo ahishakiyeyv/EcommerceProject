@@ -35,6 +35,9 @@ include("db.php");
        </section>
     </div>
     <script src="js/pass-show-hide.js"></script>
+    <?php
+    include("livechat.php");
+    ?>
 </body>
 </html>
 <?php

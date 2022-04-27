@@ -116,5 +116,8 @@ $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
     </div>
     <p class="copy">&copy 2022 All Right Reserved | </p>
 </footer>
+<?php
+include("livechat.php");
+?>
 </body>
 </html>
