@@ -42,22 +42,24 @@ include("db.php");
              </div>
              <div class="desc-details">
                     <h2 class="titledesc">T-shirt</h2>
+                    <h3 class="stitle">New Arrival</h3>
                     <div class="rating">
-                        <span class="fa fa-star fa-3x checked"></span>
-                        <span class="fa fa-star fa-3x checked"></span>
-                        <span class="fa fa-star fa-3x checked"></span>
-                        <span class="fa fa-star fa-3x"></span>
-                        <span class="fa fa-star fa-3x"></span>
+                        <span class="fa fa-star fa-2x checked"></span>
+                        <span class="fa fa-star fa-2x checked"></span>
+                        <span class="fa fa-star fa-2x checked"></span>
+                        <span class="fa fa-star fa-2x"></span>
+                        <span class="fa fa-star fa-2x"></span>
                     </div>
                     <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem assumenda doloremque illo reiciendis rem aperiam dolores quis, asperiores obcaecati, commodi et iure distinctio voluptas laudantium laboriosam deleniti minima totam eveniet.</p>
+                    <h2 class="prix">105000 fbu</h2>
                     <div class="icon">
                         <a href="#" class="btn-add">Add to Cart</a>
                         <a href="#" class="like">Like</a>
                     </div>
                     <div class="avis">
                         <form  method="post">
-                            <textarea name="" id="" cols="20" rows="10"></textarea>
-                            <input type="submit" value="Commenter">
+                            <textarea name="" id="" cols="60" rows="3"></textarea><br>
+                            <input type="submit" value="Commenter" class="btn-submit">
                         </form>
                     </div>
              </div>
