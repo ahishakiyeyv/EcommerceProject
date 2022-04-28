@@ -82,32 +82,23 @@ $product=$selectproduct->fetch();
 			<br/>
 			<table>
   <tr>
-    <th>Username</th>
+    <th>FirstName</th>
+    <th>LastName</th>
     <th>Email</th>
-    <th>Country</th>
   </tr>
+  <?php
+      $selectUsers=$bdd->query("SELECT * FROM user ORDER BY id_user");
+      while($dataUser=$selectUsers->fetch()){
+      ?>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
+    <td><?php echo $dataUser['nom_user'];?></td>
+    <td><?php echo $dataUser['prenom_user'];?></td>
+    <td><?php echo $dataUser['email_user'];?></td>
   </tr>
-  <!-- <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr> -->
-  
-  
+  <?php
+      }
+  ?>
+
 </table>
 		</div>
 	</div>

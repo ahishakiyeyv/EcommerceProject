@@ -130,6 +130,7 @@ body{
 }
 .content-box{
 	padding: 20px;
+  overflow: auto;
 }
 .content-box p{
 	margin: 0px;
