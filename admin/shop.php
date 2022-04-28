@@ -95,7 +95,7 @@ $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
    <footer>
     <div class="footer-container">
          <div class="footer-box1">
-              <h3 class="h3-ttle">SuitSHOP</h3>
+              <h3 class="h3-ttle">FashionSHOP</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quos quas, dolore architecto iure illo voluptatum sequi suscipit facere quod soluta .</p>
          </div>
          <div class="footer-box2">
