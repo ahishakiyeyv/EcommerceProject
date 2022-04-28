@@ -7,7 +7,7 @@ include("db.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/contact.css">
     <title>Contact | FashionSHOP</title>
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
@@ -28,7 +28,7 @@ include("db.php");
                 $row=$select_row->rowCount();
             ?>
           <div id="menu-btn" class="fas fa-bars"></div>
-          <a href="cart.php" class="btn">Cart <span><?php echo $row;?></span></a>
+          <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span><?php echo $row;?></span></a>
      </header>
 
 <form action="" method="POST">

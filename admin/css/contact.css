@@ -82,11 +82,9 @@ html
 {
      display: inline-block;
      /* margin-top: 1rem; */
-     padding: 1rem 3rem;
-     font-size: 2rem;
-     color: var(--white);
-     background: var(--black);
-     border: var(--border);
+     padding: 0.5rem 1rem;
+     /* font-size: 2rem; */
+     border: 1px solid Black;
      cursor: pointer;
      font-weight: bolder;
      border-radius: .5rem;
@@ -94,19 +92,21 @@ html
 
 .btn:hover
 {
-     background: none;
+     background:var(--graye);
      color: var(--black);
 }
 .btn span{
-     padding:5px;
-     background:var(--white);
-     color:black;
+     position:relative;
+     left:1px;
+     top:1px;
+     font-size:1.5rem;
+     /* padding:1px; */
+     color:#000;;
      border-radius:5px;
-     margin:5px 1px;
+     /* margin:5px 1px; */
+
 }
-.btn:hover span{
-     border:1px solid var(--black);
-}
+
 
 /* ========================================contact form====================================== */
 .container{

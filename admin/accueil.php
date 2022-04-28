@@ -25,7 +25,7 @@ if(isset($_POST['add_to_cart'])){
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Custom css link -->
-     <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/style.css">
      <!-- font awesome cdn link -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
      <title>Home | FashionSHOP</title>
@@ -47,7 +47,7 @@ if(isset($_POST['add_to_cart'])){
                 $row=$select_row->rowCount();
             ?>
           <div id="menu-btn" class="fas fa-bars"></div>
-          <a href="cart.php" class="btn">Cart <span><?php echo $row;?></span></a>
+          <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span><?php echo $row;?></span></a>
      </header>
      <!-- header section ends -->
 
@@ -59,7 +59,7 @@ if(isset($_POST['add_to_cart'])){
           <div class="content">
                <h3><span class="line-down">Clothing</span> Collections 2022</h3>
                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio ipsam eum aut sint dolorem quae. Quis reprehenderit dolore minus dolor quidem obcaecati in doloribus nam, inventore vero velit ducimus praesentium!</p>
-               <a href="#" class="btn">Explore Now</a>
+               <a href="#" class="btn-index">Explore Now</a>
           </div>
      </section>
 
