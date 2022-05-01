@@ -27,16 +27,16 @@ if(isset($_GET['delete'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/cart.css">
-    <title>Cart | SuitSHOP</title>
+    <title>Cart | FashionSHOP</title>
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo"><i class="fas fa-splotch"></i> SuitSHOP</a>
         <nav class="navbar">
-            <a href="dashboard.php">Dashboard</a>
-             <a href="accueil.php">Home</a>
+             <a href="index.php">Home</a>
              <a href="shop.php">Shop</a>
              <a href="about.php">About</a>
+             <a href="contact.php">Contact</a>
              <a href="login.php">My Account</a>
         </nav>
         <?php

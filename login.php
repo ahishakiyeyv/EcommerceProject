@@ -9,10 +9,10 @@ include("db.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>My Accout | FashionSHOP</title>
+    <title>My Account | FashionSHOP</title>
 </head>
 <body>
-    <a href="dashboard.php" class="bouton"><i class="fa-solid fa-left"></i>Back</a>
+    <a href="index.php" class="bouton"><i class="fa-solid fa-left"></i>Back</a>
     <div class="wrapper">
        <section class="form login">
            <header>My Account</header>
