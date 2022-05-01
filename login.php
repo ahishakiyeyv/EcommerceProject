@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("db.php");
 ?>
 <!DOCTYPE html>
@@ -49,7 +50,8 @@ include("db.php");
         $datauser->execute(array('mail'=>$mail,'motdepasse'=>$password ));
         $count=$datauser->rowCount();
         if($count >0){
-            header("location:dashboard.php");
+            $_SESSION['mail']=$mail;
+            header("location:index.php");
         }
         else{
            echo "<script>alert('Email or Password are Invalid!')</script>";

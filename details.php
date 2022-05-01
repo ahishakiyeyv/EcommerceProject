@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("db.php");
 ?>
 <!DOCTYPE html>
@@ -22,7 +23,18 @@ include("db.php");
                <a href="shop.php">Shop</a>
                <a href="about.php">About</a>
                <a href="contact.php">Contact</a>
-               <a href="login.php">My Account</a>
+               <?php
+               if(isset($_SESSION['mail']) && !empty($_SESSION['mail'])){
+               ?>
+               
+               <a href="logout.php"><?php echo $_SESSION['mail']?> | <img src="images/shutdown_20px.png" alt="image non disponible"></a>
+               <?php
+               }else{
+                   ?>
+                   <a href="login.php">My Account</a>
+                   <?php
+               }
+               ?>
           </nav>
             <?php
                 $select_row=$bdd->query("SELECT * FROM cart");
