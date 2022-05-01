@@ -10,7 +10,8 @@ if(isset($_POST["btn_update"])){
 };
 if(isset($_GET['sup'])){
     $idtodelete=$_GET['sup'];
-    $remove=$bdd->exec("DELETE FROM cart WHERE id_cart='$idtodelete'");
+    $remove=$bdd->query("INSERT INTO cartloss(nomprod,prixprod,photoprod,Quantite)SELECT nomprod,prixprod,photoprod,Quantite FROM cart WHERE id_cart='$idtodelete'");
+    $deletecart=$bdd->exec("DELETE FROM cart WHERE id_cart=$idtodelete");
     header("location:cart.php");
 };
 if(isset($_GET['delete'])){
