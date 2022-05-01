@@ -1,19 +1,23 @@
+<?php
+include("db.php");
+?>
+
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Signup | SuitSHOP</title>
+    <title>Signup | FashionSHOP</title>
 </head>
 <body>
-    <a href="index.html" class="bouton">Back</a>
+    <a href="dashboard.php" class="bouton">Back</a>
     <div class="wrapper">
        <section class="form signup">
            <header>Sign Up | My Account</header>
-           <form action="#" enctype="multipart/form-data">
+           <form  method="POST">
                <div class="error-txt"></div>
                <div class="name-details">
                    <div class="field input">
@@ -31,17 +35,32 @@
                    </div>
                    <div class="field input">
                         <label>Password</label>
-                        <input type="password" name="password" placeholder="Enter new password" required>
+                        <input type="password" name="motdepasse" placeholder="Enter new password" required>
                         <i class="fas fa-eye"></i>
                    </div>
                    <div class="field button">
-                       <input type="submit" value="Continue to Shop">
+                       <input type="submit" value="Continue to Shop" name="submit">
                    </div>
            </form>
-           <div class="link">Already signed up? <a href="login.html">Login now</a></div>
+           <div class="link">Already signed up? <a href="login.php">Login now</a></div>
        </section>
     </div>
     <script src="js/pass-show-hide.js"></script>
-    <script src="js/signup.js"></script>
+    <?php
+    include("livechat.php");
+    ?>
 </body>
 </html>
+<?php
+if(isset($_POST['submit'])){
+    $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+    $mail=$_POST['email'];
+    $password=md5($_POST['motdepasse']);
+   $insert=$bdd->prepare("INSERT INTO user(nom_user,prenom_user,email_user,password)VALUES(?,?,?,?)");
+   $insert->execute(array($fname,$lname,$mail,$password));
+   echo "<script>alert('Your Account has been registred.')</script>";
+}else{
+    echo "<script>alert('Error! Try Again')</script>";
+}
+?>

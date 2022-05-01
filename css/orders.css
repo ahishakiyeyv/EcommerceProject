@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Rambla&display=swap');
+*
+{
+     font-family: 'Rambla', sans-serif;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+     border: none;
+     text-decoration: none;
+}
+/* variables start */
+:root
+{
+     --gray:#a2a2a2;
+     --graye:#ececec;
+     --black: #000;
+     --blue: #cae8e3;
+     --pink: #f6e4d5;
+     --white: #fff;
+     --yellow: #ffd080;
+     --border: .2rem solid var(--black);
+}
+::-webkit-scrollbar
+     {
+          width: 1rem;
+     }
+::-webkit-scrollbar-track
+{
+     background: var(--white);
+}
+
+::-webkit-scrollbar-thumb
+{
+     background: var(--black);
+}
+html
+{
+     font-size: 62.5%;
+     overflow-x: hidden;
+     scroll-behavior: smooth;
+     scroll-padding-top: 7rem;   
+}
+.header
+{
+     position: sticky;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 1000;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background-color: var(--white);
+     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+     padding: 2rem 9%;
+}
+.logo
+     {
+          font-size: 2.5rem;
+          color: var(--black);
+     }
+
+.navbar a
+{
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: var(--black);   
+}
+
+.navbar a:hover
+{
+     text-decoration: underline;
+}
+
+#menu-btn
+{
+     display:none;
+     cursor: pointer;
+     font-size: 3rem;
+}
+.btn
+{
+     display: inline-block;
+     /* margin-top: 1rem; */
+     padding: 1rem 3rem;
+     font-size: 2rem;
+     color: var(--white);
+     background: var(--black);
+     border: var(--border);
+     cursor: pointer;
+     font-weight: bolder;
+     border-radius: .5rem;
+}
+
+.btn:hover
+{
+     background: none;
+     color: var(--black);
+}
+.btn span{
+     border:1px solid #fff;
+     color:#000;
+     background:#fff;
+     padding:5px;
+     margin:5px 1px;
+     border-radius:5px;
+
+}
+.btn:hover span{
+     border:1px solid var(--black);
+     background:#000;
+     color:#fff;
+}
+
+/* ===================================section 11================================================ */
+
+
+.button:hover
+{
+	transform: scale(1.05) translateY(-3px);
+    box-shadow: 3px 3px 6px #38373785;
+}
+
+@media only screen and (max-width: 1000px) {
+    .card{
+        flex-direction: column;
+        width: auto;
+      
+    }
+
+    .leftside{
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+      border-top-right-radius:0;
+      border-radius:0;
+    }
+
+    .rightside{
+        width:auto;
+        border-bottom-left-radius: 1.5rem;
+        padding:0.5rem 3rem 3rem 2rem;
+      border-radius:0;
+    }
+}
+/* ===========================================section 12========================================= */
+.tit1{
+    text-align: center;
+    font-size:30px;
+    font-weight:200;
+    margin:40px 0px;
+    letter-spacing: 5px;;
+}
+.card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:30px 0px;
+}
+.leftside{
+    background:black;
+    height:500px;
+    width:30rem;
+}
+.leftside h1{
+    color:#fff;
+    text-align: center;
+    margin:10px;
+    font-size:22px;
+    font-weight:200;
+}
+.rightside{
+    height:500px;
+    width:40rem;
+    border:1px solid #000;
+}
+.rightside h1{
+    color:#000;
+    text-align:center;
+    margin:10px;
+    font-size:22px;
+    font-weight:200;
+}
+.rightside h2{
+    color:#000;
+    font-size:20px;
+    margin-left:1rem;
+    margin-bottom:30px;
+}
+.rightside form{
+    margin-left:3rem;
+}
+.rightside form .p-title{
+    font-size:18px;
+}
+.rightside form .inpt-order{
+    height:3rem;
+    width:25rem;
+    border:0;
+    border-bottom:2px solid gray;
+    outline:none;
+}
+.addresse{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top:2rem;
+}
+.add1{
+    width:14rem;
+}
+.addresse .add1 .inpt-add{
+    height:3rem;
+    width:12rem;
+    border:0;
+    border-bottom:2px solid gray;
+    outline:none;
+}
+.inpt-sub{
+    margin-top:1rem;
+padding:1rem 7rem;
+background: var(--black);
+border-radius:10px;
+font-size:18px;
+color:#fff;
+cursor: pointer;
+}
+.inpt-sub:hover{
+    background: var(--graye);
+    color:var(--black);
+    box-shadow: 3px 3px 6px #38373785;
+}
+
+
+/* ==========================order summary============================================= */
+
+.leftside ul li{
+    margin-top:2rem;
+    color:var(--white);
+    font-size:2rem;
+    text-align: center;
+}
+.leftside p{
+    color:var(--white);
+    font-size:2rem;
+    margin:1rem;
+}
+
+/* ===============================modal======================================== */
+
+.order-message{
+    position:fixed;
+    top:0;
+    left:0;
+    min-height:100vh;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    padding:2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1100;
+    background:var(--black);
+    width:100%;
+}
+.order-message .message{
+    width:50rem;
+    background:var(--white);
+    border-radius:.5rem;
+    padding:2rem;
+    text-align:center;
+}
+
+.order-message .message h3{
+    font-size:2.5rem;
+    color:var(--black);
+}
+.order-message .message .order-detail{
+    background:var(--black);
+    border-radius:.5rem;
+    padding:1rem;
+    margin:1rem 0;
+}
+.order-message .message .order-detail span{
+background: var(--white);
+border-radius:.5rem;
+color:var(--black);
+font-size:2rem;
+display:inline-block;
+padding:1rem 1.5rem;
+margin:1rem;
+
+}
+.order-message .message .order-detail span.total{
+    display:block;
+    background:var(--gray);
+    color:#000;
+}
+.order-message .message .customer-details{
+    margin:1.5rem 0;
+}
+.order-message .message .customer-details p{
+    padding: 1rem 0;
+    font-size:2rem;
+    color:var(--black);
+}
+.order-message .message .customer-details p span{
+    color:red;
+    padding:0 .5rem;
+    font-style: italic;
+}
+.btn_check{
+    padding:1.5rem 10rem;
+    border-radius:.5rem;
+    font-size:1.6rem;
+    color:var(--white);
+    background: var(--black);
+    margin:1rem;
+}

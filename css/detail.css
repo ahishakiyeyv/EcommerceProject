@@ -83,11 +83,9 @@ html
 {
      display: inline-block;
      /* margin-top: 1rem; */
-     padding: 1rem 3rem;
-     font-size: 2rem;
-     color: var(--white);
-     background: var(--black);
-     border: var(--border);
+     padding: 0.5rem 1rem;
+     /* font-size: 2rem; */
+     border: 1px solid Black;
      cursor: pointer;
      font-weight: bolder;
      border-radius: .5rem;
@@ -95,120 +93,140 @@ html
 
 .btn:hover
 {
-     background: none;
+     background:var(--graye);
      color: var(--black);
 }
 .btn span{
-     border:1px solid #fff;
-     color:#000;
-     background:#fff;
-     padding:5px;
-     margin:5px 1px;
+     position:relative;
+     left:1px;
+     top:1px;
+     font-size:1.5rem;
+     /* padding:1px; */
+     color:#000;;
      border-radius:5px;
+     /* margin:5px 1px; */
 
 }
-.btn:hover span{
-     border:1px solid var(--black);
-     background:#000;
-     color:#fff;
+
+/* =========================================section details=============================== */
+.titleDetails{
+    text-align: center;
+    font-size:4.5rem;
+    margin:3rem .5rem;
 }
-/* ===================================section 1========================================== */
-.title1{
-    text-align:center;
-    font-size:40px;
-    letter-spacing: 5px;
-    margin:20px;
+.container-details{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    margin:2rem;
 }
-.table01{
-     margin-top:50px;
+.img-details{
+    width:55rem;
 }
-.thead01{
-     background:black;
+.img1{
+     height:40rem;
+     width:40rem;
 }
-.thead01 th{
-     padding:10px 80px;
-     color:#fff;
-     font-size:20px;
-     text-transform: capitalize;
-     font-weight: 200;
+.desc-details{
+    width:55rem;
 }
-.img-cart{
-     height:120px;
-     width:120px;
+.titledesc{
+    font-size:3rem;
+    margin:1rem 0.3rem;
 }
-.tbody01 td{
-     font-size:20px;
-     text-align: center;
-     border:0;
-     border-bottom:2px solid #000;
+.stitle{
+    font-size:2rem;
+    letter-spacing:3px;
+    margin:1rem 0.3rem;
 }
-.table01 input[type="number"]{
-     border:var(--border);
-     padding:1rem 2rem;
+.checked{
+    color:orange;
+}
+.para{
+    font-size:1.5rem;
+    margin:1rem 0.3rem;
+    color:var(--gray);
+    line-height:3rem;
+}
+.bare{
      font-size:2rem;
-     color:var(--black);
-     width:8rem;
 }
-.table01 input[type="submit"]{
-     padding:.5rem 1.5rem;
-     cursor: pointer;
-     font-size:2rem;
-     background: var(--black);
-     color: var(--white);
-}
-.table01 input[type="submit"]:hover{
-     border: var(--border);
-     background:var(--white);
-     color:var(--black);
-}
-.remove_btn{
-     border:1px solid red;
-     border-radius:5px;
-     padding: .5rem 2rem;
-     text-decoration: none;
-     color:#fff;
-     background: red;
-     transition:0.5s ease;
-}
-.remove_btn:hover{
-     background:#fff;
+.bare span{
+     text-decoration:line-through;
      color:red;
 }
-.deleteAll_btn{
+.prix{
+    text-align: left;
+    font-size:3rem;
+}
+.icon{
+    text-align: center;
+    margin:3rem;
+}
+.btn-add{
+    border:1px solid black;
+    padding:1rem;
+    margin:1rem;
+    background:black;
+    color:#fff;
+    font-size:1.8rem;
+    border-radius:2rem; 
+}
+.btn-add:hover{
+     color:black;
+     background:#fff;
+     transition:0.3s ease;
+}
+.like{
+    border:1px solid black;
+    padding:1rem;
+    margin:1rem;
+    background:black;
+    color:#fff;
+    font-size:1.8rem;
+    border-radius:2rem; 
+}
+.like:hover{
+     color:black;
+     background:#fff;
+     transition:0.3s ease;
+}
+.comment{
+     color:var(--black);
+     font-size:1.5rem;
+}
+textarea{
+    border:1px solid black;
+    border-radius:1rem;
+    margin:1rem;
+}
+.btn-submit{
+    padding:1rem;
+    background:black;
+    color:#fff;
+    font-size:1.5rem;
+    border-radius:0.5rem;
+    cursor:pointer;
+}
+.btn-submit:hover{
+     background:gray;
+}
+.title-share{
      font-size:2rem;
-     border:2px solid red;
-     border-radius:5px;
-     padding: .5rem 2rem;
-     margin:2rem 0rem;
-     text-decoration: none;
-     color:#fff;
-     background: red;
+}
+.sharelink a{
+     font-size:5rem;
+     color:var(--black);
+     padding:0.1rem;
+     margin:1rem;
+}
+.sharelink a:hover{
+     color:var(--gray);
      transition:0.5s ease;
 }
-.deleteAll_btn:hover{
-     background:#fff;
-     color:red;
-}
-.order_btn{
-     text-align:center;
-     margin-top:1rem;
-}
-.order_btn a{
-     padding:10px 100px;
-     text-decoration: none;
-     font-weight:200;
-     color:#fff;
-     display:inline-block;
-     width:auto;
-     margin:2rem;
-}
-.order_btn a.disabled{
-     pointer-events: none;
-     opacity:.5;
-}
-.td-tot{
-     height:50px;
-}
+
+
 /* ====================================footer========================= */
 footer{
      background: var(--black);
