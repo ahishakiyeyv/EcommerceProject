@@ -30,22 +30,24 @@ if(isset($_GET['delete'])){
     <title>Cart | FashionSHOP</title>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"><i class="fas fa-splotch"></i> SuitSHOP</a>
-        <nav class="navbar">
-             <a href="index.php">Home</a>
-             <a href="shop.php">Shop</a>
-             <a href="about.php">About</a>
-             <a href="contact.php">Contact</a>
-             <a href="login.php">My Account</a>
-        </nav>
-        <?php
+ <!-- header section starts -->
+ <header class="header">
+          <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
+          <nav class="navbar">
+               <a href="index.php">Home</a>
+               <a href="shop.php">Shop</a>
+               <a href="about.php">About</a>
+               <a href="contact.php">Contact</a>
+               <a href="login.php">My Account</a>
+          </nav>
+            <?php
                 $select_row=$bdd->query("SELECT * FROM cart");
                 $row=$select_row->rowCount();
             ?>
           <div id="menu-btn" class="fas fa-bars"></div>
-          <a href="#" class="btn">Cart <span><?php echo $row;?></span></a>
-   </header>
+          <a href="cart.php" class="btnCart"><img src="images/cart.png" alt="image non disponible" id="cart"> <span><?php echo $row;?></span></a>
+     </header>
+     <!-- header section ends -->
    <section class="section_1">
        <h1 class="title1">Shopping Cart</h1>
        <table class="table01">
