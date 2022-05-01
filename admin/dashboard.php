@@ -1,5 +1,6 @@
 <?php
 include("db.php");
+session_start();
 $select=$bdd->query("SELECT count(id_user) as Nombre FROM user");
 $selectuser=$select->fetch();
 $selectorder=$bdd->query("SELECT count(id_order)AS Nombre FROM orders");
@@ -11,7 +12,7 @@ $product=$selectproduct->fetch();
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="css/dashboards.css" type="text/css"/>
+	<link rel="stylesheet" href="css/dashboard.css" type="text/css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Dashboard | FashionSHOP</title>
 </head>
@@ -40,7 +41,8 @@ $product=$selectproduct->fetch();
 	<div class="profile">
 
 		<img src="images/200.jpg" class="pro-img" />
-		<p>Manoj Adhikari <span>ADMIN</span></p>
+		<p><?php echo $_SESSION['username'];?><span>ADMIN</span></p>
+		<p class="log"><a href="logout.php">Log-Out<i class="fa-solid fa-power-off"></i></a></p>
 	</div>
 </div>
 	<div class="clearfix"></div>
@@ -82,18 +84,18 @@ $product=$selectproduct->fetch();
 			<br/>
 			<table>
   <tr>
-    <th>FirstName</th>
-    <th>LastName</th>
+    <th>Id</th>
+    <th>Username</th>
     <th>Email</th>
   </tr>
   <?php
-      $selectUsers=$bdd->query("SELECT * FROM user ORDER BY id_user");
-      while($dataUser=$selectUsers->fetch()){
+      $selectAdmin=$bdd->query("SELECT * FROM administrator ORDER BY id_admin");
+      while($dataAdmin=$selectAdmin->fetch()){
       ?>
   <tr>
-    <td><?php echo $dataUser['nom_user'];?></td>
-    <td><?php echo $dataUser['prenom_user'];?></td>
-    <td><?php echo $dataUser['email_user'];?></td>
+    <td><?php echo $dataAdmin['id_admin'];?></td>
+    <td><?php echo $dataAdmin['username'];?></td>
+    <td><?php echo $dataAdmin['email_admin'];?></td>
   </tr>
   <?php
       }

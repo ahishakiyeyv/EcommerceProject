@@ -1,5 +1,6 @@
 <?php
 include("db.php");
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,7 @@ include("db.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Login | SuitSHOP</title>
+    <title>Login |FashionSHOP</title>
     <style>
         body {
 	font-family: sans-serif;	
@@ -112,6 +113,7 @@ include("db.php");
         $datauser->execute(array('usernme'=>$username,'motdepasse'=>$password ));
         $count=$datauser->rowCount();
         if($count >0){
+			$_SESSION['username']=$username;
             header("location:dashboard.php");
         }
         else{
