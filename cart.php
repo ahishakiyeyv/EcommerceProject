@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("db.php");
 if(isset($_POST["btn_update"])){
     $update_value=$_POST["update_quantity"];
@@ -38,7 +39,18 @@ if(isset($_GET['delete'])){
                <a href="shop.php">Shop</a>
                <a href="about.php">About</a>
                <a href="contact.php">Contact</a>
-               <a href="login.php">My Account</a>
+               <?php
+               if(isset($_SESSION['mail']) && !empty($_SESSION['mail'])){
+               ?>
+               <a href="#"><?php echo $_SESSION['mail']?></a>
+                <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"> </a> 
+               <?php
+               }else{
+                   ?>
+                   <a href="login.php">My Account</a>
+                   <?php
+               }
+               ?>
           </nav>
             <?php
                 $select_row=$bdd->query("SELECT * FROM cart");
