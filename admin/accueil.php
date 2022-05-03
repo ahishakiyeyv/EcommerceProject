@@ -221,32 +221,24 @@ if(isset($_POST['add_to_cart'])){
                     ?>
                     <!-- <img src="images/22.jpg" alt="image non disponible" class="img-arrival"> -->
                     <h3 class="desc"><?php echo $dataselect["nom_pro"]?></h3>
-                    <h2 class="prix"><?php echo $dataselect["prix"]?></h2>
+                    <h2 class="prix"><?php echo $dataselect["prix"]?> Fbu</h2>
                     <p class="p-txtbox"></p>
-                    <!-- <a href="accueil.php" class="add-btn">Add to Cart</a> -->
-                    
-               
-               <input type="hidden" name="nomprod" value="<?php echo $dataselect['nom_pro'];?>">
+              <!-- ===========add to cart============= -->
+              <?php
+               if(isset($_SESSION['mail']) && !empty($_SESSION['mail'])){
+               ?>
+                <input type="hidden" name="nomprod" value="<?php echo $dataselect['nom_pro'];?>">
                <input type="hidden" name="prixpro" value="<?php echo $dataselect['prix'];?>">
                <input type="hidden" name="imagepro" value="<?php echo $dataselect['photo'];?>">
                <input type="submit" value="Add to Cart" name="add_to_cart" class="add-btn">
-             <!-- <button id="details-btn">Details</button> -->
+               <?php
+               }else{
+                   ?>
+                   <a href="login.php" class="add-btn">Add to Cart</a>
+                   <?php
+               }
+               ?>
              <a href="details.php?det=<?php echo $dataselect['id_pro'];?>" id="details-btn">Details</a>
-            <!-- <div id="modal">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2>Modal Header</h2>
-                                <span class="close-btn">&times;</span>
-                            </div>
-                            <div class="modal-body">
-                                <img src="images/09.jpg" alt="images non disponible">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, ipsum tenetur, illum cumque ipsam numquam beatae placeat qui voluptates, totam vitae. Eveniet, accusantium. Numquam veritatis blanditiis adipisci, deserunt ad sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <h3>Yvan Igor AHISHAKIYE</h3>
-                            </div>
-                        </div>
-                    </div>     -->
 
             </div>
             </form>
