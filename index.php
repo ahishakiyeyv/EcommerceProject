@@ -232,7 +232,7 @@ if(isset($_POST['add_to_cart'])){
                     ?>
                     <!-- <img src="images/22.jpg" alt="image non disponible" class="img-arrival"> -->
                     <h3 class="desc"><?php echo $dataselect["nom_pro"]?></h3>
-                    <h2 class="prix"><?php echo $dataselect["prix"]?></h2>
+                    <h2 class="prix"><?php echo $dataselect["prix"]?> Fbu</h2>
                     <p class="p-txtbox"></p>
                     <!-- <a href="accueil.php" class="add-btn">Add to Cart</a> -->
                     

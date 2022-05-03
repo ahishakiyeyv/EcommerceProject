@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("db.php");
+include("sharing.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,6 +92,9 @@ if(isset($_GET["det"])){
                             <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
                             <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                            <?php
+                            showSharer("http://localhost/Ecommerce/details.php?det=1", "a search engine site");
+                            ?>
                         </div>
                     </div>
              </div>
