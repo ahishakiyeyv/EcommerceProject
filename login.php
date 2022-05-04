@@ -45,9 +45,9 @@ include("db.php");
     if(isset($_POST['submit'])){
         $mail=$_POST["mail"];
         $password=md5($_POST["motdepasse"]);
-        $select="SELECT email_user,password From user WHERE email_user=:mail AND password=:motdepasse";
+        $select="SELECT id_user,nom_user,email_user,password From user WHERE email_user=:mail AND password=:motdepasse";
         $datauser=$bdd->prepare($select);
-        $datauser->execute(array('mail'=>$mail,'motdepasse'=>$password ));
+        $datauser->execute(array($id,$name,'mail'=>$mail,'motdepasse'=>$password ));
         $count=$datauser->rowCount();
         if($count >0){
             $_SESSION['mail']=$mail;

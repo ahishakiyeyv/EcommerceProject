@@ -43,7 +43,7 @@ if(isset($_POST['add_to_cart'])){
                <?php
                if(isset($_SESSION['mail']) && !empty($_SESSION['mail'])){
                ?>
-               <a href="#"><?php echo $_SESSION['mail']?></a>
+               <a href="#"><?php echo $_SESSION['mail'];?></a>
                <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"></a>
                <?php
                }else{
@@ -230,7 +230,6 @@ if(isset($_POST['add_to_cart'])){
                     <?php
                      echo "<img src='image/".$dataselect['photo']."' class='img-arrival' alt='image non disponible'>";
                     ?>
-                    <!-- <img src="images/22.jpg" alt="image non disponible" class="img-arrival"> -->
                     <h3 class="desc"><?php echo $dataselect["nom_pro"]?></h3>
                     <h2 class="prix"><?php echo $dataselect["prix"]?> Fbu</h2>
                     <p class="p-txtbox"></p>
