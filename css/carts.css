@@ -79,7 +79,7 @@ html
      cursor: pointer;
      font-size: 3rem;
 }
-.btnCart
+.btn
 {
      display: inline-block;
      /* margin-top: 1rem; */
@@ -91,12 +91,12 @@ html
      border-radius: .5rem;
 }
 
-.btnCart:hover
+.btn:hover
 {
      background:var(--graye);
      color: var(--black);
 }
-.btnCart span{
+.btn span{
      position:relative;
      left:1px;
      top:1px;
