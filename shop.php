@@ -1,6 +1,20 @@
 <?php
 session_start();
 include("db.php");
+if(isset($_POST['search'])){
+     $value=$_POST['categorie'];
+     $query="SELECT * FROM produit WHERE id_Cat=".$value."";
+     $search_result=filter($query);
+}
+else{
+     $query="SELECT * FROM produit";
+     $search_result=filter($query);
+}
+function filter($query){
+     include("db.php");
+     $filter_result=$bdd->query($query);
+     return $filter_result;
+}
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +58,7 @@ include("db.php");
    <aside>
     <div class="quick-links">
         <h3 class="title">Categories</h3>
-        <form  method="post">
+        <form  action="shop.php" method="POST">
              <select name="categorie" class="cat-select">
                   <option value="">--Category--</option>
                   <?php 
@@ -75,12 +89,12 @@ include("db.php");
    <section class="shop">
        <h1 class="title-shop">Our Shop</h1>
        <?php 
-$select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
+//$select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
 
 ?>
     <div class="parent">
     <?php
-    while($dataselect=$select->fetch()){?>
+    while($dataselect=$search_result->fetch()){?>
 
      <!-- //  echo "  <div class='div1'>";
         
