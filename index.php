@@ -41,9 +41,9 @@ if(isset($_POST['add_to_cart'])){
                <a href="about.php">About</a>
                <a href="contact.php">Contact</a>
                <?php
-               if(isset($_SESSION['mail']) && !empty($_SESSION['mail'])){
+               if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
                ?>
-               <a href="#"><?php echo $_SESSION['mail'];?></a>
+               <a href="#" class="session"><?php echo $_SESSION['name'];?></a>
                <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"></a>
                <?php
                }else{

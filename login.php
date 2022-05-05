@@ -20,8 +20,8 @@ include("db.php");
            <form action="#" method="POST">
                <div class="error-txt">This is an error message</div>
                    <div class="field input">
-                    <label>Email Address</label>
-                    <input type="text" name="mail" placeholder="Enter your email">
+                    <label>Username</label>
+                    <input type="text" name="name" placeholder="Enter your UserName">
                    </div>
                    <div class="field input">
                     <label>Password</label>
@@ -43,14 +43,14 @@ include("db.php");
 </html>
 <?php
     if(isset($_POST['submit'])){
-        $mail=$_POST["mail"];
+        $name=$_POST["name"];
         $password=md5($_POST["motdepasse"]);
-        $select="SELECT id_user,nom_user,email_user,password From user WHERE email_user=:mail AND password=:motdepasse";
+        $select="SELECT id_user,nom_user,email_user,password From user WHERE nom_user=:name AND password=:motdepasse";
         $datauser=$bdd->prepare($select);
-        $datauser->execute(array($id,$name,'mail'=>$mail,'motdepasse'=>$password ));
+        $datauser->execute(array('name'=>$name,'motdepasse'=>$password ));
         $count=$datauser->rowCount();
         if($count >0){
-            $_SESSION['mail']=$mail;
+            $_SESSION['name']=$name;
             header("location:index.php");
         }
         else{
