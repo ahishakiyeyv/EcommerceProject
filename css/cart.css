@@ -197,14 +197,21 @@ html
      text-align:center;
      margin-top:1rem;
 }
-.order_btn a{
+.order_btn .btn{
      padding:10px 100px;
      text-decoration: none;
-     font-weight:200;
+     font-size:2rem;
+     font-weight:400;
      color:#fff;
+     background:#000;
      display:inline-block;
      width:auto;
      margin:2rem;
+}
+.order_btn .btn:hover{
+     color:#000;
+     background:#fff;
+     transition:0.5s ease;
 }
 .order_btn a.disabled{
      pointer-events: none;

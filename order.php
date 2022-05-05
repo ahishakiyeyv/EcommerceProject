@@ -8,19 +8,20 @@ include("db.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/orders.css">
+    <link rel="stylesheet" href="css/order.css">
     <title>Order | SuitSHOP</title>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"><i class="fas fa-splotch"></i> SuitSHOP</a>
-        <nav class="navbar">
-             <a href="index.php">Home</a>
-             <a href="shop.php">Shop</a>
-             <a href="about.php">About</a>
-             <a href="contact.php">Contact</a>
-             <?php
-               if(isset($_SESSION['mail']) && !empty($_SESSION['mail'])){
+     <!-- header section starts -->
+     <header class="header">
+          <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
+          <nav class="navbar">
+               <a href="index.php">Home</a>
+               <a href="shop.php">Shop</a>
+               <a href="about.php">About</a>
+               <a href="contact.php">Contact</a>
+               <?php
+               if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
                ?>
                <a href="#" class="session"><?php echo $_SESSION['name'];?></a>
                <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"></a>
@@ -31,10 +32,15 @@ include("db.php");
                    <?php
                }
                ?>
-        </nav>
+          </nav>
+            <?php
+                $select_row=$bdd->query("SELECT * FROM cart");
+                $row=$select_row->rowCount();
+            ?>
           <div id="menu-btn" class="fas fa-bars"></div>
-          <a href="#" class="btn">Cart</a>
-   </header>
+          <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span><?php echo $row;?></span></a>
+     </header>
+     <!-- header section ends -->
 
    <section class="section12">
        <h1 class="tit1">Order Now</h1>

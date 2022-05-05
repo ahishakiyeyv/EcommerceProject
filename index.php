@@ -7,9 +7,9 @@ if(isset($_POST['add_to_cart'])){
     $prod_photo=$_POST['imagepro'];
     $prod_quantite=1;
 
-    $select=$bdd->query("SELECT * FROM cart WHERE nom_pro='$prod_name'");
-    $data=$bdd->prepare($select);
-    $data->execute(array($prod_name,$prod_prix,$prod_photo,$prod_quantite));
+   // $select=$bdd->query();
+    $data=$bdd->prepare("SELECT * FROM cart WHERE nom_pro=".$prod_name."");
+    //$data->execute(array($prod_name,$prod_prix,$prod_photo,$prod_quantite));
     $count=$data->rowCount();
     if($count > 0){
         echo "<script>alert('Product already existed')</script>";
@@ -214,11 +214,11 @@ if(isset($_POST['add_to_cart'])){
           <h2 class="title-heading">New Arrivals</h2>
           <div class="flexcontainer">
               <?php
-              if(isset($_GET["add"])){
-                  $idtoadd=$_GET["add"];
-                  $quantite=1;
-                  $insert=$bdd->query("INSERT INTO cart(quantite,Id_user,Id_pro)SELECT nom_pro,prix,photo FROM produit WHERE id_pro=$idtoadd");  
-              }
+            //   if(isset($_GET["add"])){
+            //       $idtoadd=$_GET["add"];
+            //       $quantite=1;
+            //       $insert=$bdd->query("INSERT INTO cart(quantite,Id_user,Id_pro)SELECT nom_pro,prix,photo FROM produit WHERE id_pro=$idtoadd");  
+            //   }
               ?>
               <?php
               $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
