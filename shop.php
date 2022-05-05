@@ -39,7 +39,7 @@ function filter($query){
                if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
                ?>
                
-               <a href="logout.php"><?php echo $_SESSION['mail']?> | <img src="images/shutdown_20px.png" alt="image non disponible"></a>
+               <a href="logout.php" class="session"><?php echo $_SESSION['name']?> | <img src="images/shutdown_20px.png" alt="image non disponible"></a>
                <?php
                }else{
                    ?>
