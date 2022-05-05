@@ -71,7 +71,15 @@ html
 {
      text-decoration: underline;
 }
-
+.navbar .session{
+    margin: 0 1rem;
+    padding:5px;
+   font-size: 2rem;
+   border:1px solid black;
+}
+.navbar .session:hover{
+   border:2px solid black;
+}
 #menu-btn
 {
      display:none;
