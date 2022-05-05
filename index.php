@@ -237,7 +237,7 @@ if(isset($_POST['add_to_cart'])){
                     
                <!-- ===========add to cart============= -->
                <?php
-               if(isset($_SESSION['mail']) && !empty($_SESSION['mail'])){
+               if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
                ?>
                 <input type="hidden" name="nomprod" value="<?php echo $dataselect['nom_pro'];?>">
                <input type="hidden" name="prixpro" value="<?php echo $dataselect['prix'];?>">
