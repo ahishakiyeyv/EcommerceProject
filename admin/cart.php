@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("db.php");
 if(isset($_POST["btn_update"])){
     $update_value=$_POST["update_quantity"];
