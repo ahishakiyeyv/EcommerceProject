@@ -1,6 +1,6 @@
 <?php
 include("db.php");
-session_star();
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -42,7 +42,7 @@ $product=$selectproduct->fetch();
 
 		<img src="images/200.jpg" class="pro-img" />
 		<p><?php echo $_SESSION['username'];?><span>ADMIN</span></p>
-		<p class="log"><a href="logout.php">Log-Out<i class="fa-solid fa-power-off"></i></a></p>
+		<p class="log"><a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"></a></p>
 	</div>
 </div>
 	<div class="clearfix"></div>
