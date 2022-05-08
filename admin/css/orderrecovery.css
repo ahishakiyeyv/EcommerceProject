@@ -57,6 +57,7 @@ body{
     letter-spacing: 3px;
     text-align: center;
     margin:4rem 0;
+    color:#fff;
 }
 .contain{
     display: grid;
@@ -72,8 +73,9 @@ body{
     padding:1rem;
 }
 .content{
-    font-size:2rem;
+    font-size:1.8rem;
     line-height:5rem;
+    color:#a2a2a2;
 }
 .addrese{
     display:flex;
@@ -83,8 +85,10 @@ body{
     margin-right:1rem;
 }
 .p-addrese{
-    font-size:2rem;
+    font-size:1.8rem;
+    color:#a2a2a2;
 }
+
 .total{
     display:flex;
     justify-content: space-between;
@@ -92,6 +96,7 @@ body{
 }
 .p-total{
     font-size: 2rem;
+    color:#a2a2a2;
 }
 .content span{
     font-size:1.5rem;
