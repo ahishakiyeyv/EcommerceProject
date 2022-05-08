@@ -12,7 +12,7 @@ $product=$selectproduct->fetch();
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="css/dashboard.css" type="text/css"/>
+	<link rel="stylesheet" href="css/dashboards.css" type="text/css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Dashboard | FashionSHOP</title>
 </head>
