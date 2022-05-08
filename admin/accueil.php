@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("db.php");
 if(isset($_POST['add_to_cart'])){
     $prod_name=$_POST['nomprod'];
@@ -31,16 +32,27 @@ if(isset($_POST['add_to_cart'])){
      <title>Home | FashionSHOP</title>
 </head>
 <body> 
-     <!-- header section starts -->
-     <header class="header">
+      <!-- header section starts -->
+      <header class="header">
           <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
           <nav class="navbar">
-               <a href="dashboard.php">Dashboard</a>
-               <a href="accueil.php">Home</a>
+              <a href="dashboard.php">Dashboard</a>
+               <a href="index.php">Home</a>
                <a href="shop.php">Shop</a>
                <a href="about.php">About</a>
                <a href="contact.php">Contact</a>
-               <a href="login.php">My Account</a>
+               <?php
+               if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
+               ?>
+               <a href="#" class="session"><?php echo $_SESSION['username'];?></a>
+               <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"></a>
+               <?php
+               }else{
+                   ?>
+                   <a href="login.php">My Account</a>
+                   <?php
+               }
+               ?>
           </nav>
             <?php
                 $select_row=$bdd->query("SELECT * FROM cart");
