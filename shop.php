@@ -106,7 +106,7 @@ function filter($query){
                 
      //    echo "</div>";  -->
      <div class="div1">
-          <img src="image/<?php echo $dataselect['photo']?>" alt="image non disponible" class="img-div1">
+          <img src="admin/image/<?php echo $dataselect['photo']?>" alt="image non disponible" class="img-div1">
           <h3 class='h3-div1'><?php echo $dataselect['nom_pro']?></h3>
           <h2 class='h2-div1'><?php echo $dataselect['prix']?>/piece</h2>
           <a href="#" class="comment">Add To Cart</a>

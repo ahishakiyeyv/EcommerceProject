@@ -228,7 +228,7 @@ if(isset($_POST['add_to_cart'])){
                <div class="box1">
                     <a href="#" class="pop">New</a>
                     <?php
-                     echo "<img src='image/".$dataselect['photo']."' class='img-arrival' alt='image non disponible'>";
+                     echo "<img src='admin/image/".$dataselect['photo']."' class='img-arrival' alt='image non disponible'>";
                     ?>
                     <h3 class="desc"><?php echo $dataselect["nom_pro"]?></h3>
                     <h2 class="prix"><?php echo $dataselect["prix"]?> Fbu</h2>
