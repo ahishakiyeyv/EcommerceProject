@@ -48,13 +48,21 @@ function filter($query){
                }
                ?>
           </nav>
-            <?php
+          <?php
+            if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
                 $select_row=$bdd->query("SELECT * FROM cart");
-                $row=$select_row->rowCount();
-            ?>
-          <div id="menu-btn" class="fas fa-bars"></div>
+                $row=$select_row->rowCount();?>
+            <div id="menu-btn" class="fas fa-bars"></div>
           <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span><?php echo $row;?></span></a>
-     </header>
+          <?php
+            }else{?>
+            <div id="menu-btn" class="fas fa-bars"></div>
+          <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span>0</span></a>
+        <?php
+            }
+                
+            ?>
+             </header>
    <aside>
     <div class="quick-links">
         <h3 class="title">Categories</h3>
