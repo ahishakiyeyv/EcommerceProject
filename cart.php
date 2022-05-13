@@ -42,7 +42,7 @@ if(isset($_GET['delete'])){
                <?php
                if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
                ?>
-               <a href="#"><?php echo $_SESSION['name']?></a>
+               <a href="#" class="session"><?php echo $_SESSION['name']?></a>
                 <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"> </a> 
                <?php
                }else{
@@ -53,11 +53,20 @@ if(isset($_GET['delete'])){
                ?>
           </nav>
             <?php
+            if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
                 $select_row=$bdd->query("SELECT * FROM cart");
-                $row=$select_row->rowCount();
-            ?>
-          <div id="menu-btn" class="fas fa-bars"></div>
+                $row=$select_row->rowCount();?>
+            <div id="menu-btn" class="fas fa-bars"></div>
           <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span><?php echo $row;?></span></a>
+          <?php
+            }else{?>
+            <div id="menu-btn" class="fas fa-bars"></div>
+          <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span>0</span></a>
+        <?php
+            }
+                
+            ?>
+          
      </header>
      <!-- header section ends -->
    <section class="section_1">
@@ -75,7 +84,11 @@ if(isset($_GET['delete'])){
            </thead>
            <tbody class="tbody01">
                <?php
-                $select=$bdd->query("SELECT * FROM cart");
+               if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
+                   $user=$_SESSION['name'];
+                $select=$bdd->query("SELECT * FROM cart WHERE user=".$user."");
+
+                 
                 (int)$grandTotal=0;
                (int) $tot=0;
                 While($data=$select->fetch()){
@@ -94,12 +107,7 @@ if(isset($_GET['delete'])){
                         <td><?php echo $tot = $data['prixprod'] * $data['Quantite'];?>Fbu</td>
                         <td><a href="cart.php?sup=<?php echo $data['id_cart'];?>" onclick="return confirm('Delete item from the cart')" class="remove_btn">Remove</a></td>
                     </tr>
-                        <?php (int)$grandTotal +=   (int) $tot;?>
-               <?php
-               
-                }
-               ?>
-               <tr>
+                    <tr>
                    <td class="td-tot">Total:</td>
                    <td class="td-tot"></td>
                    <td class="td-tot"></td>
@@ -109,6 +117,19 @@ if(isset($_GET['delete'])){
                </tr>
            </tbody>
        </table>
+                        <?php (int)$grandTotal +=   (int) $tot;?>
+               <?php
+               
+                }
+               ?>
+                <?php
+               }else{
+                // header("location:index.php");
+                   echo "<script>alert('Nothing in Here')</script>";
+                   
+               }
+               ?>
+              
        <div class="order_btn">
            <a href="order.php" class="btn <?= ($grandTotal > 1)?'':'disabled'?>">CheckOut</a>
        </div>

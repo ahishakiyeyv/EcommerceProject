@@ -6,6 +6,7 @@ if(isset($_POST['add_to_cart'])){
     $prod_prix=$_POST['prixpro'];
     $prod_photo=$_POST['imagepro'];
     $prod_quantite=1;
+    $prod_user=$_SESSION['name'];
 
    // $select=$bdd->query();
     $data=$bdd->prepare("SELECT * FROM cart WHERE nom_pro=".$prod_name."");
@@ -14,7 +15,7 @@ if(isset($_POST['add_to_cart'])){
     if($count > 0){
         echo "<script>alert('Product already existed')</script>";
     }else{
-        $insert=$bdd->query("INSERT INTO cart(nomprod,prixprod,photoprod,Quantite)VALUES('$prod_name','$prod_prix','$prod_photo','$prod_quantite')");
+        $insert=$bdd->query("INSERT INTO cart(nomprod,prixprod,photoprod,Quantite,user)VALUES('$prod_name','$prod_prix','$prod_photo','$prod_quantite','$prod_user')");
         echo "<script>alert('Product added successfully')</script>";
     }
 }
