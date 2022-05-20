@@ -81,7 +81,7 @@ if(isset($_GET["det"])){
                         <form  method="POST">
                             <table>
                                 <tr>
-                                    <th><textarea name="commentaire" placeholder="Your comment here..." cols="70" rows="3"></textarea></th>
+                                    <th><textarea name="commentaire" placeholder="Your comment here..." cols="70" rows="1"></textarea></th>
                                     <td><input type="submit" name="submit" value="Post" class="btn-submit"></td>
                                 </tr>
                             </table>   
@@ -96,6 +96,8 @@ if(isset($_GET["det"])){
                              <div class="tablecomment">
                                 <div class="headcomment">
                                     <img src="images/200.png" alt="image non disponible" class="img-comment">
+                                   <h1>         </h1>
+                                   <h1>            </h1>
                                     <h1 class="nameUser"><?php echo $dataselect['auteur']?></h1>
                                 </div>
                                 <div class="comment">
