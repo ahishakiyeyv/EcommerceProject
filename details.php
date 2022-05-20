@@ -10,7 +10,7 @@ include("sharing.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Custom css link -->
-    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/details.css">
      <!-- font awesome cdn link -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Details | FashionSHOP</title>
@@ -81,11 +81,31 @@ if(isset($_GET["det"])){
                         <form  method="POST">
                             <table>
                                 <tr>
-                                    <th><textarea name="commentaire" placeholder="Your comment here..." cols="60" rows="3"></textarea></th>
+                                    <th><textarea name="commentaire" placeholder="Your comment here..." cols="70" rows="3"></textarea></th>
                                     <td><input type="submit" name="submit" value="Post" class="btn-submit"></td>
                                 </tr>
                             </table>   
                         </form>
+                    </div>
+                    <div class="recupcomment">
+                        <?php
+                        $select=$bdd->query("SELECT * FROM commentaire WHERE id_prod=$idtoget");
+                        while($dataselect=$select->fetch()){
+                        ?>
+                        <div class="comment1">
+                             <div class="tablecomment">
+                                <div class="headcomment">
+                                    <img src="images/200.png" alt="image non disponible" class="img-comment">
+                                    <h1 class="nameUser"><?php echo $dataselect['auteur']?></h1>
+                                </div>
+                                <div class="comment">
+                                    <p class="commentUser"><?php echo $dataselect['commentaire']?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                        }
+                        ?>    
                     </div>
                     <div class="share">
                         <h3 class="title-share">Share on:</h3>

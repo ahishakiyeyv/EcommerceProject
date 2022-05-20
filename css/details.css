@@ -207,8 +207,9 @@ html
 }
 textarea{
     border:1px solid black;
-    border-radius:1rem;
+    border-radius:.5rem;
     margin:1rem;
+    font-size:1.4rem;
 }
 .btn-submit{
     padding:1rem;
@@ -236,6 +237,31 @@ textarea{
 }
 
 
+.recupcomment{
+     width:50rem;
+     border:1px solid black;
+     border-radius:.5rem;
+     margin:1rem;
+}
+.img-comment{
+     width:3rem;
+     height:3rem;
+}
+.headcomment{
+     background:gray;
+     display:flex;
+     flex-direction: row;
+}
+
+.comment1{
+     border:1px solid gray;
+     border-radius:.7rem;
+     margin-top:.5rem;
+}
+.commentUser{
+     font-size:1.4rem;
+     padding:.5rem;
+}
 /* ====================================footer========================= */
 footer{
      background: var(--black);
