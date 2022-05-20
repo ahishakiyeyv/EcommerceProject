@@ -51,6 +51,7 @@ if(isset($_GET["det"])){
     $select=$bdd->query("SELECT * FROM produit WHERE id_pro=$idtoget");
     $data=$select->fetch();
 }
+
 ?>
      <section class="section-details">
          <h1 class="titleDetails">Details</h1>
@@ -77,11 +78,11 @@ if(isset($_GET["det"])){
                     </div>
                     <div class="avis">
                      <h3 class="comment">Your Comment:</h3>
-                        <form  method="post">
+                        <form  method="POST">
                             <table>
                                 <tr>
-                                    <th><textarea name="" placeholder="Your comment here..." cols="60" rows="3"></textarea></th>
-                                    <td><input type="submit" value="Post" class="btn-submit"></td>
+                                    <th><textarea name="commentaire" placeholder="Your comment here..." cols="60" rows="3"></textarea></th>
+                                    <td><input type="submit" name="submit" value="Post" class="btn-submit"></td>
                                 </tr>
                             </table>   
                         </form>
@@ -93,7 +94,7 @@ if(isset($_GET["det"])){
                             <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
                             <?php
-                            showSharer("http://localhost/Ecommerce/details.php?det=1", "a search engine site");
+                            // showSharer("http://localhost/Ecommerce/details.php?det=1", "a search engine site");
                             ?>
                         </div>
                     </div>
@@ -140,3 +141,20 @@ include("livechat.php");
 ?>
 </body>
 </html>
+
+<?php
+if(isset($_GET["det"])){
+    $idtoget=$_GET["det"];
+    if(isset($_POST['submit'])){
+        $auteur=$_SESSION['name'];
+        $commentaire=$_POST['commentaire'];
+        $insertion=$bdd->prepare("INSERT INTO commentaire(auteur,commentaire,id_prod)VALUES(?,?,?)");
+        $insertion->execute(array($auteur,$commentaire,$idtoget));
+        if($insertion){
+            echo "<script>alert('comment added successful')<?script>";
+        }else{
+            echo "<script>alert('there was an error')<?script>";
+        }
+    }
+}
+?>
