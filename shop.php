@@ -103,16 +103,6 @@ function filter($query){
     <div class="parent">
     <?php
     while($dataselect=$search_result->fetch()){?>
-
-     <!-- //  echo "  <div class='div1'>";
-        
-     //    echo "<img src='image/".$dataselect['photo']."' class='img-div1' alt='image non disponible'>";
-     //            echo "<h3 class='h3-div1'>".$dataselect['nom_pro']."</h3>";
-     //            echo "<h2 class='h2-div1'>".$dataselect['prix']."/piece</h2>";
-     //          echo"  <a href='#' class='comment'>Commentaire</a>
-     //            <a href='#' class='a-div1'>Add Cart</a>";
-                
-     //    echo "</div>";  -->
      <div class="div1">
           <img src="admin/image/<?php echo $dataselect['photo']?>" alt="image non disponible" class="img-div1">
           <h3 class='h3-div1'><?php echo $dataselect['nom_pro']?></h3>
