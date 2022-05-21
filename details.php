@@ -16,8 +16,8 @@ include("sharing.php");
     <title>Details | FashionSHOP</title>
 </head>
 <body>
-     <!-- header section starts -->
-     <header class="header">
+    <!-- header section starts -->
+    <header class="header">
           <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
           <nav class="navbar">
                <a href="index.php">Home</a>
@@ -29,7 +29,7 @@ include("sharing.php");
                ?>
                <a href="#" class="session"><?php echo $_SESSION['name'];?></a>
                <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"></a>
-              <?php
+               <?php
                }else{
                    ?>
                    <a href="login.php">My Account</a>
@@ -37,13 +37,20 @@ include("sharing.php");
                }
                ?>
           </nav>
-            <?php
+          <?php
+            if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
                 $select_row=$bdd->query("SELECT * FROM cart");
-                $row=$select_row->rowCount();
-            ?>
-          <div id="menu-btn" class="fas fa-bars"></div>
+                $row=$select_row->rowCount();?>
+            <div id="menu-btn" class="fas fa-bars"></div>
           <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span><?php echo $row;?></span></a>
-     </header>
+          <?php
+            }else{?>
+            <div id="menu-btn" class="fas fa-bars"></div>
+          <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span>0</span></a>
+        <?php
+            }
+                
+            ?>  </header>
      <!-- header section ends -->
 <?php 
 if(isset($_GET["det"])){

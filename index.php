@@ -78,7 +78,7 @@ if(isset($_POST['add_to_cart'])){
           <div class="content">
                <h3><span class="line-down">Clothing</span> Collections 2022</h3>
                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio ipsam eum aut sint dolorem quae. Quis reprehenderit dolore minus dolor quidem obcaecati in doloribus nam, inventore vero velit ducimus praesentium!</p>
-               <a href="#" class="btn-index">Explore Now</a>
+               <a href="shop.php" class="btn-index">Explore Now</a>
           </div>
      </section>
 

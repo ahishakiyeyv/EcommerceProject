@@ -1,5 +1,7 @@
 <?php
+session_start();
 include("db.php");
+include("sharing.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +10,7 @@ include("db.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Custom css link -->
-    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/details.css">
      <!-- font awesome cdn link -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Details | FashionSHOP</title>
@@ -18,12 +20,22 @@ include("db.php");
      <header class="header">
           <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
           <nav class="navbar">
-               <a href="dashboard.php">Dashboard</a>
-               <a href="accueil.php">Home</a>
+               <a href="index.php">Home</a>
                <a href="shop.php">Shop</a>
                <a href="about.php">About</a>
                <a href="contact.php">Contact</a>
-               <a href="login.php">My Account</a>
+               <?php
+               if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
+               ?>
+               <a href="#" class="session"><?php echo $_SESSION['name'];?></a>
+               <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"></a>
+              <?php
+               }else{
+                   ?>
+                   <a href="login.php">My Account</a>
+                   <?php
+               }
+               ?>
           </nav>
             <?php
                 $select_row=$bdd->query("SELECT * FROM cart");
@@ -39,6 +51,7 @@ if(isset($_GET["det"])){
     $select=$bdd->query("SELECT * FROM produit WHERE id_pro=$idtoget");
     $data=$select->fetch();
 }
+
 ?>
      <section class="section-details">
          <h1 class="titleDetails">Details</h1>
@@ -65,14 +78,36 @@ if(isset($_GET["det"])){
                     </div>
                     <div class="avis">
                      <h3 class="comment">Your Comment:</h3>
-                        <form  method="post">
+                        <form  method="POST">
                             <table>
                                 <tr>
-                                    <th><textarea name="" placeholder="Your comment here..." cols="60" rows="3"></textarea></th>
-                                    <td><input type="submit" value="Post" class="btn-submit"></td>
+                                    <th><textarea name="commentaire" placeholder="Your comment here..." cols="70" rows="1"></textarea></th>
+                                    <td><input type="submit" name="submit" value="Post" class="btn-submit"></td>
                                 </tr>
                             </table>   
                         </form>
+                    </div>
+                    <div class="recupcomment">
+                        <?php
+                        $select=$bdd->query("SELECT * FROM commentaire WHERE id_prod=$idtoget");
+                        while($dataselect=$select->fetch()){
+                        ?>
+                        <div class="comment1">
+                             <div class="tablecomment">
+                                <div class="headcomment">
+                                    <img src="images/200.png" alt="image non disponible" class="img-comment">
+                                   <h1>         </h1>
+                                   <h1>            </h1>
+                                    <h1 class="nameUser"><?php echo $dataselect['auteur']?></h1>
+                                </div>
+                                <div class="comment">
+                                    <p class="commentUser"><?php echo $dataselect['commentaire']?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                        }
+                        ?>    
                     </div>
                     <div class="share">
                         <h3 class="title-share">Share on:</h3>
@@ -80,6 +115,9 @@ if(isset($_GET["det"])){
                             <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
                             <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                            <?php
+                            // showSharer("http://localhost/Ecommerce/details.php?det=1", "a search engine site");
+                            ?>
                         </div>
                     </div>
              </div>
@@ -125,3 +163,20 @@ include("livechat.php");
 ?>
 </body>
 </html>
+
+<?php
+if(isset($_GET["det"])){
+    $idtoget=$_GET["det"];
+    if(isset($_POST['submit'])){
+        $auteur=$_SESSION['name'];
+        $commentaire=$_POST['commentaire'];
+        $insertion=$bdd->prepare("INSERT INTO commentaire(auteur,commentaire,id_prod)VALUES(?,?,?)");
+        $insertion->execute(array($auteur,$commentaire,$idtoget));
+        if($insertion){
+            echo "<script>alert('comment added successful')<?script>";
+        }else{
+            echo "<script>alert('there was an error')<?script>";
+        }
+    }
+}
+?>
