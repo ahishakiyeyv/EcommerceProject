@@ -103,8 +103,6 @@ if(isset($_GET["det"])){
                              <div class="tablecomment">
                                 <div class="headcomment">
                                     <img src="images/200.png" alt="image non disponible" class="img-comment">
-                                   <h1>         </h1>
-                                   <h1>            </h1>
                                     <h1 class="nameUser"><?php echo $dataselect['auteur']?></h1>
                                 </div>
                                 <div class="comment">

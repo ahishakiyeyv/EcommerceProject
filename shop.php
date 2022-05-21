@@ -117,8 +117,22 @@ function filter($query){
           <img src="admin/image/<?php echo $dataselect['photo']?>" alt="image non disponible" class="img-div1">
           <h3 class='h3-div1'><?php echo $dataselect['nom_pro']?></h3>
           <h2 class='h2-div1'><?php echo $dataselect['prix']?>/piece</h2>
-          <a href="#" class="comment">Add To Cart</a>
-          <a href="#" class="a-div1">Details</a>
+          <?php
+               if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
+               ?>
+                <input type="hidden" name="nomprod" value="<?php echo $dataselect['nom_pro'];?>">
+               <input type="hidden" name="prixpro" value="<?php echo $dataselect['prix'];?>">
+               <input type="hidden" name="imagepro" value="<?php echo $dataselect['photo'];?>">
+               <input type="submit" value="Add to Cart" name="add_to_cart" class="add-btn">
+               <?php
+               }else{
+                   ?>
+                   <a href="login.php" class="comment">Add to Cart</a>
+                   <?php
+               }
+               ?>
+          <!-- <a href="#" class="comment">Add To Cart</a> -->
+          <a href="details.php?det=<?php echo $dataselect['id_pro'];?>" class="a-div1">Details</a>
      </div>
        <?php 
 }
