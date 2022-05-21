@@ -185,3 +185,10 @@ if(isset($_GET["det"])){
     }
 }
 ?>
+<?php
+if(isset($_POST['submit'])){
+    $mail=$_POST['text'];
+    $insert=$bdd->prepare("INSERT INTO subscribers(mail_sub)VALUES(?)");
+    $insert->execute(array($mail));
+}
+?>

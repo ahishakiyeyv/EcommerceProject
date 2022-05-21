@@ -139,7 +139,7 @@ if(isset($_POST['add_to_cart'])){
                    <div class="images">
                        <img src="images/29.jpg" alt="image non disponible">
                        <div class="details">
-                           <h2>Your <span>Title</span></h2>
+                           <h2> <span>Gaudasse</span></h2>
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tempora, debitis possimus voluptatum perspiciatis quaerat. Possimus vitae amet id ducimus, </p>
                            <div class="more">
                                <a href="#" class="read-more"><span>More</span></a>
@@ -157,7 +157,7 @@ if(isset($_POST['add_to_cart'])){
                    <div class="images">
                        <img src="images/12.jpg" alt="image non disponible">
                        <div class="details">
-                           <h2>Your <span>Title</span></h2>
+                           <h2>Jeans <span> </span></h2>
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tempora, debitis possimus voluptatum perspiciatis quaerat. Possimus vitae amet id ducimus, </p>
                            <div class="more">
                                <a href="#" class="read-more"><span>More</span></a>
@@ -172,7 +172,7 @@ if(isset($_POST['add_to_cart'])){
                    <div class="images">
                        <img src="images/25.jpg" alt="image non disponible">
                        <div class="details">
-                           <h2>Your <span>Title</span></h2>
+                           <h2>Shoes- <span>Fils</span></h2>
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tempora, debitis possimus voluptatum perspiciatis quaerat. Possimus vitae amet id ducimus, </p>
                            <div class="more">
                                <a href="#" class="read-more"><span>More</span></a>
@@ -187,7 +187,7 @@ if(isset($_POST['add_to_cart'])){
                    <div class="images">
                     <img src="images/17.jpg" alt="image non disponible">
                     <div class="details">
-                        <h2>Your <span>Title</span></h2>
+                        <h2> <span>Lacoste</span></h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tempora, debitis possimus voluptatum perspiciatis quaerat. Possimus vitae amet id ducimus, </p>
                         <div class="more">
                             <a href="#" class="read-more"><span>More</span></a>
@@ -202,7 +202,7 @@ if(isset($_POST['add_to_cart'])){
                    <div class="images">
                        <img src="images/23.jpg" alt="image non disponible">
                        <div class="details">
-                           <h2>Your <span>Title</span></h2>
+                           <h2>One-hand <span>Bag</span></h2>
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tempora, debitis possimus voluptatum perspiciatis quaerat. Possimus vitae amet id ducimus, </p>
                            <div class="more">
                                <a href="#" class="read-more"><span>More</span></a>

@@ -53,7 +53,7 @@ include("db.php");
    <section class="section1">
        <div class="about-section">
         <h2 class="h2-title">About Products</h2>
-        <a href="#" class="link-about">Explore Now</a>
+        <a href="shop.php" class="link-about">Explore Now</a>
        </div>
    </section>
    <section class="section2">
@@ -91,19 +91,19 @@ include("db.php");
        <p class="p-team">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo cum illum, omnis ducimus doloribus voluptatum assumenda ea! Quam incidunt aut dignissimos.</p>
        <div class="team">
            <div class="member1">
-               <img src="images/2.jpg" alt="image non disponible" class="img-member1">
-               <h3 class="name1">Tony Bim</h3>
+               <img src="images/200.png" alt="image non disponible" class="img-member1">
+               <h3 class="name1">Yvan Igor AHISHAKIYE</h3>
                <p class="p-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio neque veritatis dolor error amet quibusdam labore in similique laboriosam porro? Provident, natus aspernatur nulla placeat impedit ipsam nisi odit dolorum!</p>
 
            </div>
            <div class="member1">
-            <img src="images/2.jpg" alt="image non disponible" class="img-member1">
-            <h3 class="name1">Tony Bim</h3>
-            <p class="p-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio neque veritatis dolor error amet quibusdam labore in similique laboriosam porro? Provident, natus aspernatur nulla placeat impedit ipsam nisi odit dolorum!</p>
+            <img src="images/200.png" alt="image non disponible" class="img-member1">
+            <h3 class="name1">Prudence AHINDOREYE</h3>
+            <p class="p-text">Lorem, Odio neque veritatis dolor error amet quibusdam labore in similique laboriosam porro? Provident, natus aspernatur nulla placeat impedit ipsam nisi odit dolorum!</p>
            </div>
            <div class="member1">
-            <img src="images/2.jpg" alt="image non disponible" class="img-member1">
-            <h3 class="name1">Tony Bim</h3>
+            <img src="images/200.png" alt="image non disponible" class="img-member1">
+            <h3 class="name1">Tony BIMENYIMANA</h3>
             <p class="p-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio neque veritatis dolor error amet quibusdam labore in similique laboriosam porro? Provident, natus aspernatur nulla placeat impedit ipsam nisi odit dolorum!</p>
            </div>
        </div>
@@ -148,3 +148,10 @@ include("livechat.php");
 ?>
 </body>
 </html>
+<?php
+if(isset($_POST['submit'])){
+    $mail=$_POST['text'];
+    $insert=$bdd->prepare("INSERT INTO subscribers(mail_sub)VALUES(?)");
+    $insert->execute(array($mail));
+}
+?>
