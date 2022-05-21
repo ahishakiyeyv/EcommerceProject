@@ -163,6 +163,7 @@ if(isset($_GET["det"])){
     </div>
     <p class="copy">&copy 2022 All Right Reserved | </p>
 </footer>
+<script src="js/main.js"></script>
 <?php
 include("livechat.php");
 ?>

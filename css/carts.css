@@ -309,3 +309,103 @@ footer{
      font-size:15px;
      padding:10px;
 }
+
+
+/* Responsivity starts*/
+
+@media (max-width: 1200px)
+{
+     .header
+     {
+          padding: 2rem;
+     }
+
+     section
+     {
+          padding: 3rem 2rem;
+     }
+
+     .home .content h3
+     {
+          font-size: 4rem;
+     }
+}
+
+@media (max-width: 991px)
+{
+     html{
+          font-size: 50%;
+     }
+}
+
+@media (max-width: 768px)
+{
+     .btn
+     {
+          display: none;
+     }
+
+     #menu-btn
+     {
+          display: inline-block;
+          transition: .2s linear;
+     }
+
+     #menu-btn .fa-times
+     {
+          transform: rotate(180deg);
+     }
+
+     .navbar
+     {
+          position: absolute;
+          top: 99%;
+          left: 0;
+          right: 0;
+          border-top: var(--border);
+          background-color: var(--white);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          transition: .2s linear;
+     }
+
+     .active
+     {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+     }
+
+     a
+     {
+          display: block;
+          margin: 0;
+          padding: 1.5rem 2rem;
+     }
+     .flex-container{
+          display:flex;
+          flex-wrap:wrap;
+          justify-content: center;
+          align-items: center;
+     }
+     .footer-container{
+          display:flex;
+          flex-wrap:wrap;
+          justify-content: center;
+          align-items: center;
+     }
+}
+
+@media (max-width: 450px)
+{
+     html{
+          font-size: 50%;
+     }
+     .heading h1
+     {
+          font-size: 3rem;
+     }
+     .footer-container{
+          display:flex;
+          flex-wrap:wrap;
+     }
+}
+
+/* Responsivity ends*/
