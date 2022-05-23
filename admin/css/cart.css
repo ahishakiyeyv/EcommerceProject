@@ -196,6 +196,8 @@ html
 .order_btn{
      text-align:center;
      margin-top:1rem;
+     display:flex;
+     justify-content: space-around;
 }
 .order_btn .btn{
      padding:10px 100px;
@@ -219,6 +221,9 @@ html
 }
 .td-tot{
      height:50px;
+}
+.btn-recup{
+     margin:1rem;
 }
 /* ====================================footer========================= */
 footer{

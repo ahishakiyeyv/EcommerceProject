@@ -27,7 +27,7 @@ if(isset($_GET['delete'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/carts.css">
+    <link rel="stylesheet" href="css/cart.css">
     <title>Cart | FashionSHOP</title>
 </head>
 <body>
@@ -110,8 +110,12 @@ if(isset($_GET['delete'])){
            </tbody>
        </table>
        <div class="order_btn">
+           <a href="#"></a>
            <a href="order.php" class="btn <?= ($grandTotal > 1)?'':'disabled'?>">CheckOut</a>
-       </div>
+           <a href="#" class="btn-recup"><img src="images/recycle-bin (1).png" alt=""></a>
+
+        </div>
+
    </section>
    <footer>
      <div class="footer-container">
