@@ -23,16 +23,23 @@ include("db.php");
   <!-- <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Tasks</a> -->
 </div>
 <section class="section1">
-    <h1 class="title01">Product Management</h1>
+    <h1 class="title01">Update Product</h1>
+    <?php
+    if(isset($_GET['modify'])){
+        $idtomodify=$_GET['modify'];
+        $selection=$bdd->query("SELECT * FROM produit WHERE id_pro=$idtomodify");
+        $datamod=$selection->fetch();
+    }
+    ?>
     <fieldset>
         <form  method="POST" enctype="multipart/form-data">
             <ul class="ul-form">
                 <h3 class="h3-form">Name:</h3>
-                <li class="li-form"><input type="text" name="nomproduit" class="inpt" placeholder="Name of the product..."></li>
+                <li class="li-form"><input type="text" name="nomproduit" class="inpt" value="<?php echo $datamod['nom_pro'];?>" placeholder="Name of the product..."></li>
                 <h3 class="h3-form">Price:</h3>
-                <li class="li-form"><input type="number" name="prix" class="inpt" placeholder="enter price..."></li>
+                <li class="li-form"><input type="number" name="prix" class="inpt" value="<?php echo $datamod['prix'];?>" placeholder="enter price..."></li>
                 <h3 class="h3-form">Image:</h3>
-                <li class="li-form"><input type="file" name="image" class="inpt-img"></li>
+                <li class="li-form"><input type="file" name="image" class="inpt-img" value="<?php echo $datamod['photo'];?>"></li>
                 <h3 class="h3-form">Category:</h3>
                 <li class="li-form"><select name="category" class="inpt">
                     <option value="">----category-----</option>
@@ -53,59 +60,15 @@ include("db.php");
         </form>
     </fieldset>
 </section>
-<?php 
-$select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
-if(isset($_GET['sup'])){
-    $idtodelete=$_GET['sup'];
-    $delete=$bdd->exec("DELETE FROM produit WHERE id_pro=$idtodelete");
-}
-?>
-<section class="section2">
-    <h1 class="title02">Recovery</h1>
-    <div class="box-recovery">
-        <?php
-        while($dataselect=$select->fetch()){?>
-        
-           
-            <!-- echo "<div class='recovery'>";
-                echo "<img src='image/".$dataselect['photo']."' class='img-recovery' alt='image non disponible'>";
-                echo "<h3 class='desc'>".$dataselect['nom_pro']."</h3>";
-                echo "<h2 class='price'>".$dataselect['prix']." fbu</h2>";
-                echo "<div class='btn-act'>
-                <a href='#' class='btn-del'>Delete</a>
-                <a href='#' class='btn-upd'>Update</a>
-                </div>";
-            echo "</div>"; -->
-            <div class="recovery">
-                <img src="image/<?php echo $dataselect['photo'];?>" alt="image non disponible" class="img-recovery">
-                <h3 class="desc"><?php echo $dataselect['nom_pro'];?></h3>
-                <h2 class="price"><?php echo $dataselect['prix']?> fbu</h2>
-                <div class="btn-act">
-                    <a href="product.php?sup=<?php echo $dataselect['id_pro'];?>" class="btn-del">Delete</a>
-                    <a href="modify_product.php?modify=<?php echo $dataselect['id_pro'];?>" class="btn-upd">Update</a>
-                </div>
-            </div>
-  <?php
-        }
-            ?>
-    </div>
-</section>
 </body>
 </html>
 <?php
 
 if(isset($_POST["submit"])){
-    $target="image/".basename($_FILES['image']['name']);
     $nompro=$_POST["nomproduit"];
     $prix=$_POST["prix"];
     $img=$_FILES["image"]["name"];
     $category=$_POST["category"];
-$insert=$bdd->prepare("INSERT INTO produit(nom_pro,prix,photo,id_Cat)VALUES(?,?,?,?)");
-if($insert->execute(array($nompro,$prix,$img,$category))){
-    move_uploaded_file($_FILES["image"]["tmp_name"],$target);
-    echo "<script>alert('Data added Successfully')</script>";
-}else{
-    echo "<script>alert('Error occurs !!')</script>";
-}
+    $updateexamen=$bdd->EXEC("UPDATE produit SET nom_pro='$nompro', prix='$prix',photo='$img',id_Cat='$category' WHERE id_pro=$idtomodify");
 }
 ?>
