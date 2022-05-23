@@ -72,6 +72,15 @@ html
 {
      text-decoration: underline;
 }
+.navbar .session{
+     margin: 0 1rem;
+     padding:5px;
+    font-size: 2rem;
+    border:1px solid black;
+}
+.navbar .session:hover{
+    border:2px solid black;
+}
 
 #menu-btn
 {
@@ -83,11 +92,9 @@ html
 {
      display: inline-block;
      /* margin-top: 1rem; */
-     padding: 1rem 3rem;
-     font-size: 2rem;
-     color: var(--white);
-     background: var(--black);
-     border: var(--border);
+     padding: 0.5rem 1rem;
+     /* font-size: 2rem; */
+     border: 1px solid Black;
      cursor: pointer;
      font-weight: bolder;
      border-radius: .5rem;
@@ -95,22 +102,19 @@ html
 
 .btn:hover
 {
-     background: none;
+     background:var(--graye);
      color: var(--black);
 }
 .btn span{
-     border:1px solid #fff;
-     color:#000;
-     background:#fff;
-     padding:5px;
-     margin:5px 1px;
+     position:relative;
+     left:1px;
+     top:1px;
+     font-size:1.5rem;
+     /* padding:1px; */
+     color:#000;;
      border-radius:5px;
+     /* margin:5px 1px; */
 
-}
-.btn:hover span{
-     border:1px solid var(--black);
-     background:#000;
-     color:#fff;
 }
 /* ===================================section 1========================================== */
 .title1{
@@ -193,14 +197,21 @@ html
      text-align:center;
      margin-top:1rem;
 }
-.order_btn a{
+.order_btn .btn{
      padding:10px 100px;
      text-decoration: none;
-     font-weight:200;
+     font-size:2rem;
+     font-weight:400;
      color:#fff;
+     background:#000;
      display:inline-block;
      width:auto;
      margin:2rem;
+}
+.order_btn .btn:hover{
+     color:#000;
+     background:#fff;
+     transition:0.5s ease;
 }
 .order_btn a.disabled{
      pointer-events: none;

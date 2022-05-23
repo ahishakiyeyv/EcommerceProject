@@ -27,24 +27,23 @@ if(isset($_GET['delete'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/carts.css">
-    <title>Cart | SuitSHOP</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <title>Cart | FashionSHOP</title>
 </head>
 <body>
-    <!-- header section starts -->
-    <header class="header">
+ <!-- header section starts -->
+ <header class="header">
           <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
           <nav class="navbar">
-              <a href="dashboard.php">Dashboard</a>
-               <a href="accueil.php">Home</a>
+               <a href="index.php">Home</a>
                <a href="shop.php">Shop</a>
                <a href="about.php">About</a>
                <a href="contact.php">Contact</a>
                <?php
-               if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
+               if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
                ?>
-               <a href="#" class="session"><?php echo $_SESSION['username'];?></a>
-               <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"></a>
+               <a href="#"><?php echo $_SESSION['name']?></a>
+                <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"> </a> 
                <?php
                }else{
                    ?>
@@ -61,7 +60,6 @@ if(isset($_GET['delete'])){
           <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span><?php echo $row;?></span></a>
      </header>
      <!-- header section ends -->
-
    <section class="section_1">
        <h1 class="title1">Shopping Cart</h1>
        <table class="table01">
@@ -150,6 +148,5 @@ if(isset($_GET['delete'])){
      </div>
      <p class="copy">&copy 2022 All Right Reserved | </p>
 </footer>
-<script src="js/main.js"></script>
 </body>
 </html>
