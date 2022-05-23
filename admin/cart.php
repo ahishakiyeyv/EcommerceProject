@@ -35,14 +35,14 @@ if(isset($_GET['delete'])){
  <header class="header">
           <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
           <nav class="navbar">
-               <a href="index.php">Home</a>
+               <a href="accueil.php">Home</a>
                <a href="shop.php">Shop</a>
                <a href="about.php">About</a>
                <a href="contact.php">Contact</a>
                <?php
-               if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
+               if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
                ?>
-               <a href="#"><?php echo $_SESSION['name']?></a>
+               <a href="#"><?php echo $_SESSION['username']?></a>
                 <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"> </a> 
                <?php
                }else{
