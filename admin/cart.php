@@ -36,7 +36,7 @@ if(isset($_GET['delete'])){
           <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
           <nav class="navbar">
               <a href="dashboard.php">Dashboard</a>
-               <a href="index.php">Home</a>
+               <a href="accueil.php">Home</a>
                <a href="shop.php">Shop</a>
                <a href="about.php">About</a>
                <a href="contact.php">Contact</a>
