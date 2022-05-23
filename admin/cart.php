@@ -112,7 +112,7 @@ if(isset($_GET['delete'])){
        <div class="order_btn">
            <a href="#"></a>
            <a href="order.php" class="btn <?= ($grandTotal > 1)?'':'disabled'?>">CheckOut</a>
-           <a href="#" class="btn-recup"><img src="images/recycle-bin (1).png" alt=""></a>
+           <a href="cartloss.php" class="btn-recup"><img src="images/recycle-bin (1).png" alt=""></a>
 
         </div>
 
