@@ -20,7 +20,6 @@ include("db.php");
   <a href="orderrecovery.php"class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Orders</a>
   <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Cart</a>
   <a href="admin.php"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Home View</a>
-  <!-- <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Tasks</a> -->
 </div>
 <section class="section1">
     <h1 class="title01">Update Product</h1>
@@ -70,5 +69,6 @@ if(isset($_POST["submit"])){
     $img=$_FILES["image"]["name"];
     $category=$_POST["category"];
     $updateexamen=$bdd->EXEC("UPDATE produit SET nom_pro='$nompro', prix='$prix',photo='$img',id_Cat='$category' WHERE id_pro=$idtomodify");
+    header("location:product.php");
 }
 ?>
