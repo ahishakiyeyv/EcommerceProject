@@ -128,8 +128,8 @@ include("db.php");
               <ul>
                    <li>Contact Us</li>
                    <li>Payment Method</li>
-                   <li>Delivery</li>
-                   <li>Return & Exchange</li>
+                   <li><a href="terms.php">Terms & Conditions</a></li>
+                    <li><a href="return.php">Return Policy</a></li>
               </ul>
          </div>
          <div class="footer-box4">
