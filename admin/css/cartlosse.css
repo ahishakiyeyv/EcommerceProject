@@ -116,3 +116,21 @@ html
      /* margin:5px 1px; */
 
 }
+/* =========================================section 1=========================================== */
+.title0{
+    text-align:center;
+    font-size:2.5rem;
+    letter-spacing: .2rem;
+}
+table .thead .th{
+    background:gray;
+    padding:1.2rem 2rem;
+}
+table .tbody .td img{
+    width:5rem;
+    height:5rem;
+}
+table .tbody .td{
+    border:0;
+    border-bottom:2px solid black;
+}

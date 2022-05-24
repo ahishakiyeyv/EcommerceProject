@@ -9,7 +9,7 @@ include("db.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/cartloss.css">
+    <link rel="stylesheet" href="css/cartlosse.css">
     <title>Cart Loss  | FashionSHOP</title>
 </head>
 <body>
@@ -45,26 +45,26 @@ include("db.php");
      <section class="section12">
          <h1 class="title0">Cart Loss</h1>
          <table>
-             <thead>
+             <thead class="thead">
                  <tr>
-                     <th>Images</th>
-                     <th>Name Product</th>
-                     <th>Price</th>
-                     <th>Quantity</th>
-                     <th>Action</th>
+                     <th class="th">Images</th>
+                     <th class="th">Name Product</th>
+                     <th class="th">Price</th>
+                     <th class="th">Quantity</th>
+                     <th class="th">Action</th>
                  </tr>
              </thead>
-             <tbody>
+             <tbody class="tbody">
                  <?php
                  $select=$bdd->query("SELECT * FROM cartloss ORDER BY id_cart");
                  while($data=$select->fetch()){
                  ?>
                  <tr>
-                     <td><img src="image/<?php echo $data['photoprod']?>" alt="image non disponible"></td>
-                     <td><?php echo $data['nomprod']?></td>
-                     <td><?php echo $data['prixprod']?></td>
-                     <td><?php echo $data['Quantite']?></td>
-                     <td><a href="#">Recover</a></td>
+                     <td class="td"><img src="image/<?php echo $data['photoprod']?>" alt="image non disponible"></td>
+                     <td class="td"><?php echo $data['nomprod']?></td>
+                     <td class="td"><?php echo $data['prixprod']?></td>
+                     <td class="td"><?php echo $data['Quantite']?></td>
+                     <td class="td"><a href="#">Recover</a></td>
                  </tr>
                  <?php
                  }
