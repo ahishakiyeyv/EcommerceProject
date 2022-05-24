@@ -11,7 +11,7 @@ if(isset($_POST["btn_update"])){
 };
 if(isset($_GET['sup'])){
     $idtodelete=$_GET['sup'];
-    $remove=$bdd->query("INSERT INTO cartloss(nomprod,prixprod,photoprod,Quantite)SELECT nomprod,prixprod,photoprod,Quantite FROM cart WHERE id_cart='$idtodelete'");
+    $remove=$bdd->query("INSERT INTO cartloss(nomprod,prixprod,photoprod,Quantite,user)SELECT nomprod,prixprod,photoprod,Quantite,user FROM cart WHERE id_cart='$idtodelete'");
     $deletecart=$bdd->exec("DELETE FROM cart WHERE id_cart=$idtodelete");
     header("location:cart.php");
 };
@@ -27,7 +27,7 @@ if(isset($_GET['delete'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/carts.css">
+    <link rel="stylesheet" href="css/cart.css">
     <title>Cart | FashionSHOP</title>
 </head>
 <body>
@@ -40,9 +40,9 @@ if(isset($_GET['delete'])){
                <a href="about.php">About</a>
                <a href="contact.php">Contact</a>
                <?php
-               if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
+               if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
                ?>
-               <a href="#"><?php echo $_SESSION['name']?></a>
+               <a href="#"><?php echo $_SESSION['username']?></a>
                 <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"> </a> 
                <?php
                }else{
@@ -110,8 +110,12 @@ if(isset($_GET['delete'])){
            </tbody>
        </table>
        <div class="order_btn">
+           <a href="#"></a>
            <a href="order.php" class="btn <?= ($grandTotal > 1)?'':'disabled'?>">CheckOut</a>
-       </div>
+           <a href="cartloss.php" class="btn-recup"><img src="images/recycle-bin (1).png" alt=""></a>
+
+        </div>
+
    </section>
    <footer>
      <div class="footer-container">
