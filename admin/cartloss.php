@@ -17,6 +17,7 @@ include("db.php");
  <header class="header">
           <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
           <nav class="navbar">
+              <a href="dashboard.php">Dashboard</a>
                <a href="accueil.php">Home</a>
                <a href="shop.php">Shop</a>
                <a href="about.php">About</a>
@@ -42,6 +43,17 @@ include("db.php");
           <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span><?php echo $row;?></span></a>
      </header>
      <!-- header section ends -->
+     <?php
+     if(isset($_GET['restore'])){
+         $idtorestore=$_GET['restore'];
+         $restore=$bdd->query("INSERT INTO cart(nomprod,prixprod,photoprod,Quantite,user)SELECT nomprod,prixprod,photoprod,Quantite,user FROM cartloss WHERE id_cart='$idtorestore'");
+         $delete=$bdd->query("DELETE FROM cartloss WHERE id_cart=$idtorestore");
+     }
+     if(isset($_GET['sup'])){
+         $idtodelete=$_GET['sup'];
+         $delet=$bdd->query("DELETE FROM cartloss WHERE id_cart=$idtodelete");
+     }
+     ?>
      <section class="section12">
          <h1 class="title0">Cart Loss</h1>
          <table>
@@ -51,7 +63,7 @@ include("db.php");
                      <th class="th">Name Product</th>
                      <th class="th">Price</th>
                      <th class="th">Quantity</th>
-                     <th class="th">Action</th>
+                     <th class="th" colspan="2">Action</th>
                  </tr>
              </thead>
              <tbody class="tbody">
@@ -64,7 +76,8 @@ include("db.php");
                      <td class="td"><?php echo $data['nomprod']?></td>
                      <td class="td"><?php echo $data['prixprod']?></td>
                      <td class="td"><?php echo $data['Quantite']?></td>
-                     <td class="td"><a href="#">Recover</a></td>
+                     <td class="td"><a href="cartloss.php?restore=<?php echo $data['id_cart']?>">Restore</a></td>
+                     <td class="td"><a href="cartloss.php?sup=<?php echo $data['id_cart']?>">Delete</a></td>
                  </tr>
                  <?php
                  }

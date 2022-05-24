@@ -126,6 +126,7 @@ html
 table{
      width:80rem;
      margin-left:25rem;
+     margin-bottom:5rem;
 }
 table .thead .th{
     background:gray;
