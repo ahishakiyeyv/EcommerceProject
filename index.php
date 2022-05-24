@@ -27,7 +27,7 @@ if(isset($_POST['add_to_cart'])){
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Custom css link -->
-     <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/style.css">
      <!-- font awesome cdn link -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
      <title>Home | FashionSHOP</title>
@@ -329,8 +329,8 @@ if(isset($_POST['add_to_cart'])){
                <ul>
                     <li>Contact Us</li>
                     <li>Payment Method</li>
-                    <li>Delivery</li>
-                    <li>Return & Exchange</li>
+                    <li><a href="terms.php">Terms & Conditions</a></li>
+                    <li><a href="return.php">Return Policy</a></li>
                </ul>
           </div>
           <div class="footer-box4">
