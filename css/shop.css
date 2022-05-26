@@ -179,6 +179,7 @@ aside{
 .img-div1{
      height:300px;
      width:290px;
+     border-radius:inherit;
 }
 .h3-div1{
      text-align:center;
@@ -371,6 +372,26 @@ footer{
           margin: 0;
           padding: 1.5rem 2rem;
      }
+     .quick-links{
+          display:block;
+        
+     }
+     .cat-select{
+          width:35rem;
+          text-align: center;
+     }
+     .search-btn{
+          float:right;
+     }
+     aside{
+          position:absolute;
+          top:12rem;
+          left:10rem;
+     }
+     .shop{
+          margin-left:8rem;
+          margin-top:15rem;
+     }
      .flex-container{
           display:flex;
           flex-wrap:wrap;
@@ -393,6 +414,25 @@ footer{
      .heading h1
      {
           font-size: 3rem;
+     }
+     .quick-links{
+        display: block;
+     }
+     .cat-select{
+          width:35rem;
+          text-align: center;
+     }
+     .search-btn{
+          float:right;
+     }
+     aside{
+          position:absolute;
+          top:12rem;
+          left:10rem;
+     }
+     .shop{
+          margin-top:15rem;
+          margin-left:8rem;
      }
      .footer-container{
           display:flex;

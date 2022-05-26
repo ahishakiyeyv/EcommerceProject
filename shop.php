@@ -23,7 +23,7 @@ function filter($query){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/shops.css">
+    <link rel="stylesheet" href="css/shop.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Shop | FashionSHOP</title>
 </head>
@@ -66,7 +66,7 @@ function filter($query){
    <aside>
     <div class="quick-links">
         <h3 class="title">Categories</h3>
-        <form  action="shop.php" method="POST">
+        <form  action="shop.php" method="POST" class="formu">
              <select name="categorie" class="cat-select">
                   <option value="">--Category--</option>
                   <?php 
