@@ -413,6 +413,19 @@ footer{
           margin: 0;
           padding: 1.5rem 2rem;
      }
+     .about-section{
+        position:absolute;
+        left:4rem;
+        top:30rem;
+     }
+     .link-about{
+         font-size:2rem;
+         padding:1rem 3rem;
+         width:20rem;
+     }
+     .h2-title{
+         font-size:5rem;
+     }
      .flex-container{
           display:flex;
           flex-wrap:wrap;
@@ -435,6 +448,19 @@ footer{
      .heading h1
      {
           font-size: 3rem;
+     }
+     .link-about{
+        font-size:2rem;
+        padding:1rem 3rem;
+        width:2rem;
+    }
+     .about-section{
+         position:absolute;
+         left:4rem;
+         top:6rem;
+     }
+     .h2-title{
+         font-size:5rem;
      }
      .footer-container{
           display:flex;
