@@ -369,6 +369,7 @@ section
 .img-arrival{
      width:348px;
      height:300px;
+     border-radius: inherit;
 }
 .desc{
      text-align:center;
@@ -643,6 +644,13 @@ footer{
           margin: 0;
           padding: 1.5rem 2rem;
      }
+     .box1{
+          margin-left:7rem;
+     }
+     .add-btn{
+          width:16.5rem;
+          text-align: center;
+     }
      .pop{
           display:none;
      }
@@ -669,7 +677,13 @@ footer{
      {
           font-size: 3rem;
      }
-     
+     .box1{
+          margin-left:7rem;
+     }
+     .add-btn{
+         width:16.5rem;
+         text-align: center;
+     }
      .pop{
           display:none;
      }
