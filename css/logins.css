@@ -238,3 +238,18 @@ form .name-details .field:last-child{
     background:gray;
     color:#fff;
 }
+
+@media (max-width: 768px){
+.wrapper{
+    position:absolute;
+    top:8rem;
+    left:1.5rem;
+}
+}
+@media (max-width: 450px){
+    .wrapper{
+        position:absolute;
+        top:8rem;
+        left:1.5rem;
+    }
+}

@@ -8,7 +8,7 @@ include("db.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/logins.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Signup | FashionSHOP</title>
 </head>
@@ -59,8 +59,11 @@ if(isset($_POST['submit'])){
     $password=md5($_POST['motdepasse']);
    $insert=$bdd->prepare("INSERT INTO user(nom_user,prenom_user,email_user,password)VALUES(?,?,?,?)");
    $insert->execute(array($fname,$lname,$mail,$password));
-   echo "<script>alert('Your Account has been registred.')</script>";
+ 
+ if($insert){
+       echo "<script>alert('Your Account has been registred.')</script>";
 }else{
     echo "<script>alert('Error! Try Again')</script>";
+}
 }
 ?>
