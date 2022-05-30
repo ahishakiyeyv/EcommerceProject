@@ -73,7 +73,7 @@ $category=$selectCategory->fetch();
 	</div>
 	<div class="col-div-3">
 		<div class="box">
-			<p>78<br/><span>Tasks</span></p>
+			<p><?php echo $category['Nombre'];?><br/><span>Category</span></p>
 			<i class="fa fa-tasks box-icon"></i>
 		</div>
 	</div>
