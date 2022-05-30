@@ -13,10 +13,10 @@ if(isset($_POST['add_to_cart'])){
     //$data->execute(array($prod_name,$prod_prix,$prod_photo,$prod_quantite));
     $count=$data->rowCount();
     if($count > 0){
-        echo "<script>alert('Product already existed')</script>";
-    }else{
         $insert=$bdd->query("INSERT INTO cart(nomprod,prixprod,photoprod,Quantite,user)VALUES('$prod_name','$prod_prix','$prod_photo','$prod_quantite','$prod_user')");
         echo "<script>alert('Product added successfully')</script>";
+    }else{
+        echo "<script>alert('Product already existed')</script>";
     }
 }
 ?>
@@ -37,10 +37,10 @@ if(isset($_POST['add_to_cart'])){
      <header class="header">
           <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
           <nav class="navbar">
-               <a href="index.php">Home</a>
-               <a href="shop.php">Shop</a>
-               <a href="about.php">About</a>
-               <a href="contact.php">Contact</a>
+               <a href='index'>Home</a>
+               <a href='shop'>Shop</a>
+               <a href='about'>About</a>
+               <a href='contact'>Contact</a>
                <?php
                if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
                ?>
@@ -229,7 +229,7 @@ if(isset($_POST['add_to_cart'])){
             //   }
               ?>
               <?php
-              $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro");
+              $select=$bdd->query("SELECT * FROM produit ORDER BY id_pro DESC LIMIT 9");
               while($dataselect=$select->fetch()){
               ?>
               <form  method="post">

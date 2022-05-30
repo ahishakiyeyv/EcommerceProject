@@ -7,6 +7,8 @@ $selectorder=$bdd->query("SELECT count(id_order)AS Nombre FROM orders");
 $selectOrders=$selectorder->fetch();
 $selectproduct=$bdd->query("SELECT count(id_pro)AS Nombre FROM produit");
 $product=$selectproduct->fetch();
+$selectCategory=$bdd->query("SELECT count(id_cat)AS Nombre FROM categorie");
+$category=$selectCategory->fetch();
 ?>
 <!Doctype HTML>
 <html>

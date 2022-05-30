@@ -209,6 +209,16 @@ aside{
      font-size:15px;
      border-radius:0px 20px 0px 0px;
 }
+.add-btn{
+     float: left;
+     border:1px solid var(--black);
+     background:var(--black);
+     color:var(--white);
+     padding:10px;
+     font-size:15px;
+     border-radius:0px 20px 0px 0px; 
+     cursor:pointer;
+}
 
 /* ====================================footer========================= */
 footer{

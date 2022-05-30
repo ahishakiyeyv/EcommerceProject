@@ -15,6 +15,24 @@ function filter($query){
      $filter_result=$bdd->query($query);
      return $filter_result;
 }
+if(isset($_POST['add_to_cart'])){
+     $prod_name=$_POST['nomprod'];
+     $prod_prix=$_POST['prixpro'];
+     $prod_photo=$_POST['imagepro'];
+     $prod_quantite=1;
+     $prod_user=$_SESSION['name'];
+ 
+    // $select=$bdd->query();
+     $data=$bdd->prepare("SELECT * FROM cart WHERE nom_pro=".$prod_name."");
+     //$data->execute(array($prod_name,$prod_prix,$prod_photo,$prod_quantite));
+     $count=$data->rowCount();
+     if($count > 0){
+          $insert=$bdd->query("INSERT INTO cart(nomprod,prixprod,photoprod,Quantite,user)VALUES('$prod_name','$prod_prix','$prod_photo','$prod_quantite','$prod_user')");
+          echo "<script>alert('Product added successfully')</script>";
+     }else{
+         echo "<script>alert('Product already existed')</script>";
+     }
+ }
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +41,7 @@ function filter($query){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/shops.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Shop | FashionSHOP</title>
 </head>
@@ -103,6 +121,7 @@ function filter($query){
     <div class="parent">
     <?php
     while($dataselect=$search_result->fetch()){?>
+    <form method="POST">
      <div class="div1">
           <img src="admin/image/<?php echo $dataselect['photo']?>" alt="image non disponible" class="img-div1">
           <h3 class='h3-div1'><?php echo $dataselect['nom_pro']?></h3>
@@ -124,6 +143,7 @@ function filter($query){
           <!-- <a href="#" class="comment">Add To Cart</a> -->
           <a href="details.php?det=<?php echo $dataselect['id_pro'];?>" class="a-div1">Details</a>
      </div>
+          </form>
        <?php 
 }
          ?>
