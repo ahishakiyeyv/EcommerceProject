@@ -14,7 +14,7 @@ include("db.php");
 </head>
 <body>
     <!-- header section starts -->
- <header class="header">
+    <header class="header">
           <a href="#" class="logo"><i class="fas fa-splotch"></i> FashionSHOP</a>
           <nav class="navbar">
                <a href="index.php">Home</a>
@@ -22,11 +22,11 @@ include("db.php");
                <a href="about.php">About</a>
                <a href="contact.php">Contact</a>
                <?php
-               if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
+               if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
                ?>
-               <a href="#"><?php echo $_SESSION['username']?></a>
-                <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"> </a> 
-               <?php
+               <a href="#" class="session"><?php echo $_SESSION['name'];?></a>
+               <a href="logout.php"><img src="images/shutdown_20px.png" alt="image non disponible"></a>
+              <?php
                }else{
                    ?>
                    <a href="login.php">My Account</a>
@@ -34,13 +34,21 @@ include("db.php");
                }
                ?>
           </nav>
-            <?php
+          <?php
+            if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
                 $select_row=$bdd->query("SELECT * FROM cart");
-                $row=$select_row->rowCount();
-            ?>
-          <div id="menu-btn" class="fas fa-bars"></div>
+                $row=$select_row->rowCount();?>
+            <div id="menu-btn" class="fas fa-bars"></div>
           <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span><?php echo $row;?></span></a>
-     </header>
+          <?php
+            }else{?>
+            <div id="menu-btn" class="fas fa-bars"></div>
+          <a href="cart.php" class="btn"><img src="images/cart.png" alt="image non disponible" id="cart"> <span>0</span></a>
+        <?php
+            }
+                
+            ?>
+             </header>
      <!-- header section ends -->
      <?php
      if(isset($_GET['restore'])){
@@ -55,6 +63,9 @@ include("db.php");
      ?>
      <section class="section12">
          <h1 class="title0">Cart Loss</h1>
+         <?php
+         if(isset($_SESSION['name']) && !empty($_SESSION['name'])){
+         ?>
          <table>
              <thead class="thead">
                  <tr>
@@ -83,6 +94,11 @@ include("db.php");
                  ?>
              </tbody>
          </table>
+         <?php
+          }else{
+              echo "<center style='font-size:2rem;color:red;margin-bottom:1rem;'>Sign In or Sign Up First!</center>";
+          }
+         ?>
      </section>
      <footer>
      <div class="footer-container">
