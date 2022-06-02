@@ -92,7 +92,7 @@ if(isset($_GET['delete'])){
                 While($data=$select->fetch()){
                ?>
                     <tr>
-                        <td><img src="image/<?php echo $data['photoprod']?>" alt="Image non disponible" class="img-cart"></td>
+                        <td><img src="admin/image/<?php echo $data['photoprod']?>" alt="Image non disponible" class="img-cart"></td>
                         <td><?php echo $data['nomprod']?></td>
                         <td>
                         <form method="post">

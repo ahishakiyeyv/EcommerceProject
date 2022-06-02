@@ -161,7 +161,7 @@ echo "
         <p>your address: <span>".$city.", ".$commune.", ".$street."</span></p>
         <p>(*Pay when products arrive*)</p>
     </div>
-    <a href='accueil.php' class='btn_check'>Continue Shopping</a>
+    <a href='index.php' class='btn_check'>Continue Shopping</a>
 </div>
 </div>
 ";

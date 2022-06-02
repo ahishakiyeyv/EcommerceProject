@@ -13,10 +13,11 @@ if(isset($_POST['add_to_cart'])){
     //$data->execute(array($prod_name,$prod_prix,$prod_photo,$prod_quantite));
     $count=$data->rowCount();
     if($count > 0){
+        echo "<script>alert('Product already existed')</script>";
+    }else{
         $insert=$bdd->query("INSERT INTO cart(nomprod,prixprod,photoprod,Quantite,user)VALUES('$prod_name','$prod_prix','$prod_photo','$prod_quantite','$prod_user')");
         echo "<script>alert('Product added successfully')</script>";
-    }else{
-        echo "<script>alert('Product already existed')</script>";
+       
     }
 }
 ?>
