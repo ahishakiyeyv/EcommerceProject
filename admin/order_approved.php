@@ -1,11 +1,5 @@
 <?php
 include("db.php");
-if(isset($_GET['approve'])){
-    $idtoapprove=$_GET['approve'];
-    $restore=$bdd->query("INSERT INTO orderapproved(name_order,email_order,phone_order,city,commune,street,total_product,total_price)SELECT name_order,email_order,phone_order,city,commune,street,total_product,total_price FROM orders WHERE id_order='$idtoapprove'");
-    $delete=$bdd->query("DELETE FROM orders WHERE id_order=$idtoapprove");
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +9,7 @@ if(isset($_GET['approve'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/orderrecoverys.css">
-    <title>Order Recovery | FashionSHOP</title>
+    <title>Order Approved | FashionSHOP</title>
 </head>
 <body>
 <div id="mySidenav" class="sidenav">
@@ -24,16 +18,20 @@ if(isset($_GET['approve'])){
   <a href="customer.php"class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Customers</a>
   <a href="administration.php"class="icon-a"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Administration</a>
   <a href="orderrecovery.php"class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Orders</a>
-  <a href="order_approved.php"class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Order Approved</a>
   <a href="cart.php"class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Cart</a>
   <a href="admin.php"class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Home View</a>
   <!-- <a href="#"class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Tasks</a> -->
 </div>
    <section class="recovery">
-       <h1 class="title">Order Recovery</h1>
+       <h1 class="title">Order Approved</h1>
        <div class="contain">
        <?php
-           $select=$bdd->query("SELECT * FROM orders ORDER BY id_order DESC");
+    //    if(isset($_GET['approve'])){
+    //     $idtoapprove=$_GET['restore'];
+    //     $restore=$bdd->query("INSERT INTO orderapproved(name_order,email_order,phone_order,city,commune,street,total_product,total_price)SELECT name_order,email_order,phone_order,city,commune,street,total_product,total_price FROM orders WHERE id_order='$idtoapprove'");
+    //     $delete=$bdd->query("DELETE FROM orders WHERE id_order=$idtoapprove");
+    // }
+    $select=$bdd->query("SELECT * FROM orderapproved ORDER BY id_order DESC");
            while($data=$select->fetch()){
            ?>
        <div class="recov-container">
@@ -50,7 +48,7 @@ if(isset($_GET['approve'])){
                <p class="p-total">Total Price: <span><?php echo $data['total_price']?></span></p>
              
            </div>
-           <a href="orderrecovery.php?approve=<?php echo $data['id_order']?>" class="btn-aprove">Approve</a>
+           <!-- <a href="#" class="btn-aprove">Approve</a> -->
        </div>
        
        <?php

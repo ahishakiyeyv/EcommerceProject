@@ -68,16 +68,16 @@ include("db.php");
                 </ul>
                 <div class="count">
                     <div class="student">
-                        <h2 class="h2-award">45000+</h2>
-                        <h3 class="h3-award">Students</h3>
+                        <h2 class="h2-award">500+</h2>
+                        <h3 class="h3-award">Products</h3>
                     </div>
                     <div class="teach">
-                        <h2 class="h2-award">731</h2>
-                        <h3 class="h3-award">Teachers</h3>
+                        <h2 class="h2-award">20</h2>
+                        <h3 class="h3-award">Category</h3>
                     </div>
                     <div class="award">
-                        <h2 class="h2-award">12</h2>
-                        <h3 class="h3-award">Awards</h3>
+                        <h2 class="h2-award">5+</h2>
+                        <h3 class="h3-award">Admin</h3>
                     </div>
                 </div>
            </div>
