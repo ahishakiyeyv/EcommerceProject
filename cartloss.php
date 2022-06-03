@@ -82,7 +82,7 @@ include("db.php");
                  while($data=$select->fetch()){
                  ?>
                  <tr>
-                     <td class="td"><img src="image/<?php echo $data['photoprod']?>" alt="image non disponible"></td>
+                     <td class="td"><img src="admin/image/<?php echo $data['photoprod']?>" alt="image non disponible"></td>
                      <td class="td"><?php echo $data['nomprod']?></td>
                      <td class="td"><?php echo $data['prixprod']?></td>
                      <td class="td"><?php echo $data['Quantite']?></td>
